@@ -3,12 +3,12 @@ from titles import *
 
 file_num = 1
   
-file_path = f"input{file_num}.md"
-output_file_path = f"output{file_num}.md"
+file_path = f"inputs/input{file_num}.md"
+output_file_path = f"outputs/output{file_num}.md"
 
 tree = Tree()
 parse_file(file_path, output_file_path, tree)
-save_as_html(tree, f"output{file_num}.html")
+save_as_html(tree, f"outputs/output{file_num}.html")
 # tree.print_sections()
 
 tree.tree_to_json() 
@@ -38,4 +38,4 @@ def process_json_file(file_path, limit=10):
         tree.add_title(section, title)
         
 process_json_file("nodes_without_title.json") 
-save_as_html(tree, f"titled_output{file_num}.html")
+save_as_html(tree, f"outputs/titled_output{file_num}.html")

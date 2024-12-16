@@ -110,7 +110,7 @@ def save_as_html(tree, file_name):
         # If there's a title, display it in blue and bold, otherwise use "???" in red 
         title = node.title if node.title != "???" else "<span style='color: red;'>???</span>"
         if node.color == "green":
-            title = f"<span style='color: light_green;'>{node.title}</span>"
+            title = f"<span style='color: green;'>{node.title}</span>"
         title_html = f"<span style='color: blue; font-weight: bold;'>{title}</span>" if node.title else title
         html = f"""
         <li>
