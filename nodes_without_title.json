@@ -1,0 +1,1877 @@
+[
+  {
+    "section": "1.1",
+    "title": "???",
+    "content": "\nThis European Standard specifies the process and technical requirements for the development of software for programmable electronic systems for use in railway control and protection applications. It is aimed at use in any area where there are safety implications. These systems can be implemented using dedicated microprocessors, programmable logic controllers, multiprocessor distributed systems, larger scale central processor systems or other architectures.\n\n"
+  },
+  {
+    "section": "1.2",
+    "title": "???",
+    "content": "\nThis European Standard is applicable exclusively to software and the interaction between software and the system of which it is part.\n\n"
+  },
+  {
+    "section": "1.3",
+    "title": "???",
+    "content": "\nThis European Standard is not relevant for software that has been identified as having no impact on safety, i.e. software of which failures cannot affect any identified safety functions.\n\n"
+  },
+  {
+    "section": "1.4",
+    "title": "???",
+    "content": "\nThis European Standard applies to all safety related software used in railway control and protection systems, including\n\n- application programming,\n- operating systems,\n- support tools,\n- firmware.\n\nApplication programming comprises high level programming, low level programming and special purpose programming (for example: Programmable logic controller ladder logic).\n\n"
+  },
+  {
+    "section": "1.5",
+    "title": "???",
+    "content": "\nThis European Standard also addresses the use of pre-existing software and tools. Such software may be used, if the specific requirements in 7.3.4.7 and 6.5.4.16 on pre-existing software and for tools in 6.7 are fulfilled.\n\n"
+  },
+  {
+    "section": "1.6",
+    "title": "???",
+    "content": "\nSoftware developed according to any version of this European Standard will be considered as compliant and not subject to the requirements on pre-existing software.\n\n"
+  },
+  {
+    "section": "1.7",
+    "title": "???",
+    "content": "\nThis European Standard considers that modern application design often makes use of generic software that is suitable as a basis for various applications. Such generic software is then configured by data, algorithms, or both, for producing the executable software for the application. The general Clauses 1 to 6 and 9 of this European Standard apply to generic software as well as for application data or algorithms. The specific Clause 7 applies only for generic software while Clause 8 provides the specific requirements for application data or algorithms.\n\n"
+  },
+  {
+    "section": "1.8",
+    "title": "???",
+    "content": "\nThis European Standard is not intended to address commercial issues. These should be addressed as an essential part of any contractual agreement. All the clauses of this European Standard will need careful consideration in any commercial situation.\n\n"
+  },
+  {
+    "section": "1.9",
+    "title": "???",
+    "content": "\nThis European Standard is not intended to be retrospective. It therefore applies primarily to new developments and only applies in its entirety to existing systems if these are subjected to major modifications. For minor changes, only 9.2 applies. The assessor has to analyse the evidences provided in the software documentation to confirm whether the determination of the nature and scope of software changes is adequate. However, application of this European Standard during upgrades and maintenance of existing software is highly recommended.\n\n"
+  },
+  {
+    "section": "4.1",
+    "title": "???",
+    "content": "\nThe allocation of safety-related system functions to software, as well as software interfaces, shall be identified in the system documentation. The system in which the software is embedded shall be fully defined with respect to the following:\n\n- functions and interfaces;\n- application conditions;\n- configuration or architecture of the system;\n- hazards to be controlled;\n- safety integrity requirements;\n- apportionment of requirements and allocation of SIL to software and hardware;\n- timing constraints\n\nNOTE The allocation of safety integrity requirements may lead to different SIL for well-separated software and hardware parts of a subsystem. This allocation depends on the contribution of the software and hardware parts of the subsystem to the safety-related functions and on the mechanisms for the failure mitigation including the separation of function with different SIL.\n\n"
+  },
+  {
+    "section": "4.2",
+    "title": "???",
+    "content": "\nThe software safety integrity shall be specified as one of five levels, from SIL 0 (the lowest) to SIL 4 (the highest).\n\n"
+  },
+  {
+    "section": "4.3",
+    "title": "???",
+    "content": "\nThe required software safety integrity level shall be decided and assessed at system level, on the basis of the system safety integrity level and the level of risk associated with the use of the software in the system.\n\n"
+  },
+  {
+    "section": "4.4",
+    "title": "???",
+    "content": "\nAt least the SIL 0 requirements of this European Standard shall be fulfilled for the software part of functions that have a safety impact below SIL 1. This is because uncertainty is present in the evaluation of the risk, and even in the identification of hazards. In the face of uncertainty it is prudent to aim for a low level of safety integrity, represented by SIL 0, rather than none.\n\n"
+  },
+  {
+    "section": "4.5",
+    "title": "???",
+    "content": "\nTo conform to this European Standard it shall be shown that each of the requirements has been satisfied to the software safety integrity level defined and therefore the objective of the sub-clause in question has been met.\n\n"
+  },
+  {
+    "section": "4.6",
+    "title": "???",
+    "content": "\nWhere a requirement is qualified by the words _to the extent required by the software safety integrity level_, this indicates that a range of techniques and measures shall be used to satisfy that requirement.\n\n"
+  },
+  {
+    "section": "4.7",
+    "title": "???",
+    "content": "\nWhere 4.6 is applied, tables from normative A shall be used to assist in the selection of techniques and measures appropriate to the software safety integrity level. The selection shall be\n\n"
+  },
+  {
+    "section": "4.8",
+    "title": "???",
+    "content": "\nIf a technique or measure which is ranked as highly recommended (HR) in the tables is not used, then the rationale for using alternative techniques shall be detailed and recorded either in the Software Quality Assurance Plan or in another document referenced by the Software Quality Assurance Plan. This is not necessary if an approved combination of techniques given in the corresponding table is used. The selected techniques shall be demonstrated to have been applied correctly.\n\n"
+  },
+  {
+    "section": "4.9",
+    "title": "???",
+    "content": "\nIf a technique or measure is proposed to be used that is not contained in the tables then its effectiveness and suitability in meeting the particular requirement and overall objective of the sub-clause shall be justified and recorded in either the Software Quality Assurance Plan or in another document referenced by the Software Quality Assurance Plan.\n\n"
+  },
+  {
+    "section": "4.10",
+    "title": "???",
+    "content": "\nCompliance with the requirements of a particular sub-clause and their respective techniques and measures detailed in the tables shall be verified by the inspection of documents required by this European Standard. Where appropriate, other objective evidence, auditing and the witnessing of tests shall also be taken into account.\n\n"
+  },
+  {
+    "section": "5.1.1.1",
+    "title": "???",
+    "content": "\nTo ensure that all personnel who have responsibilities for the software are organised, empowered and capable of fulfilling their responsibilities.\n\n"
+  },
+  {
+    "section": "5.1.2.1",
+    "title": "???",
+    "content": "\nAs a minimum, the supplier shall implement the parts of EN ISO 9001 dealing with the organisation and management of the personnel and responsibilities.\n\n"
+  },
+  {
+    "section": "5.1.2.2",
+    "title": "???",
+    "content": "\nResponsibilities shall be compliant with the requirements defined in B.\n\n"
+  },
+  {
+    "section": "5.1.2.3",
+    "title": "???",
+    "content": "\nThe personnel assigned to the roles involved in the development or maintenance of the software shall be named and recorded.\n\n"
+  },
+  {
+    "section": "5.1.2.4",
+    "title": "???",
+    "content": "\nAn Assessor shall be appointed by the supplier, the customer or the Safety Authority.\n\n"
+  },
+  {
+    "section": "5.1.2.5",
+    "title": "???",
+    "content": "\nThe Assessor shall be independent from the supplier or, at the discretion of the Safety Authority, be part of the supplier\u2019s organisation or of the customer\u2019s organisation.\n\n"
+  },
+  {
+    "section": "5.1.2.6",
+    "title": "???",
+    "content": "\nThe Assessor shall be independent from the project.\n\n"
+  },
+  {
+    "section": "5.1.2.7",
+    "title": "???",
+    "content": "\nThe Assessor shall be given authority to perform the assessment of the software.\n\n"
+  },
+  {
+    "section": "5.1.2.8",
+    "title": "???",
+    "content": "\nThe Validator shall give agreement/disagreement for the software release.\n\n"
+  },
+  {
+    "section": "5.1.2.9",
+    "title": "???",
+    "content": "\n|     | SIL3 & SIL4  |     | RQM, DES, IMP | INT, TST           | VER      | VAL |\n| --- | ------------ | --- | ------------- | ------------------ | -------- | --- |\n|     | SIL 1 & SIL2 |     | RQM, DES, IMP | INT, TST           | VER, VAL |     |\n|     | SIL0         |     | RQM, DES, IMP | INT, TST, VER, VAL |          |     |\n\n# Key\n\n- can be the same person\n- can be the same organization\n- shall report to the Project Manager\n- can report to the Project Manager\n- shall not report to the Project Manager\n\n| PM  | Project Manager      |\n| --- | -------------------- |\n| ASR | Assessor             |\n| RQM | Requirements Manager |\n| INT | Integrator           |\n| TST | Tester               |\n| DES | Designer             |\n| IMP | Implementer          |\n| VER | Verifier             |\n| VAL | Validator            |\n\nNOTE: For the role of the Configuration Manager, see Table B.10, there are no independence requirements.\n\nFigure 2 \u2013 Illustration of the preferred organisational structure\n\nNOTE: Figure 2 is only illustrative for the preferred organisational structure.\n\n"
+  },
+  {
+    "section": "5.1.2.10",
+    "title": "???",
+    "content": "\nThe preferred organisational structure for SIL 3 and SIL 4 is:\n\n1. Requirements Manager, Designer and Implementer for a software component can be the same person.\n2. Requirements Manager, Designer and Implementer for a software component shall report to the Project Manager.\n3. Integrator and Tester for a software component can be the same person.\n4. Integrator and Tester for a software component can report to the Project Manager or to the Validator.\n5. Verifier can report to the Project Manager or to the Validator.\n6. Validator shall not report to the Project Manager i.e. the Project Manager shall have no influence on the validator\u2019s decisions but the validator informs the Project Manager about his decisions.\n7. A person who is Requirements Manager, Designer or Implementer for a software component shall neither be Tester nor Integrator for the same software component.\n8. A person who is Integrator or Tester for a software component shall neither be Requirements Manager, Designer nor Implementer for the same software component.\n9. A person who is Verifier shall neither be Requirements Manager, Designer, Implementer, Integrator, Tester nor Validator.\n10. A person who is Validator shall neither be Requirements Manager, Designer, Implementer, Integrator, Tester nor Verifier.\n11. A person who is Project Manager can additionally perform the roles of Requirements Manager, Designer, Implementer, Integrator, Tester or Verifier providing that the requirements for the independence between these additional roles are respected.\n12. Project Manager, Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier and Validator can belong to the same organization.\n13. The assessor shall be independent and organisationally independent from the roles of Project Manager, Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier and Validator.\n\nHowever, the following options may apply:\n\nA person who is Validator may also perform the role of Verifier, but still maintaining independence from the Project Manager. In this case the Verifier\u2019s output documents shall be reviewed by another competent person with the same level of independence as the Validator. This organisational option shall be subject to Assessor\u2019s approval.\nA person who is Verifier may also perform the role of Integrator and Tester, in which case the role of Validator shall check the adequacy of the documented evidence from integration and testing with the specified verification objectives, hence maintaining two levels of checking within the project organisation.\n\n"
+  },
+  {
+    "section": "5.1.2.11",
+    "title": "???",
+    "content": "\nThe preferred organisational structure for SIL 1 and SIL 2 is:\n\n1. Requirements Manager, Designer and Implementer for a software component can be the same person and shall report to the Project Manager.\n2. Integrator and Tester for a software component can be the same person.\n3. Integrator and Tester for a software component can report to the Project Manager or to the Validator.\n4. Verifier and Validator can be the same person.\n5. Verifier and Validator can report to the Project Manager.\n6. A person who is Requirements Manager, Designer or Implementer for a software component shall be neither Tester nor Integrator for the same software component.\n7. A person who is Integrator or Tester for a software component shall neither be Requirements Manager, Designer nor Implementer for the same software component.\n8. A person who is Verifier or Validator shall neither be Requirements Manager, Designer, Implementer, Integrator nor Tester.\n9. A person who is a Project Manager can additionally perform the roles of Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier or Validator provided that the requirements for the independence between these additional roles are respected.\n10. Project Manager, Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier and Validator can belong to the same organization.\n11. The assessor shall be independent and organisationally independent from the roles of Project Manager, Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier and Validator.\n\n"
+  },
+  {
+    "section": "5.1.2.12",
+    "title": "???",
+    "content": "\nThe preferred organisational structure for SIL 0 is:\n\n- a) Requirements Manager, Designer and Implementer for a software component can be the same person and shall be managed by the Project Manager.\n- b) Integrator, Tester, Verifier and Validator for a software component can be the same person.\n- c) Integrator, Tester, Verifier and Validator can be managed by the Project Manager.\n- d) A person who is Requirements Manager, Designer or Implementer for a software component shall be neither Tester nor Integrator for the same software component.\n- e) A person who is Verifier or Validator shall neither be Requirements Manager, Designer, nor Implementer.\n- f) A person who is Project Manager can additionally perform the roles of Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier or Validator providing that the requirements for the independence between these additional roles are respected.\n- g) Project Manager, Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier and Validator can belong to the same organization.\n- h) The assessor shall be independent and organisationally independent from the roles of Project Manager, Requirements Manager, Designer, Implementer, Integrator, Tester, Verifier and Validator.\n\nHowever, the following alternatives can apply:\n\n- i) Requirements Manager, Designer, Implementer, Integrator and Tester can be the same person.\n- j) The Validator and Verifier can also be the same person;\n- k) A person who is Verifier or Validator shall neither be Requirements Manager, Designer, nor Implementer.\n\n"
+  },
+  {
+    "section": "5.1.2.13",
+    "title": "???",
+    "content": "\nThe roles Requirements Manager, Designer and Implementer for one component can perform the roles Tester and Integrator for a different component.\n\n"
+  },
+  {
+    "section": "5.1.2.14",
+    "title": "???",
+    "content": "\nThe roles of the Verifier and the Validator shall be defined at the project level and shall remain unchanged throughout the development project.\n\n"
+  },
+  {
+    "section": "5.2.1.1",
+    "title": "???",
+    "content": "\nTo ensure that all personnel who have responsibilities for the software are competent to discharge those responsibilities by demonstrating the ability to perform relevant tasks correctly, efficiently and consistently to a high quality and under varying conditions.\n\n"
+  },
+  {
+    "section": "5.2.2.1",
+    "title": "???",
+    "content": "\nThe key competencies required for each role in the software development are defined in B. If additional experience, capabilities or qualifications are required for a role in the software life cycle, these shall be defined in the Software Quality Assurance Plan.\n\n"
+  },
+  {
+    "section": "5.2.2.2",
+    "title": "???",
+    "content": "\nDocumented evidence of personnel competence, including technical knowledge, qualifications, relevant experience and appropriate training, shall be maintained by the supplier\u2019s organisation in order to demonstrate appropriate safety organisation.\n\n"
+  },
+  {
+    "section": "5.2.2.3",
+    "title": "???",
+    "content": "\nThe organisation shall maintain procedures to manage the competence of personnel to suit appropriate roles in accordance to existing quality standards.\n\n"
+  },
+  {
+    "section": "5.2.2.4",
+    "title": "???",
+    "content": "\nOnce it has been proved to the satisfaction of an assessor or by a certification that competence has been demonstrated for all personnel appointed in various roles, each individual will need to show continuous maintenance and development of competence. This could be demonstrated by keeping a logbook showing the activity is being regularly carried out correctly, and that additional training is being undertaken in accordance with EN ISO 9001 and ISO/IEC 90003:2004, 6.2.2 \u201cCompetence, awareness and training\\_.\n\n"
+  },
+  {
+    "section": "5.3.1.1",
+    "title": "???",
+    "content": "\nTo structure the development of the software into defined phases and activities.\n\n"
+  },
+  {
+    "section": "5.3.1.2",
+    "title": "???",
+    "content": "\nTo record all information pertinent to the software throughout the lifecycle of the software.\n\n"
+  },
+  {
+    "section": "5.3.2.1",
+    "title": "???",
+    "content": "\nA lifecycle model for the development of software shall be selected. It shall be detailed in the Software Quality Assurance Plan in accordance with 6.5.\n\nTwo examples of lifecycle models are shown in Figure 3 and Figure 4.\n\n"
+  },
+  {
+    "section": "5.3.2.2",
+    "title": "???",
+    "content": "\nThe lifecycle model shall take into account the possibility of iterations in and between phases.\n\n"
+  },
+  {
+    "section": "5.3.2.3",
+    "title": "???",
+    "content": "\nQuality Assurance procedures shall run in parallel with lifecycle activities and use the same terminology.\n\n"
+  },
+  {
+    "section": "5.3.2.4",
+    "title": "???",
+    "content": "\nThe Software Quality Assurance Plan, Software Verification Plan, Software Validation Plan and Software Configuration Management Plan shall be drawn up at the start of the project and maintained throughout the software development life cycle.\n\n"
+  },
+  {
+    "section": "5.3.2.5",
+    "title": "???",
+    "content": "\nAll activities to be performed during a phase shall be defined and planned prior to the commencement of the phase.\n\n"
+  },
+  {
+    "section": "5.3.2.6",
+    "title": "???",
+    "content": "\nAll documents shall be structured to allow continued expansion in parallel with the development process.\n\n"
+  },
+  {
+    "section": "5.3.2.7",
+    "title": "???",
+    "content": "\nFor each document, traceability shall be provided in terms of a unique reference number and a defined and documented relationship with other documents.\n\n"
+  },
+  {
+    "section": "5.3.2.8",
+    "title": "???",
+    "content": "\nEach term, acronym or abbreviation shall have the same meaning in every document. If, for historical reasons, this is not possible, the different meanings shall be listed and the references given.\n\n"
+  },
+  {
+    "section": "5.3.2.9",
+    "title": "???",
+    "content": "\nExcept for documents relating to pre-existing software (see 7.3.4.7), each document shall be written according to the following rules:\n\n- it shall contain or implement all applicable conditions and requirements of the preceding document with which it has a hierarchical relationship;\n- it shall not contradict the preceding document.\n\n"
+  },
+  {
+    "section": "5.3.2.10",
+    "title": "???",
+    "content": "\nEach item or concept shall be referred to by the same name or description in every document.\n\n"
+  },
+  {
+    "section": "5.3.2.11",
+    "title": "???",
+    "content": "\nThe contents of all documents shall be recorded in a form appropriate for manipulation, processing and storage.\n\n"
+  },
+  {
+    "section": "5.3.2.12",
+    "title": "???",
+    "content": "\nWhen documents which are produced by independent roles are combined into a single document, the relation to the parts produced by any independent role shall be traced within the document.\n\n"
+  },
+  {
+    "section": "5.3.2.13",
+    "title": "???",
+    "content": "\nDocuments may be combined or divided in accordance with 5.3.2.12. Some development steps may be combined, divided or, when justified, eliminated, at the discretion of the Project Manager and with the agreement of the Validator.\n\n"
+  },
+  {
+    "section": "5.3.2.14",
+    "title": "???",
+    "content": "\nWhere any alternative lifecycle or documentation structure is adopted it shall be established that it meets all the objectives and requirements of this European Standard.\n\n| DESIGN AND TEST DOCUMENTS                         | DESIGN AND TEST DOCUMENTS                                  | VERIFICATION ACTIVITIES                | PHASE                           |\n| ------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------- | ------------------------------- |\n| System Requirements Specification                 | System Safety Requirements Specification                   | System Architecture Description        | System Safety Plan and V&V Plan |\n| Software Requirements Specification               | Overall Software Test Specification                        | Software Requirements Verification     | Software Requirements           |\n| Software Architecture Specification               |                                                            | Software Architecture Verification     | Software Architecture           |\n| Software Design Specification                     | Software, Software/Hardware Integration Test Specification | Software Design Verification           | Software Design                 |\n| Software Component Design Specification           | Software Component Test Specification                      | Software Component Design Verification | Software Component              |\n| Software Source Code and supporting documentation |                                                            | Component Implementation and Testing   |                                 |\n| Software Component Test Report                    | Source Code Verification                                   | Software Integration Test Report       |                                 |\n| Software/Hardware Integration Test Report         | Overall Software Test Report                               | Software Validation                    | Software Validation             |\n| Software Deployment Documents                     |                                                            | Software Deployment                    |                                 |\n| Software Maintenance Documents                    |                                                            | Software Maintenance                   |                                 |\n\nSoftware assessment is an external activity and can be performed during the whole life-cycle.\n\nFigure 3 \u2013 Illustrative Development Lifecycle 1\n\n# System Development Phase (external)\n\n- System Requirements Specification\n- System Safety Requirements Specification\n- System Architecture Description\n- System Safety Plan\n\n# Software Requirements Phase (7.2)\n\n- Software Requirements Specification\n- Overall Software Test Specification\n- Software Requirements Verification Report\n\n# Software Planning Phase\n\n- Software Quality Assurance Plan\n\n# Software Arch. & Design Phase (7.3)\n\n- Software Configuration Management Plan\n- Software Architecture Specification\n- Software Verification Plan\n- Software Design Specification\n- Software Validation Plan\n- Software Interface Specification\n- Software Integration Test Specification\n- Software/Hardware Integration Test Specification\n- Software Architecture and Design Verification Report\n\n# Software Maintenance Phase (9.2)\n\n- Software Maintenance Records\n- Software Change Records\n\n# Software Assessment Phase\n\n- Software Assessment Plan\n- Software Assessment Report\n\n# Software Validation Phase (7.7)\n\n- Overall Software Test Report\n- Software Validation Report\n\n# Software Integration Phase (7.6)\n\n- Software Integration Test Report\n- Software/Hardware Integration Test Report\n- Software Integration Verification Report\n\n# Software Component Design Phase (7.4)\n\n- Software Component Design Specification\n- Software Component Test Specification\n- Software Component Design Verification Report\n\n# Software Component Testing Phase (7.5)\n\n- Software Component Test Report\n- Software Source Code Verification Report\n\n# Software Component Implementation Phase (7.5)\n\n- Software Source Code & Supporting Documentation\n\nFigure 4 \u2013 Illustrative Development Lifecycle 2\n\n"
+  },
+  {
+    "section": "6.1.1.1",
+    "title": "???",
+    "content": "\nThe objective of software testing, as performed by the Tester and/or Integrator, is to ascertain the behaviour or performance of software against the corresponding test specification to the extent achievable by the selected test coverage.\n\n"
+  },
+  {
+    "section": "6.1.4.1",
+    "title": "???",
+    "content": "\nTests performed by other parties such as the Requirements Manager, Designer or Implementer, if fully documented and complying with the following requirements, may be accepted by the Verifier.\n\n"
+  },
+  {
+    "section": "6.1.4.2",
+    "title": "???",
+    "content": "\nMeasurement equipment used for testing shall be calibrated appropriately. Any tools, hardware or software, used for testing shall be shown to be suitable for the purpose.\n\n"
+  },
+  {
+    "section": "6.1.4.3",
+    "title": "???",
+    "content": "\nSoftware testing shall be documented by a Test Specification and a Test Report, as defined in the following.\n\n"
+  },
+  {
+    "section": "6.1.4.4",
+    "title": "???",
+    "content": "\nEach Test Specification shall document the following:\n\n- a) test objectives;\n- b) test cases, test data and expected results;\n- c) types of tests to be performed;\n- d) test environment, tools, configuration and programs;\n- e) test criteria on which the completion of the test will be judged;\n- f) the criteria and degree of test coverage to be achieved;\n- g) the roles and responsibilities of the personnel involved in the test process;\n- h) the requirements which are covered by the test specification;\n- i) the selection and utilisation of the software test equipment;\n\n"
+  },
+  {
+    "section": "6.1.4.5",
+    "title": "???",
+    "content": "\nA Test Report shall be produced as follows:\n\n- a) the Test Report shall mention the Tester names, state the test results and whether the test objectives and test criteria of the Test Specification have been met. Failures shall be documented and summarized;\n- b) test cases and their results shall be recorded, preferably in a machine-readable form for subsequent analysis;\n- c) tests shall be repeatable and, if practicable, be performed by automatic means;\n- d) test scripts for automatic test execution shall be verified;\n- e) the identity and configuration of all items involved (hardware used, software used, equipment used, equipment calibration, as well as version information of the test specification) shall be documented;\n- f) an evaluation of the test coverage and test completion shall be provided and any deviations noted.\n\n"
+  },
+  {
+    "section": "6.2.1.1",
+    "title": "???",
+    "content": "\nThe objective of software verification is to examine and arrive at a judgment based on evidence that output items (process, documentation, software or application) of a specific development phase fulfil the requirements and plans with respect to completeness, correctness and consistency. These activities are managed by the Verifier.\n\n"
+  },
+  {
+    "section": "6.2.4.1",
+    "title": "???",
+    "content": "\nVerification shall be documented by at least a Software Verification Plan and one or more (process-related) Verification Reports.\n\n"
+  },
+  {
+    "section": "6.2.4.2",
+    "title": "???",
+    "content": "\nA Software Verification Plan shall be written, under the responsibility of the Verifier, on the basis of the necessary documentation.\n\nRequirements from 6.2.4.3 to 6.2.4.9 refer to the Software Verification Plan.\n\n"
+  },
+  {
+    "section": "6.2.4.3",
+    "title": "???",
+    "content": "\nThe Software Verification Plan shall describe the activities to be performed to ensure proper verification and that particular design or other verification needs are suitably provided for.\n\n"
+  },
+  {
+    "section": "6.2.4.4",
+    "title": "???",
+    "content": "\nDuring development (and depending upon the size of the system) the plan may be sub-divided into a number of child documents and be added to, as the detailed needs of verification become clearer.\n\n"
+  },
+  {
+    "section": "6.2.4.5",
+    "title": "???",
+    "content": "\nThe Software Verification Plan shall document all the criteria, techniques and tools to be used in the verification process. The Software Verification Plan shall include techniques and measures chosen from Table A.5, Table A.6, Table A.7 and Table A.8. The selected combination shall be justified as a set satisfying 4.8, 4.9 and 4.10.\n\n"
+  },
+  {
+    "section": "6.2.4.6",
+    "title": "???",
+    "content": "\nThe Software Verification Plan shall describe the activities to be performed to ensure correctness and consistency with respect to the input to that phase. These include reviewing, testing and integration.\n\n"
+  },
+  {
+    "section": "6.2.4.7",
+    "title": "???",
+    "content": "\nIn each development phase it shall be shown that the functional, performance and safety requirements are met.\n\n"
+  },
+  {
+    "section": "6.2.4.8",
+    "title": "???",
+    "content": "\nThe results of each verification shall be retained in a format defined or referenced in the Software Verification Plan.\n\n"
+  },
+  {
+    "section": "6.2.4.9",
+    "title": "???",
+    "content": "\nThe Software Verification Plan shall address the following:\n\n- a) the selection of verification strategies and techniques (to avoid undue complexity in the assessment of the verification and testing, preference shall be given to the selection of techniques which are in themselves readily analysable);\n- b) selection of techniques from Table A.5, Table A.6, Table A.7 and Table A.8;\n\n\nc) the selection and documentation of verification activities;\n\nd) the evaluation of verification results gained;\n\ne) the evaluation of the safety and robustness requirements;\n\nf) the roles and responsibilities of the personnel involved in the verification process;\n\ng) the degree of the functional based test coverage required to be achieved;\n\nh) the structure and content of each verification step, especially for the Software Requirement Verification (7.2.4.22), Software Architecture and Design Verification (7.3.4.41, 7.3.4.42), Software Components Verification (7.4.4.13), Software Source Code Verification (7.5.4.10) and Integration Verification (7.6.4.13) in a way that facilitates review against the Software Verification Plan.\n\n"
+  },
+  {
+    "section": "6.2.4.10",
+    "title": "???",
+    "content": "\nA Software Quality Assurance Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 6.2.2.\n\n"
+  },
+  {
+    "section": "6.2.4.11",
+    "title": "???",
+    "content": "\nOnce the Software Verification Plan has been established, verification shall address\n\na) that the Software Verification Plan meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 6.2.4.3 to 6.2.4.9,\n\nb) the internal consistency of the Software Verification Plan.\n\nThe results shall be recorded in a Software Quality Assurance Verification Report.\n\n"
+  },
+  {
+    "section": "6.2.4.12",
+    "title": "???",
+    "content": "\nAny Software Verification Reports shall be written, under the responsibility of the Verifier, on the basis of the input documents. These reports can be partitioned for clarity and convenience, and shall follow the Software Verification Plan. The requirement in 6.2.4.13 refers to the Software Verification Reports.\n\n"
+  },
+  {
+    "section": "6.2.4.13",
+    "title": "???",
+    "content": "\nEach Software Verification Report shall document the following:\n\na) the identity and configuration of the items verified, as well as the Verifier names;\n\nb) items which do not conform to the specifications;\n\nc) components, data, structures and algorithms poorly adapted to the problem;\n\nd) detected errors or deficiencies;\n\ne) the fulfilment of, or deviation from, the Software Verification Plan (in the event of deviation the Verification Report shall explain whether the deviation is critical or not);\n\nf) assumptions if any;\n\ng) a summary of the verification results.\n\n"
+  },
+  {
+    "section": "6.3.1.1",
+    "title": "???",
+    "content": "\nThe objective of software validation is to demonstrate that the processes and their outputs are such that the software is of the defined software safety integrity level, fulfils the software requirements and is fit for its intended application. This activity is performed by the Validator.\n\n"
+  },
+  {
+    "section": "6.3.1.2",
+    "title": "???",
+    "content": "\nThe main validation activities are to demonstrate by analysis and/or testing that all the software requirements are specified, implemented, tested and fulfilled as required by the applicable SIL, and to evaluate the safety criticality of all anomalies and non-conformities based on the results of reviews, analyses and tests.\n\n"
+  },
+  {
+    "section": "6.3.4.1",
+    "title": "???",
+    "content": "\nThe Software Validation activities shall be developed and performed, with their results evaluated, by a Validator with an appropriate level of independence as defined in 5.1.\n\n"
+  },
+  {
+    "section": "6.3.4.2",
+    "title": "???",
+    "content": "\nValidation shall be documented with, at least, a Software Validation Plan and a Software Validation Report, as defined in the following.\n\n"
+  },
+  {
+    "section": "6.3.4.3",
+    "title": "???",
+    "content": "\nA Software Validation Plan shall be written, under the responsibility of the Validator, on the basis of the input documents.\n\nRequirements from 6.3.4.4 to 6.3.4.6 refer to the Software Validation Plan.\n\n"
+  },
+  {
+    "section": "6.3.4.4",
+    "title": "???",
+    "content": "\nThe Software Validation Plan shall include a summary justifying the validation strategy chosen. The justification shall include consideration, according to the required software safety integrity level, of\n\n- a) manual or automated techniques or both,\n- b) static or dynamic techniques or both,\n- c) analytical or statistical techniques or both,\n- d) testing in a real or simulated environment or both.\n\n"
+  },
+  {
+    "section": "6.3.4.5",
+    "title": "???",
+    "content": "\nThe Software Validation Plan shall identify the steps necessary to demonstrate the adequacy of any Software Specification in fulfilling the safety requirements set out in the System Safety Requirements Specification.\n\n"
+  },
+  {
+    "section": "6.3.4.6",
+    "title": "???",
+    "content": "\nThe Software Validation Plan shall identify the steps necessary to demonstrate the adequacy of the Overall Software Test Specification as a test against the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "6.3.4.7",
+    "title": "???",
+    "content": "\nA Software Validation Report shall be written, under the responsibility of the Validator, on the basis of the input documents.\n\nRequirements from 6.3.4.8 to 6.3.4.11 refer to the Software Validation Report.\n\n"
+  },
+  {
+    "section": "6.3.4.8",
+    "title": "???",
+    "content": "\nThe results of the validation shall be documented in the Software Validation Report.\n\n"
+  },
+  {
+    "section": "6.3.4.9",
+    "title": "???",
+    "content": "\nThe Validator shall check that the verification process is complete.\n\n"
+  },
+  {
+    "section": "6.3.4.10",
+    "title": "???",
+    "content": "\nThe Software Validation Report shall fully state the software baseline that has been validated.\n\n"
+  },
+  {
+    "section": "6.3.4.11",
+    "title": "???",
+    "content": "\nThe Validation Report shall clearly identify any known deficiencies in the software and the impact these may have on the use of the software.\n\n"
+  },
+  {
+    "section": "6.3.4.12",
+    "title": "???",
+    "content": "\nA Software Validation Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 6.3.2.\n\nRequirements from 6.3.4.13 to 6.3.4.14 refer to the Software Validation Verification Report.\n\n"
+  },
+  {
+    "section": "6.3.4.13",
+    "title": "???",
+    "content": "\nOnce the Software Validation Plan has been established, verification shall address\n\n- a) that the Software Validation Plan meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 6.3.4.4 to 6.3.4.6,\n- b) the internal consistency of the Software Validation Plan.\n\n"
+  },
+  {
+    "section": "6.3.4.14",
+    "title": "???",
+    "content": "\nOnce the Software Validation Report has been established, verification shall address\n\n- a) that the Software Validation Report meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 6.3.4.8 to 6.3.4.11 and 7.7.4.7 to 7.7.4.11,\n- b) the internal consistency of the Software Validation Report.\n\nThe results shall be recorded in a Software Validation Verification Report.\n\n"
+  },
+  {
+    "section": "6.3.4.15",
+    "title": "???",
+    "content": "\nThe Validator shall be empowered to require or perform additional reviews, analyses and tests.\n\n"
+  },
+  {
+    "section": "6.3.4.16",
+    "title": "???",
+    "content": "\nThe software shall only be released for operation after authorisation by the Validator.\n\n"
+  },
+  {
+    "section": "6.3.4.17",
+    "title": "???",
+    "content": "\nSimulation and modelling may be used to supplement the validation process.\n\n"
+  },
+  {
+    "section": "6.4",
+    "title": "???",
+    "content": "\nSoftware assessment\n\n"
+  },
+  {
+    "section": "6.4.1",
+    "title": "???",
+    "content": "\nObjective\n\n"
+  },
+  {
+    "section": "6.4.1.1",
+    "title": "???",
+    "content": "\nTo evaluate that the lifecycle processes and their outputs are such that the software is of the defined software safety integrity levels 1-4 and is fit for its intended application.\n\n"
+  },
+  {
+    "section": "6.4.1.2",
+    "title": "???",
+    "content": "\nFor SIL 0 software, requirements of this standard shall be fulfilled but where a certificate stating compliance with EN ISO 9001 is available, no assessment will be required.\n\n"
+  },
+  {
+    "section": "6.4.2",
+    "title": "???",
+    "content": "\nInput documents\n\n1. System Safety Requirements Specification\n2. Software Requirements Specification\n3. All other documents necessary to carry out the assessment process.\n\n"
+  },
+  {
+    "section": "6.4.4.1",
+    "title": "???",
+    "content": "\nThe assessment of the software shall be carried out by an Assessor who is independent as described in 5.1.2.6 and 5.1.2.7.\n\n"
+  },
+  {
+    "section": "6.4.4.2",
+    "title": "???",
+    "content": "\nSoftware with a Software Assessment Report from another Assessor does not have to be an object of a new assessment. The assessor shall check that the software is fit for its intended use within the intended environment, and that the former assessment stated the software has achieved a safety integrity level at least equal to the required level.\n\n"
+  },
+  {
+    "section": "6.4.4.3",
+    "title": "???",
+    "content": "\nThe Assessor shall have access to all project-related documentation throughout the development process.\n\n"
+  },
+  {
+    "section": "6.4.4.4",
+    "title": "???",
+    "content": "\nA Software Assessment Plan shall be written, under the responsibility of the Assessor, on the basis of the input documents from 6.4.2. Where appropriate, an existing documented generic Software Assessment Plan or procedure may be used. The requirement in 6.4.4.5 refers to the Software Assessment Plan.\n\n"
+  },
+  {
+    "section": "6.4.4.5",
+    "title": "???",
+    "content": "\nThe Software Assessment Plan shall include the following scope:\n\n- a) aspects with which the assessment deals;\n- b) activities throughout the assessment process and their sequential link to engineering activities;\n- c) documents to be taken into consideration;\n- d) statements on pass/fail criteria and the way to deal with non-conformance cases;\n- e) requirements with regard to content and form of the Software Assessment Report.\n\n"
+  },
+  {
+    "section": "6.4.4.6",
+    "title": "???",
+    "content": "\nA Software Assessment Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 6.4.2.\n\n"
+  },
+  {
+    "section": "6.4.4.7",
+    "title": "???",
+    "content": "\nOnce the Software Assessment Plan has been established, verification shall address:\n\n- a) that the Software Assessment Plan meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 6.4.4.5,\n- b) the internal consistency of the Software Assessment Plan.\n\nThe results shall be recorded in a Software Assessment Verification Report.\n\n"
+  },
+  {
+    "section": "6.4.4.8",
+    "title": "???",
+    "content": "\nThe Assessor shall assess that the software of the system is fit for its intended purpose and responds correctly to safety issues derived from the System Safety Requirements Specification.\n\n"
+  },
+  {
+    "section": "6.4.4.9",
+    "title": "???",
+    "content": "\nThe Assessor shall assess if an appropriate set of techniques from A, suitable for the intended development, has been selected and applied in accordance to the required safety integrity level.\n\nMoreover, the assessor shall consider the extent to which each technique from A is applied, i.e. whether it is applied to all or to only part of the software, and also look for evidence that it is properly applied.\n\n"
+  },
+  {
+    "section": "6.4.4.10",
+    "title": "???",
+    "content": "\nThe Assessor shall assess the configuration and change management system and the evidences on its use and application.\n\n"
+  },
+  {
+    "section": "6.4.4.11",
+    "title": "???",
+    "content": "\nThe Assessor shall review the evidence of the competency of the project staff according to B and shall assess the organisation for the software development according to 5.1.\n\n"
+  },
+  {
+    "section": "6.4.4.12",
+    "title": "???",
+    "content": "\nFor any software containing safety-related application conditions, the Assessor shall check for noted deviations, non-compliances to requirements and recorded non-conformities if these have an impact on safety, and make a judgment whether the justification from the project is acceptable. The result shall be stated in the assessment report.\n\n"
+  },
+  {
+    "section": "6.4.4.13",
+    "title": "???",
+    "content": "\nThe Assessor shall assess the verification and validation activities and the supporting evidence.\n\n"
+  },
+  {
+    "section": "6.4.4.14",
+    "title": "???",
+    "content": "\nThe Assessor shall agree the scope and contents of the Software Validation Plan. This agreement shall also make a statement concerning the presence of the Assessor during testing.\n\n"
+  },
+  {
+    "section": "6.4.4.15",
+    "title": "???",
+    "content": "\nThe Assessor may carry out audits and inspections (e.g. witnessing tests) throughout the entire development process. The Assessor may ask for additional verification and validation work.\n\nNOTE It is of advantage to involve the Assessor early in the project.\n\n"
+  },
+  {
+    "section": "6.4.4.16",
+    "title": "???",
+    "content": "\nA Software Assessment Report shall be written under the responsibility of the Assessor. Requirements from 6.4.4.17 to 6.4.4.19 refer to the Software Assessment Report.\n\n"
+  },
+  {
+    "section": "6.4.4.17",
+    "title": "???",
+    "content": "\nThe Software Assessment Report shall meet the requirements of the Software Assessment Plan and provide a conclusion and recommendations.\n\n"
+  },
+  {
+    "section": "6.4.4.18",
+    "title": "???",
+    "content": "\nThe Assessor shall record his/her activities as a consistent base for the Software Assessment Report. These shall be summarised in the Software Assessment report.\n\n"
+  },
+  {
+    "section": "6.4.4.19",
+    "title": "???",
+    "content": "\nThe Assessor shall identify and evaluate any non-conformity with the requirements of this European Standard and judge the impact on the final result. These non-conformities and their judgments shall be listed in the Software Assessment Report.\n\n"
+  },
+  {
+    "section": "6.5.1.1",
+    "title": "???",
+    "content": "\nTo identify, monitor and control all those activities, both technical and managerial, which are necessary to ensure that the software achieves the quality required. This is necessary to provide the required qualitative defence against systematic faults and to ensure that an audit trail can be established to allow verification and validation activities to be undertaken effectively.\n\n"
+  },
+  {
+    "section": "6.5.1.2",
+    "title": "???",
+    "content": "\nTo provide evidence that the above activities have been carried out.\n\n"
+  },
+  {
+    "section": "6.5.4.1",
+    "title": "???",
+    "content": "\nAll the plans shall be issued at the beginning of the project and updated during the lifecycle.\n\n"
+  },
+  {
+    "section": "6.5.4.2",
+    "title": "???",
+    "content": "\nThe organisations taking part in the software development shall implement and use a Quality Assurance System compliant with EN ISO 9000, to support the requirements of this European Standard. EN ISO 9001 certification is highly recommended.\n\n"
+  },
+  {
+    "section": "6.5.4.3",
+    "title": "???",
+    "content": "\nA Software Quality Assurance Plan shall be written, under the responsibility of the Verifier, on the basis of the input documents from 6.5.2.\n\nThe requirements from 6.5.4.4 to 6.5.4.6 refer to the Software Quality Assurance Plan.\n\n"
+  },
+  {
+    "section": "6.5.4.4",
+    "title": "???",
+    "content": "\nA Software Quality Assurance Plan shall be written and shall be specific to the project. It shall implement the requirements of 6.5.4.5.\n\n"
+  },
+  {
+    "section": "6.5.4.5",
+    "title": "???",
+    "content": "\nAs a minimum, the following items shall be specified or referenced in the Software Quality Assurance Plan.\n\n- a) Definition of the life-cycle model:\n\n1. activities and elementary tasks consistent with the plans, e.g. Safety Plan, that have been established at the System level;\n2. entry and exit criteria of each activity;\n3. inputs and outputs of each activity;\n4. major quality activities;\n5. the entity responsible for each activity.\n\n- b) Documentation structure.\n- c) Documentation control:\n\n1. roles involved for writing, checking and approval;\n2. scope of distribution;\n3. archiving.\n\n- d) Tracking and tracing of deviations.\n- e) Methods, measures and tools for quality assurance according to the allocated safety integrity levels (refer to A).\n- f) Justifications, as defined in 4.7 to 4.9, that each combination of techniques or measures selected according to A is appropriate to the defined software safety integrity level.\n\nSome of the Software Quality Assurance Plan required information may be contained in other documents, such as a separate Software Configuration Management Plan, a Maintenance Plan, a Software Verification plan and a Software Validation Plan. The sub-clauses of the Software Quality Assurance Plan shall reference the documents in which the information is contained. In any case the content of each sub-clause of the Software Quality Assurance Plan shall be specified either directly or by reference to another document.\n\nThe referenced documents shall be reviewed in order to ensure they provide all the required information and that they fully address the requirements of this European Standard.\n\n"
+  },
+  {
+    "section": "6.5.4.6",
+    "title": "???",
+    "content": "\nQuality assurance activities, actions, documents, etc. required by all normative sub-clauses of this European Standard shall be specified or referenced in the Software Quality Assurance Plan and tailored to the specific project.\n\n"
+  },
+  {
+    "section": "6.5.4.7",
+    "title": "???",
+    "content": "\nA Software Quality Assurance Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 6.5.2.\n\nThe requirement in 6.5.4.8 refers to the Software Quality Assurance Verification Report.\n\n"
+  },
+  {
+    "section": "6.5.4.8",
+    "title": "???",
+    "content": "\nOnce the Software Quality Assurance Plan has been established, verification shall address\n\n- a) that the Software Quality Assurance Plan meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 6.5.4.4 to 6.5.4.6,\n- b) the internal consistency of the Software Quality Assurance Plan.\n\nThe results shall be recorded in a Software Quality Assurance Verification Report.\n\n"
+  },
+  {
+    "section": "6.5.4.9",
+    "title": "???",
+    "content": "\nEach planning document shall have a paragraph specifying details about its own updating throughout the project: frequency, responsibility, method.\n\n"
+  },
+  {
+    "section": "6.5.4.10",
+    "title": "???",
+    "content": "\nEach software document and deliverable shall be placed under configuration control from the time of its first release.\n\n"
+  },
+  {
+    "section": "6.5.4.11",
+    "title": "???",
+    "content": "\nChanges to all items under Configuration Management Control shall be authorised and recorded.\n\n"
+  },
+  {
+    "section": "6.5.4.12",
+    "title": "???",
+    "content": "\nIn addition to software development, the Configuration Management System shall also cover the software development environment used during the full lifecycle.\n\nThis extension, necessary for the reproducibility of the development and for the maintenance activities, shall include all the tools, translators, data and test files, parameterisation files, and supporting hardware platforms.\n\n"
+  },
+  {
+    "section": "6.5.4.13",
+    "title": "???",
+    "content": "\nThe supplier shall establish, document and maintain procedures for control of the external suppliers, including\n\n- \u2013 methods and relevant records to ensure that software provided by external suppliers adheres to established requirements. Previously developed software shall be assured to be compliant with the required software safety integrity level and dependability. New software shall be developed and maintained in conformity with the Software Quality Assurance Plan of the Supplier or with a specific Software Quality Assurance Plan prepared by the external supplier in accordance with the Software Quality Assurance Plan of the Supplier,\n- \u2013 methods and relevant records to ensure that the requirements provided to the External Supplier are adequate and complete.\n\n"
+  },
+  {
+    "section": "6.5.4.14",
+    "title": "???",
+    "content": "\nTraceability to requirements shall be an important consideration in the validation of a safety-related system and means shall be provided to allow this to be demonstrated throughout all phases of the lifecycle.\n\n"
+  },
+  {
+    "section": "6.5.4.15",
+    "title": "???",
+    "content": "\nWithin the context of this European Standard, and to a degree appropriate to the specified software safety integrity level, traceability shall particularly address\n\n- a) traceability of requirements to the design or other objects which fulfil them,\n- b) traceability of design objects to the implementation objects which instantiate them,\n- c) traceability of requirements and design objects to the tests (component, integration, overall test) and analyses that verify them.\n\nTraceability shall be the subject of configuration management.\n\n"
+  },
+  {
+    "section": "6.5.4.16",
+    "title": "???",
+    "content": "\nIn special cases, e.g. pre-existing software or prototyped software, traceability may be established after the implementation and/or documentation of the code, but prior to verification/validation. In these cases, it shall be shown that verification/validation is as effective as it would have been with traceability over all phases.\n\n"
+  },
+  {
+    "section": "6.5.4.17",
+    "title": "???",
+    "content": "\nObjects of requirements, design or implementation that cannot be adequately traced shall be demonstrated to have no bearing upon the safety or integrity of the system.\n\n"
+  },
+  {
+    "section": "6.6.1.1",
+    "title": "???",
+    "content": "\nTo ensure that the software performs as required, preserving the software safety integrity and dependability when modifying the software.\n\n"
+  },
+  {
+    "section": "6.6.1.2",
+    "title": "???",
+    "content": "\nThese objectives are managed by the Configuration Manager.\n\n"
+  },
+  {
+    "section": "6.6.4.1",
+    "title": "???",
+    "content": "\nThe Change Management Process shall define at least the following aspects:\n\n- a) the documentation needed for problem reporting and/or corrective actions, with the aim of giving feedback to the responsible management;\n- b) analysis of the information collected in the problem reports to identify its causes;\n- c) the practices to be followed for reporting, tracking and resolving problems identified both during the development phase and during software maintenance;\n- d) the specific organisational responsibilities with regard to development and software maintenance;\n- e) how to apply controls to ensure that corrective actions are taken and that they are effective;\n- f) impact analysis of the effect of the changes on the software component under development or already delivered;\n- g) impact analysis shall state the re-verification, re-validation and re-assessment necessary for the change;\n- h) where multiple changes are applied, the impact analysis shall consider the cumulative impact;\nNOTE Several changes may cumulatively require a complete re-test.\n- i) authorisation before implementation.\n\n"
+  },
+  {
+    "section": "6.6.4.2",
+    "title": "???",
+    "content": "\nAll changes shall initiate a return to an appropriate phase of the lifecycle. All subsequent phases shall then be carried out in accordance with the procedures specified for the specific phases in accordance with the requirements in this European Standard.\n\n"
+  },
+  {
+    "section": "6.7.1.1",
+    "title": "???",
+    "content": "\nThe objective is to provide evidence that potential failures of tools do not adversely affect the integrated toolset output in a safety related manner that is undetected by technical and/or organisational measures outside the tool. To this end, software tools are categorised into three classes namely, T1, T2 & T3 respectively (see definitions in 3.1).\n\nWhen tools are being used as a replacement for manual operations, the evidence of the integrity of tools output can be adduced by the same process steps as if the output was done in manual operation. These process steps might be replaced by alternative methods if an argumentation on the integrity of tools output is given and the integrity level of the software is not decreased by the replacement.\n\n"
+  },
+  {
+    "section": "6.7.4.1",
+    "title": "???",
+    "content": "\nSoftware tools shall be selected as a coherent part of the software development activities.\n\nNOTE Appropriate tools to support the development of software should be used in order to increase the integrity of the software by reducing the likelihood of introducing or not detecting faults during the development. Examples of tools relevant to the phases of the software development lifecycle include:\n\n- a) transformation or translation tools that convert a software or design representation (e.g. text or a diagram) from one abstraction level to another: design refinement tools, compilers, assemblers, linkers, binders, loaders and code generation tools,\n- b) verification and validation tools such as static code analysers, test coverage monitors, theorem proving assistants, simulators and model checkers,\n- c) diagnostic tools used to maintain and monitor the software under operating conditions,\n- d) infrastructure tools such as development support systems,\n- e) configuration control tools such as version control tools,\n- f) application data tools that produce or maintain data which are required to define parameters and to instantiate system functions e.g. function parameters, instrument ranges, alarm and trip levels, output states to be adopted at failure, geographical layout.\n\nThe selected tools should be able to cooperate. In this context, tools cooperate if the outputs from one tool have suitable content and format for automatic input to a subsequent tool, thus minimizing the possibility of introducing human error in the reworking of intermediate results.\n\nTools shall be selected and demonstrated to be compatible with the needs of the application. The availability of suitable tools to supply the services that are necessary over the whole lifetime of the software shall be considered.\n\n"
+  },
+  {
+    "section": "6.7.4.2",
+    "title": "???",
+    "content": "\nThe selection of the tools in classes T2 and T3 shall be justified (see 7.3.4.12). The justification shall include the identification of potential failures which can be injected into the tools output and the measures to avoid or handle such failures.\n\n"
+  },
+  {
+    "section": "6.7.4.3",
+    "title": "???",
+    "content": "\nAll tools in classes T2 and T3 shall have a specification or manual which clearly defines the behaviour of the tool and any instructions or constraints on its use.\n\n"
+  },
+  {
+    "section": "6.7.4.4",
+    "title": "???",
+    "content": "\n\n\nnecessary for a manual process as a replacement for the tool and an argument presented if these steps are replaced by alternatives (e. g. validation of the tool). Evidence may also be based on\n\n- a suitable combination of history of successful use in similar environments and for similar applications (within the organisation or other organisations),\n- tool validation as specified in 6.7.4.5,\n- diverse redundant code which allows the detection and control of failures resulting in faults introduced by a tool,\n- compliance with the safety integrity levels derived from the risk analysis of the process and procedures including the tools,\n- other appropriate methods for avoiding or handling failures introduced by tools.\n\nNOTE 1 A version history may provide assurance of maturity of the tool, and a record of the errors / ambiguities associated with its use in the environment.\n\nNOTE 2 The evidence listed for T3 may also be used for T2 tools in judging the correctness of their results.\n\n"
+  },
+  {
+    "section": "6.7.4.5",
+    "title": "???",
+    "content": "\nThe results of tool validation shall be documented covering the following results:\n\n- a record of the validation activities;\n- the version of the tool manual being used;\n- the tool functions being validated;\n- tools and equipment used;\n- the results of the validation activity; the documented results of validation shall state either that the software has passed the validation or the reasons for its failure;\n- test cases and their results for subsequent analysis;\n- discrepancies between expected and actual results.\n\n"
+  },
+  {
+    "section": "6.7.4.6",
+    "title": "???",
+    "content": "\nWhere the conformance evidence of 6.7.4.4 is unavailable, there shall be effective measures to control failures of the executable safety related software that result from faults that are attributable to the tool.\n\nNOTE 1 An example is the generation of diverse redundant code which allows the detection and control of failures resulting in faults introduced by a translator.\n\nNOTE 2 As an example, the fitness for purpose of a non-trusted compiler can be justified as follows.\n\nThe object code produced by the compiler has been subjected to a combination of tests, checks and analyses which are capable of ensuring the correctness of the code to the extent that it is consistent with the target Safety Integrity Level. In particular, the following applies to all tests, checks and analyses.\n\n- Testing has been shown to have a sufficiently high coverage of the implemented code. If there is any code unreachable by testing, it has been shown by checks or analyses that the function concerned is executed correctly when the code is reached on the target.\n- Checks and analyses have been applied to the object code and shown to be capable of detecting the types of errors which might result from a defect in the compiler.\n- No more translation with the compiler has taken place after testing, checking and analysis.\n- If further compilation or translation is carried out, all tests, checks and analyses will be repeated.\n\n"
+  },
+  {
+    "section": "6.7.4.7",
+    "title": "???",
+    "content": "\nThe software or design representation (including a programming language) selected shall\n\n- a) have a translator which has been evaluated for fitness for purpose including, where appropriate, evaluated against the international or national standards,\n- b) match the characteristics of the application,\n- c) contain features that facilitate the detection of design or programming errors,\n- d) support features that match the design method.\n\nA programming language is one of a class of representations of software or design. A Translator converts a software or design representation (e.g. text or a diagram) from one abstraction level to another level. Examples of Translators include: design refinement tools, compilers, assemblers, linkers, binders, loaders and code generation tools.\n\nThe evaluation of a Translator may be performed for a specific application project, or for a class of applications. In the latter case all necessary information on the tool regarding the intended and appropriate use of the tool shall be available to the user of the tool. The evaluation of the tool for a specific project may then be reduced to checking general suitability of the tool for the project and compliance to the \u201cspecification or manual\u201d (i.e. proper use of the tool). Proper use might include additional verification activities within the specific project.\n\nA validation suite may be used to evaluate the fitness for purpose of a Translator according to defined criteria, which shall include functional and non-functional requirements. For the functional Translator requirements, dynamic testing may be a main validation technique. If possible an automatic testing suite shall be used.\n\n"
+  },
+  {
+    "section": "6.7.4.8",
+    "title": "???",
+    "content": "\nWhere 6.7.4.7 cannot be fully satisfied, the fitness for purpose of the language, and any additional measures which address any identified shortcomings of the language shall be justified and evaluated.\n\nNOTE See NOTE 2 from 6.7.4.6.\n\n"
+  },
+  {
+    "section": "6.7.4.9",
+    "title": "???",
+    "content": "\nWhere automatic code generation or similar automatic translation takes place, the suitability of the automatic Translator for safety-related software development shall be evaluated at the point in the development lifecycle where development support tools are selected.\n\n"
+  },
+  {
+    "section": "6.7.4.10",
+    "title": "???",
+    "content": "\nConfiguration management shall ensure that for tools in classes T2 and T3, only justified versions are used.\n\n"
+  },
+  {
+    "section": "6.7.4.11",
+    "title": "???",
+    "content": "\nEach new version of a tool that is used shall be justified (see Table 1). This justification may rely on evidence provided for an earlier version if sufficient evidence is provided that\n\n- a) the functional differences (if any) will not affect tool compatibility with the rest of the toolset,\n- b) the new version is unlikely to contain significant new, unknown faults.\n\nNOTE Evidence that the new version is unlikely to contain significant new unknown faults may be based on a credible identification of the changes made, and on an analysis of the verification and validation actions performed.\n\n"
+  },
+  {
+    "section": "6.7.4.12",
+    "title": "???",
+    "content": "\nThe relation between the tool classes and the applicable sub-clauses is defined within Table 1.\n\nTable 1 - Relation between tool class and applicable sub-clauses\n\n| Tool class | Applicable sub-clauses                                                                                |\n| ---------- | ----------------------------------------------------------------------------------------------------- |\n| T1         | 6.7.4.1                                                                                               |\n| T2         | 6.7.4.1, 6.7.4.2, 6.7.4.3, 6.7.4.10, 6.7.4.11                                                         |\n| T3         | 6.7.4.1, 6.7.4.2, 6.7.4.3, 6.7.4.4, 6.7.4.5 or 6.7.4.6, 6.7.4.7, 6.7.4.8, 6.7.4.9, 6.7.4.10, 6.7.4.11 |\n\n"
+  },
+  {
+    "section": "7.1.1.1",
+    "title": "???",
+    "content": "\nTo provide a description of the software itself, from the higher levels of abstraction down to the detailed refinements, in order to create a frame for the demonstration of the achieved safety as well as for future maintenance actions.\n\n"
+  },
+  {
+    "section": "7.1.2.1",
+    "title": "???",
+    "content": "\nTo the extent required by the software safety integrity level, the documents listed in Table A.1 shall be produced for a generic software.\n\n"
+  },
+  {
+    "section": "7.1.2.2",
+    "title": "???",
+    "content": "\nThe sequence of deliverable documents as they are described in Table A.1 reflects an ideal linear waterfall model. This model is however not intended to be a reference in the sense of schedule and linkage of activities, as it would usually be difficult to achieve a strict compliance in practice. Phases can overlap but verification and validation activities shall demonstrate the consistency of inputs and outputs (documents and software) within and between the phases.\n\nHowever, the main purpose of the documentation foreseen is to provide a description of the software itself, from the higher levels of abstraction down to the detailed refinements, in order to create a frame for the demonstration of the achieved safety as well as for future maintenance actions.\n\n"
+  },
+  {
+    "section": "7.2.1.1",
+    "title": "???",
+    "content": "\nTo describe a complete set of requirements for the software meeting all System and Safety Requirements and provide a comprehensive set of documents for each subsequent phase.\n\n"
+  },
+  {
+    "section": "7.2.1.2",
+    "title": "???",
+    "content": "\nTo describe the Overall Software Test Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.1",
+    "title": "???",
+    "content": "\nA Software Requirements Specification shall be written, under the responsibility of the Requirements Manager, on the basis of the input documents from 7.2.2.\n\nThe requirements from 7.2.4.2 to 7.2.4.15 refer to the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.2",
+    "title": "???",
+    "content": "\nThe Software Requirements Specification shall express the required properties of the software being developed. These properties, which are all (except safety) defined in ISO/IEC 9126 series, shall include:\n\n- a) functionality (including capacity and response time performance),\n- b) robustness and maintainability,\n- c) safety (including safety functions and their associated software safety integrity levels),\n- d) efficiency,\n- e) usability,\n- f) portability.\n\n"
+  },
+  {
+    "section": "7.2.4.3",
+    "title": "???",
+    "content": "\nThe software safety integrity level shall be derived as defined in Clause 4 and recorded in the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.4",
+    "title": "???",
+    "content": "\nTo the extent required by the software safety integrity level, the Software Requirements Specification shall be expressed and structured in such a way that it is:\n\n- a) complete, clear, precise, unequivocal, verifiable, testable, maintainable and feasible,\n- b) traceable back to all the input documents.\n\n"
+  },
+  {
+    "section": "7.2.4.5",
+    "title": "???",
+    "content": "\nThe Software Requirements Specification shall include modes of expression and descriptions which are understandable to the responsible personnel involved in the life cycle of the software.\n\n"
+  },
+  {
+    "section": "7.2.4.6",
+    "title": "???",
+    "content": "\nThe Software Requirements Specification shall identify and document all interfaces with any other system, either within or outside the equipment under control, including operators, wherever a direct connection exists or is planned.\n\n"
+  },
+  {
+    "section": "7.2.4.7",
+    "title": "???",
+    "content": "\nAll relevant modes of operation shall be detailed in the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.8",
+    "title": "???",
+    "content": "\nAll relevant modes of behaviour of the programmable electronics, in particular failure behaviour, shall be documented or referenced (e.g. system level documentation) in the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.9",
+    "title": "???",
+    "content": "\nAny constraints between the hardware and the software shall be documented or referenced (e.g. system level documentation) in the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.10",
+    "title": "???",
+    "content": "\nTo the extent required by the description of system documentation, the Software Requirements Specification shall consider the software self-checking and the hardware checking by the software. Software self-checking consists of the detection and reporting by the software of its own failures and errors.\n\n"
+  },
+  {
+    "section": "7.2.4.11",
+    "title": "???",
+    "content": "\nThe Software Requirements Specification shall include requirements for the periodic testing of functions to the extent required by the System Safety Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.12",
+    "title": "???",
+    "content": "\nThe Software Requirements Specification shall include requirements to enable all safety functions to be testable during overall system operation to the extent required by the System Safety Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.13",
+    "title": "???",
+    "content": "\nAll functions to be performed by the software, especially those related to achieving the required system safety integrity level, shall be clearly identified in the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.14",
+    "title": "???",
+    "content": "\nAny non-safety functions which the software is required to perform shall be clearly identified in the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.15",
+    "title": "???",
+    "content": "\nThe Software Requirements Specification shall be supported by techniques and measures from Table A.2. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.2.4.16",
+    "title": "???",
+    "content": "\nAn Overall Software Test Specification shall be written, under the responsibility of the Tester, on the basis of the Software Requirements Specification.\n\nThe requirements from 7.2.4.17 to 7.2.4.19 refer to the Overall Software Test Specification.\n\n"
+  },
+  {
+    "section": "7.2.4.17",
+    "title": "???",
+    "content": "\nThe Overall Software Test Specification shall be a description of the tests to be performed on the completed software.\n\n"
+  },
+  {
+    "section": "7.2.4.18",
+    "title": "???",
+    "content": "\nThe Overall Software Test Specification shall choose techniques and measures from Table A.7. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.2.4.19",
+    "title": "???",
+    "content": "\nThe Overall Software Test Specification shall identify for each required function the test cases including\n\n- a) the required input signals with their sequences and their values,\n- b) the anticipated output signals with their sequences and their values,\n- c) the test success criteria, including performance and quality aspects.\n\n"
+  },
+  {
+    "section": "7.2.4.20",
+    "title": "???",
+    "content": "\nA Software Requirements Verification Report shall be written, under the responsibility of the Verifier, on the basis of the System Safety Requirements Specification, Software Requirements Specification, Overall Software Test Specification and Software Quality Assurance Plan.\n\nRequirements from 7.2.4.21 to 7.2.4.22 refer to the Software Requirements Verification Report.\n\n"
+  },
+  {
+    "section": "7.2.4.21",
+    "title": "???",
+    "content": "\nThe Software Requirements Verification Report shall be written in accordance to the generic requirements established for all the Verification Reports (see 6.2.4.13).\n\n"
+  },
+  {
+    "section": "7.2.4.22",
+    "title": "???",
+    "content": "\nOnce the Software Requirements Specification has been established, verification shall address:\n\n- a) the adequacy of the Software Requirements Specification in fulfilling the requirements set out in the System Requirements Specification, the System Safety Requirements Specification and the Software Quality Assurance Plan,\n- b) that the Software Requirements Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 7.2.4.2 to 7.2.4.15,\n- c) the adequacy of the Overall Software Test Specification as a test against the Software Requirements Specification,\n- d) the definition of any additional activity in order to demonstrate the correct coverage of not testable requirements,\n- e) the internal consistency of the Software Requirements Specification,\n- f) the adequacy of the Software Requirements Specification in fulfilling or taking into account the constraints between hardware and software.\n\nThe results shall be recorded in a Software Requirements Verification Report.\n\n"
+  },
+  {
+    "section": "7.3.1.1",
+    "title": "???",
+    "content": "\nTo develop a software architecture that achieves the requirements of the software.\n\n"
+  },
+  {
+    "section": "7.3.1.2",
+    "title": "???",
+    "content": "\nTo identify and evaluate the significance of hardware/software interactions for safety.\n\n"
+  },
+  {
+    "section": "7.3.1.3",
+    "title": "???",
+    "content": "\nTo choose a design method if one has not been previously defined.\n\n"
+  },
+  {
+    "section": "7.3.1.4",
+    "title": "???",
+    "content": "\nTo design software of a defined software safety integrity level from the input documents.\n\n"
+  },
+  {
+    "section": "7.3.1.5",
+    "title": "???",
+    "content": "\nTo ensure that the resultant system and its software will be readily testable from the outset. As verification and test will be a critical element in the validation, particular consideration shall be given to verification and test needs throughout the implementation.\n\n"
+  },
+  {
+    "section": "7.3.4.1",
+    "title": "???",
+    "content": "\nA Software Architecture Specification shall be written, under the responsibility of the Designer, on the basis of the Software Requirements Specification.\n\nRequirements from 7.3.4.2 to 7.3.4.14 refer to the Software Architecture Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.2",
+    "title": "???",
+    "content": "\nThe proposed software architecture shall be established and detailed in the Software Architecture Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.3",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall consider the feasibility of achieving the Software Requirements Specification at the required software safety integrity level.\n\nNOTE The Software Architecture should minimise the size and complexity of the safety part of the application.\n\n"
+  },
+  {
+    "section": "7.3.4.4",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall identify, analyse and detail the significance of all hardware/software interactions.\n\n"
+  },
+  {
+    "section": "7.3.4.5",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall identify all software components and for these components identify\n\n- a) whether these components are new or existing,\n- b) whether these components have been previously validated and if so their validation conditions,\n- c) the software safety integrity level of the component.\n\n"
+  },
+  {
+    "section": "7.3.4.6",
+    "title": "???",
+    "content": "\nSoftware components shall\n\n- a) cover a defined subset of software requirements,\n- b) be clearly identified and independently versioned inside the configuration management system.\n\n"
+  },
+  {
+    "section": "7.3.4.7",
+    "title": "???",
+    "content": "\nThe use of pre-existing software shall be subject to the following restrictions.\n\n- a) For all software safety integrity levels the following information shall clearly be identified and documented:\n- - \u2013 the requirements that the pre-existing software is intended to fulfil;\n- \u2013 the assumptions about the environment of the pre-existing software;\n- \u2013 interfaces with other parts of the software.\n\nb) For all software safety integrity levels the pre-existing software shall be included in the validation process of the whole software.\n\n- c) For software safety integrity levels SIL 3 or SIL 4, the following precautions shall be taken:\n\n\u2013 the verification and validation process shall ensure\n\n1. that the pre-existing software fulfils the allocated requirements,\n2. that failures of the pre-existing software are detected and the system where the pre-existing software is integrated into is protected from these failures,\n3. that the assumptions about the environment of the pre-existing software are fulfilled.\n\nd) The pre-existing software shall be accompanied by a sufficiently precise (e.g. limited to the used functions) and complete description (i.e. functions, constraints and evidence). The description shall include hardware and/or software constraints of which the integrator shall be aware and take into consideration during application. In particular it forms the vehicle for informing the integrator of what the software was designed for, its properties, behaviour and characteristics.\n\nNOTE Statistical evidence may be used in the validation strategy of the pre-existing software.\n\n"
+  },
+  {
+    "section": "7.3.4.8",
+    "title": "???",
+    "content": "\nThe use of existing verified software components developed according to this European Standard in the design is to be preferred wherever possible.\n\n"
+  },
+  {
+    "section": "7.3.4.9",
+    "title": "???",
+    "content": "\nWhere the software consists of components of different software safety integrity levels then all of the software components shall be treated as belonging to the highest of these levels unless there is evidence of independence between the higher software safety integrity level components and the lower software safety integrity level components. This evidence shall be recorded in the Software Architecture Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.10",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall describe the strategy for the software development to the extent required by the software safety integrity level. The Software Architecture Specification shall be expressed and structured in such a way that it is\n\n1. complete, consistent, clear, precise, unequivocal, verifiable, testable, maintainable and feasible,\n2. traceable back to the Software Requirements Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.11",
+    "title": "???",
+    "content": "\nMeasures for handling faults shall be included in the Software Architecture Specification in order to achieve the balance between the fault avoidance and fault handling strategies.\n\n"
+  },
+  {
+    "section": "7.3.4.12",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall justify that the techniques, measures and tools chosen form a set which satisfies the Software Requirements Specification at the required software safety integrity level.\n\n"
+  },
+  {
+    "section": "7.3.4.13",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall take into account the requirements from 8.4.8 when the software is configured by applications data or algorithms.\n\n"
+  },
+  {
+    "section": "7.3.4.14",
+    "title": "???",
+    "content": "\nThe Software Architecture Specification shall choose techniques and measures from Table A.3. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.3.4.15",
+    "title": "???",
+    "content": "\nThe size and complexity of the developed software architecture shall be balanced.\n\n"
+  },
+  {
+    "section": "7.3.4.16",
+    "title": "???",
+    "content": "\nPrototyping may be used in any phase to elicit requirements or to obtain a more detailed view on requirements and their consequences.\n\n"
+  },
+  {
+    "section": "7.3.4.17",
+    "title": "???",
+    "content": "\nCode from a prototype may be used in the target system only if it is demonstrated that the code and its development and documentation fulfils this European Standard.\n\n"
+  },
+  {
+    "section": "7.3.4.18",
+    "title": "???",
+    "content": "\nA Software Interface Specification for all Interfaces between the components of the software and the boundary of the overall software shall be written, under the responsibility of the Designer, on the basis of the Software Requirements Specification and the Software Architecture Specification.\n\nThe requirement in 7.3.4.19 refers to the Software Interface Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.19",
+    "title": "???",
+    "content": "\nThe description of interfaces shall address\n\n- a) pre/post conditions,\n- b) definition and description of all boundary values for all specified data,\n- c) behaviour when the boundary value is exceeded,\n- d) behaviour when the value is at the boundary,\n- e) for time-critical input and output data:\n- 1. time constraints and requirements for correct operation,\n- 2. management of exceptions.\n- f) allocated memory for the interface buffers and the mechanisms to detect that the memory cannot be allocated or all buffers are full, where applicable,\n- g) existence of synchronization mechanisms between functions (see e).\n\nAll data from and to the interfaces shall be defined for the whole range of values defined by the type of the data, including the ranges which are not used when processed by the functions:\n\n- a) definition and description of all equivalence classes for all specified data and each software function using them,\n- b) definition of unused or forbidden equivalence classes.\n\nNOTE The data type includes the following:\n\n- 1. input parameters and output results of functions and/or procedures;\n- 2. data specified in telegrams or communication packets;\n- 3. data from the hardware.\n\n"
+  },
+  {
+    "section": "7.3.4.20",
+    "title": "???",
+    "content": "\nA Software Design Specification shall be written, under the responsibility of the Designer, on the basis of the Software Requirements Specification, the Software Architecture Specification and the Software Interface Specification.\n\nRequirements from 7.3.4.21 to 7.3.4.24 refer to the Software Design Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.21",
+    "title": "???",
+    "content": "\nThe input documents shall be available, although not necessarily finalised, prior to the start of the design process.\n\n"
+  },
+  {
+    "section": "7.3.4.22",
+    "title": "???",
+    "content": "\nThe Software Design Specification shall describe the software design based on a decomposition into components with each component having a Software Component Design Specification and a Software Component Test Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.23",
+    "title": "???",
+    "content": "\nThe Software Design Specification shall address\n\n- a) software components traced back to software architecture and their safety integrity level,\n- b) interfaces of software components with the environment,\n- c) interfaces between the software components,\n- d) data structures,\n- e) allocation and tracing of requirements on components,\n- f) main algorithms and sequencing,\n- g) error reporting mechanisms.\n\n"
+  },
+  {
+    "section": "7.3.4.24",
+    "title": "???",
+    "content": "\nThe Software Design Specification shall choose techniques and measures from Table A.4. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.3.4.25",
+    "title": "???",
+    "content": "\nCoding standards shall be developed and specify\n\n- a) good programming practice, as defined by Table A.12,\n- b) measures to avoid or detect errors which can be made during application of the language and are not detectable during the verification (see 7.5 and 7.6). Such failures are derived by analysis over all features of the language,\n- c) procedures for source code documentation.\n\n"
+  },
+  {
+    "section": "7.3.4.26",
+    "title": "???",
+    "content": "\nThe selection of a coding standard shall be justified to the extent required by the software safety integrity level.\n\n"
+  },
+  {
+    "section": "7.3.4.27",
+    "title": "???",
+    "content": "\nThe coding standards shall be used for the development of all software and be referenced in the Software Quality Assurance Plan.\n\n"
+  },
+  {
+    "section": "7.3.4.28",
+    "title": "???",
+    "content": "\nIn accordance with the required software safety integrity level the design method chosen shall possess features that facilitate\n\n- a) abstraction, modularity and other features which control complexity,\n- b) the clear and precise expression of\n- - 1. functionality,\n- 2. information flow between components,\n- 3. sequencing and time related information,\n- 4. concurrency,\n- 5. data structure and properties,\n\nc) human comprehension,\n\n- d) verification and validation,\n- e) software maintenance.\n\n"
+  },
+  {
+    "section": "7.3.4.29",
+    "title": "???",
+    "content": "\nA Software Integration Test Specification shall be written, under the responsibility of the Integrator, on the basis of the Software Requirements Specification, the Software Architecture Specification, the Software Design Specification and the Software Interface Specifications.\n\nThe requirements from 7.3.4.30 to 7.3.4.32 refer to the Software Integration Test Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.30",
+    "title": "???",
+    "content": "\nThe Software Integration Test Specification shall be written in accordance with the generic requirements established for a Test Specification (see 6.1.4.4).\n\n"
+  },
+  {
+    "section": "7.3.4.31",
+    "title": "???",
+    "content": "\nThe Software Integration Test Specification shall address the following:\n\n- a) it shall be shown that each software component provides the specified interfaces for the other components by executing the components together;\n- b) it shall be shown that the software behaves in an appropriate manner when the interface is subjected to inputs which are out of specification;\n- c) the required input data with their sequences and their values shall be the base of the test cases;\n- d) the anticipated output data with their sequences and their values shall be the basis of the test cases;\n\n\ne) it shall be shown which results of the component test (see 7.5.4.5 and 7.5.4.7) are intended to be reused for the software integration test.\n\n"
+  },
+  {
+    "section": "7.3.4.32",
+    "title": "???",
+    "content": "\nThe Software Integration Test Specification shall choose techniques and measures from Table A.5. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.3.4.33",
+    "title": "???",
+    "content": "\nA Software/Hardware Integration Test Specification shall be written, under the responsibility of the integrator, on the basis of the System Design Description, the Software Requirements Specification, the Software Architecture Specification and the Software Design Specification.\n\nThe requirements from 7.3.4.34 to 7.3.4.39 refer to the Software/Hardware Integration Test Specification.\n\n"
+  },
+  {
+    "section": "7.3.4.34",
+    "title": "???",
+    "content": "\nA Software/Hardware Integration Test Specification should be created early in the development lifecycle, in order that integration testing may be properly directed and that particular design or other integration needs may be suitably provided for. Depending upon the size of the system, the Software/Hardware Integration Test Specification may be subdivided during development into a number of child documents and be naturally added to, as the hardware and software designs evolve and the detailed needs of integration become clearer.\n\n"
+  },
+  {
+    "section": "7.3.4.35",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Specification shall distinguish between those activities which can be carried out by the supplier on his premises and those that require access to the user's site.\n\n"
+  },
+  {
+    "section": "7.3.4.36",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Specification shall address the following:\n\n- a) it shall be shown that the software runs in a proper way on the hardware using the hardware via the specified hardware interfaces;\n- b) it shall be shown that the software can handle hardware faults as required;\n- c) the required timing and performance shall be demonstrated;\n- d) the required input data with their sequences and their values shall be the basis of the test cases;\n- e) the anticipated output data with their sequences and their values shall be the basis of the test cases;\n- f) it shall be shown which results of the component test (see 7.5.4.5) and of the software integration test (see 7.6.4.3) are intended to be reused for the software/hardware integration test.\n\n"
+  },
+  {
+    "section": "7.3.4.37",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Specification shall document the following:\n\n- a) test cases and test data;\n- b) types of tests to be performed;\n- c) test environment including tools, support software and configuration description;\n- d) test criteria on which the completion of the test will be judged.\n\n"
+  },
+  {
+    "section": "7.3.4.38",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Specification shall be written in accordance with the generic requirements established for a Test Specification (see 6.1.4.4).\n\n"
+  },
+  {
+    "section": "7.3.4.39",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Specification shall choose techniques and measures from Table A.5. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.3.4.40",
+    "title": "???",
+    "content": "\nA Software Architecture and Design Verification Report shall be written, under the responsibility of the Verifier, on the basis of the Software Requirements Specification, Software Architecture Specification, Software Design Specification, Software Integration Test Specification and Software/Hardware Integration Test Specification.\n\nThe requirements from 7.3.4.41 to 7.3.4.43 refer to the Software Architecture and Design Verification Report.\n\n"
+  },
+  {
+    "section": "7.3.4.41",
+    "title": "???",
+    "content": "\nThe Software Architecture and Design Verification Report shall be written in accordance with the generic requirements established for a Verification Report (see 6.2.4.13).\n\n"
+  },
+  {
+    "section": "7.3.4.42",
+    "title": "???",
+    "content": "\nAfter the Software Architecture, Interface and Design Specifications have been established, verification shall address:\n\n- a) the internal consistency of the Software Architecture, Interface and Design Specifications,\n- b) the adequacy of the Software Architecture, Interface and Design Specifications in fulfilling the Software Requirements Specification with respect to consistency and completeness,\n- c) that the Software Architecture Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.16 as well as the specific requirements in 7.3.4.1 to 7.3.4.14,\n- d) that the Software Interface Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.16 as well as the specific requirements in 7.3.4.18 to 7.3.4.19,\n- e) that the Software Design Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.16 as well as the specific requirements in 7.3.4.20 to 7.3.4.24,\n- f) the adequacy of the Software Architecture Specification and the Software Design Specification in taking into account the hardware and software constraints.\n\nThe results shall be recorded in a Software Architecture and Design Verification Report.\n\n"
+  },
+  {
+    "section": "7.3.4.43",
+    "title": "???",
+    "content": "\nAfter the Software Integration and Software/Hardware Integration Test Specifications have been established, verification shall address:\n\n- a) that the Software Integration Test Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.16, as well as the specific requirements in 7.3.4.29 to 7.3.4.32,\n- b) that the Software/Hardware Integration Test Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.16, as well as the specific requirements in 7.3.4.33 to 7.3.4.39.\n\nThe results shall be recorded in a Software Architecture and Design Verification Report.\n\n"
+  },
+  {
+    "section": "7.4.1.1",
+    "title": "???",
+    "content": "\nTo develop a software component design that achieves the requirements of the Software Design Specification to the extent required by the software safety integrity level.\n\n"
+  },
+  {
+    "section": "7.4.1.2",
+    "title": "???",
+    "content": "\nTo develop a software component test specification that achieves the requirements of the Software Component Design Specification to the extent required by the software safety integrity level.\n\n"
+  },
+  {
+    "section": "7.4.4.1",
+    "title": "???",
+    "content": "\nFor each component, a Software Component Design Specification shall be written, under the responsibility of the Designer, on the basis of the Software Design Specification.\n\nRequirements from 7.4.4.2 to 7.4.4.6 refer to the Software Component Design Specification.\n\n"
+  },
+  {
+    "section": "7.4.4.2",
+    "title": "???",
+    "content": "\nFor each software component, the following information shall be available:\n\n- author,\n- configuration history, and\n- short description.\n\nThe configuration history shall include a precise identification of the current and all previous versions of the component, specifying the version, date and author, and a description of the changes made from the previous version.\n\n"
+  },
+  {
+    "section": "7.4.4.3",
+    "title": "???",
+    "content": "\nThe Software Component Design Specification shall address:\n\n1. identification of all lowest software units (e.g. subroutines, methods, procedures) traced back to the upper level,\n2. their detailed interfaces with the environment and other components with detailed inputs and outputs,\n3. their safety integrity level without any further apportionment within the component itself,\n4. detailed algorithms and data structures.\n\nEach Software Component Design Specification shall be self consistent and allow transforming into code of the corresponding components.\n\n"
+  },
+  {
+    "section": "7.4.4.4",
+    "title": "???",
+    "content": "\nEach Software Component Design Specification shall be readable, understandable and testable.\n\n"
+  },
+  {
+    "section": "7.4.4.5",
+    "title": "???",
+    "content": "\nThe size and complexity of each developed Software Component shall be balanced.\n\n"
+  },
+  {
+    "section": "7.4.4.6",
+    "title": "???",
+    "content": "\nThe Software Component Design Specification shall choose techniques and measures from Table A.4. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.4.4.7",
+    "title": "???",
+    "content": "\nFor each component, a Software Component Test Specification shall be written, under the responsibility of the Tester, on the basis of the Software Component Design Specification.\n\nThe requirements from 7.4.4.8 to 7.4.4.10 refer to the Software Component Test Specification.\n\n"
+  },
+  {
+    "section": "7.4.4.8",
+    "title": "???",
+    "content": "\nThe Software Component Test Specification shall be written in accordance with the generic requirements established for a Test Specification (see 6.1.4.4).\n\n"
+  },
+  {
+    "section": "7.4.4.9",
+    "title": "???",
+    "content": "\nA Software Component Test Specification shall be produced against which the component shall be tested. These tests shall show that each component performs its intended function. The Software Component Test Specification shall define and justify the required criteria and degree of test coverage to the extent required by the software integrity level. Tests shall be designed so as to fulfil three objectives:\n\n- a) to confirm that the component performs its intended functions (black box testing);\n- b) to check how the internal parts of the component interact to carry out the intended functions (black/white box testing);\n- c) to confirm that all parts of the component are tested (white box testing).\n\n"
+  },
+  {
+    "section": "7.4.4.10",
+    "title": "???",
+    "content": "\nThe Software Component Test Specification shall choose techniques and measures from Table A.5. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.4.4.11",
+    "title": "???",
+    "content": "\nA Software Component Design Verification Report shall be written, under the responsibility of the Verifier, on the basis of the Software Design Specification, Software Component Design Specification and Software Component Test Specification.\n\n"
+  },
+  {
+    "section": "7.4.4.12",
+    "title": "???",
+    "content": "\nThe Software Component Design Verification Report shall be written in accordance with the generic requirements established for a Verification Report (see 6.2.4.13).\n\n"
+  },
+  {
+    "section": "7.4.4.13",
+    "title": "???",
+    "content": "\nAfter each Software Component Design Specification has been established, verification shall address:\n\n- a) the adequacy of the Software Component Design Specification in fulfilling the Software Design Specification,\n- b) that the Software Component Design Specification meets general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17, as well as the specific requirements in 7.4.4.1 to 7.4.4.6,\n- c) the adequacy of the Software Component Test Specification as a set of test cases for the Software Component Design Specification,\n- d) that the Software Component Test Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17, as well as the specific requirements in 7.4.4.7 to 7.4.4.10,\n- e) the decomposition of the Software Design Specification into software components and the Software Component Design Specification with reference to:\n\nThe results shall be recorded in a Software Component Design Verification Report.\n\n"
+  },
+  {
+    "section": "7.5.1.1",
+    "title": "???",
+    "content": "\nTo achieve software which is analysable, testable, verifiable and maintainable. Component testing is also included in this phase.\n\n"
+  },
+  {
+    "section": "7.5.4.1",
+    "title": "???",
+    "content": "\nThe Software Source Code shall be written under the responsibility of the Implementer on the basis of the Software Component Design Specification. Requirements from 7.5.4.2 to 7.5.4.4 refer to the software source code.\n\n"
+  },
+  {
+    "section": "7.5.4.2",
+    "title": "???",
+    "content": "\nThe size and complexity of the developed source code shall be balanced.\n\n"
+  },
+  {
+    "section": "7.5.4.3",
+    "title": "???",
+    "content": "\nThe Software Source Code shall be readable, understandable and testable.\n\n"
+  },
+  {
+    "section": "7.5.4.4",
+    "title": "???",
+    "content": "\nThe Software Source Code shall be placed under configuration control before the commencement of documented testing.\n\n"
+  },
+  {
+    "section": "7.5.4.5",
+    "title": "???",
+    "content": "\nA Software Component Test Report shall be written, under the responsibility of the Tester, on the basis of the Software Component Test Specification and the Software Source Code.\n\nRequirements from 7.5.4.6 to 7.5.4.7 refer to the Software Component Test Report.\n\n"
+  },
+  {
+    "section": "7.5.4.6",
+    "title": "???",
+    "content": "\nThe Software Component Test Report shall be written in accordance with the generic requirements established for a Test Report (see 6.1.4.5).\n\n"
+  },
+  {
+    "section": "7.5.4.7",
+    "title": "???",
+    "content": "\nThe Software Component Test Report shall include the following features.\n\n- a) A statement of the test results and whether each component has met the requirements of its Software Component Design Specification.\n- b) A statement of test coverage shall be provided for each component, showing that the required degree of test coverage has been achieved for all required criteria.\n\n"
+  },
+  {
+    "section": "7.5.4.8",
+    "title": "???",
+    "content": "\nA Software Source Code Verification Report shall be written, under the responsibility of the verifier, on the basis of the Software Component Design Specification, the Software Component Test Specification and the Software Source Code.\n\nRequirements from 7.5.4.9 to 7.5.4.10 refer to the Software Source Code Verification Report.\n\n"
+  },
+  {
+    "section": "7.5.4.9",
+    "title": "???",
+    "content": "\nThe Software Source Code Verification Report shall be written in accordance with the generic requirements established for a Verification Report (see 6.2.4.13).\n\n"
+  },
+  {
+    "section": "7.5.4.10",
+    "title": "???",
+    "content": "\nAfter the Software Source Code and the Software Component Test Report have been established, verification shall address\n\n- a) the adequacy of the Software Source Code as an implementation of the Software Component Design Specification,\n- b) the correct use of the chosen techniques and measures from Table A.4 as a set satisfying 4.8 and 4.9,\n- c) determining the correct application of the coding standards,\n- d) that the Software Source Code meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17, as well as the specific requirements in 7.5.4.1 to 7.5.4.4,\n- e) the adequacy of the Software Component Test Report as a record of the tests carried out in accordance with the Software Component Test Specification.\n\nThe results shall be recorded in a Software Source Code Verification Report.\n\n"
+  },
+  {
+    "section": "7.6.1.1",
+    "title": "???",
+    "content": "\nTo carry out software and software/hardware integration.\n\n"
+  },
+  {
+    "section": "7.6.1.2",
+    "title": "???",
+    "content": "\nTo demonstrate that the software and the hardware interact correctly to perform their intended functions.\n\n"
+  },
+  {
+    "section": "7.6.4.1",
+    "title": "???",
+    "content": "\nThe integration of software components shall be the process of progressively combining individual and previously tested components into a composite whole in order that the components interfaces and the assembled software may be adequately proven prior to system integration and system test.\n\n"
+  },
+  {
+    "section": "7.6.4.2",
+    "title": "???",
+    "content": "\nDuring software/hardware integration any modification or change to the integrated system shall be subject to an impact study which shall identify all components impacted and the necessary reverification activities.\n\n"
+  },
+  {
+    "section": "7.6.4.3",
+    "title": "???",
+    "content": "\nA Software Integration Test Report shall be written, under the responsibility of the Integrator, on the basis of the Software Integration Test Specification.\n\nRequirements from 7.6.4.4 to 7.6.4.6 refer to the Software Integration Test Report.\n\n"
+  },
+  {
+    "section": "7.6.4.4",
+    "title": "???",
+    "content": "\nThe Software Integration Test Report shall be written in accordance with the generic requirements established for a Test Report (see 6.1.4.5).\n\n"
+  },
+  {
+    "section": "7.6.4.5",
+    "title": "???",
+    "content": "\nA Software Integration Test Report shall be produced as follows:\n\n- a Software Integration Test Report shall be produced stating the test results and whether the objectives and criteria of the Software Integration Test Specification have been met. If there is a failure, the circumstances for the failure shall be recorded;\n- test cases and their results shall be recorded, preferably in machine readable form for subsequent analysis;\n- tests shall be repeatable and, if practicable, be performed by automatic means;\n- the Software Integration Test Report shall document the identity and configuration of all the items involved.\n\n"
+  },
+  {
+    "section": "7.6.4.6",
+    "title": "???",
+    "content": "\nThe Software Integration Test Report shall demonstrate the correct use of the chosen techniques and measures from Table A.6 as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.6.4.7",
+    "title": "???",
+    "content": "\nA Software/Hardware Integration Test Report shall be written, under the responsibility of the integrator, on the basis of the Software/Hardware Integration Test Specification.\n\nRequirements from 7.6.4.8 to 7.6.4.10 refer to the Software/Hardware Integration Test Report.\n\n"
+  },
+  {
+    "section": "7.6.4.8",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Report shall be written in accordance with the generic requirements established for a Test Report (see 6.1.4.5).\n\n"
+  },
+  {
+    "section": "7.6.4.9",
+    "title": "???",
+    "content": "\nA Software/Hardware Integration Test Report shall be produced as follows:\n\n- the Software/Hardware Integration Test Report shall state the test results and whether the objectives and criteria of the Software/Hardware Integration Test Specification have been met. If there is a failure, the circumstances of the failure shall be recorded;\n- test cases and their results shall be recorded, preferably in a machine-readable form for subsequent analysis;\n- the Software/Hardware Integration Test Report shall document the identity and configuration of all items involved.\n\n"
+  },
+  {
+    "section": "7.6.4.10",
+    "title": "???",
+    "content": "\nThe Software/Hardware Integration Test Report shall demonstrate the correct use of the chosen techniques and measures from Table A.6 as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "7.6.4.11",
+    "title": "???",
+    "content": "\nA Software Integration Verification Report shall be written, under the responsibility of the Verifier, on the basis of the Software and Software/Hardware Integration Test Specifications and the corresponding test reports.\n\nRequirements from 7.6.4.12 to 7.6.4.13 refer to the Software Integration Verification Report.\n\n"
+  },
+  {
+    "section": "7.6.4.12",
+    "title": "???",
+    "content": "\nThe Software Integration Verification Report shall be written in accordance with the generic requirements established for a Verification Report (see 6.2.4.13).\n\n"
+  },
+  {
+    "section": "7.6.4.13",
+    "title": "???",
+    "content": "\nAfter the Software Integration Test Report and the Software/Hardware Integration Test Report have been established, verification shall address:\n\n- the adequacy of the Software Integration Test Report as a record of the tests carried out in accordance with the Software Integration Test Specification,\n- whether the Software Integration Test Report meets the requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17, as well as the specific requirements in 7.6.4.3 to 7.6.4.6.\n\n"
+  },
+  {
+    "section": "7.7.1.1",
+    "title": "???",
+    "content": "\nTo analyse and test the integrated software and hardware to ensure compliance with the Software Requirements Specification with particular emphasis on the functional and safety aspects according to the software safety integrity level and to check whether it is fit for its intended application.\n\n"
+  },
+  {
+    "section": "7.7.4.1",
+    "title": "???",
+    "content": "\nAn Overall Software Test Report shall be written, under the responsibility of the Tester, on the basis of the Overall Software Test Specification.\n\nRequirements from 7.7.4.2 to 7.7.4.4 refer to the Overall Software Test Report.\n\n"
+  },
+  {
+    "section": "7.7.4.2",
+    "title": "???",
+    "content": "\nThe Overall Software Test Report shall be written in accordance with the generic requirements established for a Test Report (see 6.1.4.5).\n\n"
+  },
+  {
+    "section": "7.7.4.3",
+    "title": "???",
+    "content": "\nThe Validator shall specify and perform supplementary tests on his discretion or have them performed by the Tester. While the Overall Software Tests are mainly based on the structure of the Software Requirements Specification, the added value the Validator shall contribute, are tests which stress the system by complex scenarios reflecting the actual needs of the user.\n\n"
+  },
+  {
+    "section": "7.7.4.4",
+    "title": "???",
+    "content": "\nThe results of all tests and analyses shall be recorded in a Overall Software Test Report.\n\n"
+  },
+  {
+    "section": "7.7.4.5",
+    "title": "???",
+    "content": "\nThe software shall be exercised either by connection to real items of hardware or actual systems with which it would interface in operation, or by simulation of input signals and loads driven by outputs. It shall be exercised under conditions present during normal operation, anticipated occurrences and undesired conditions requiring system action. Where simulated inputs or loads are used it shall be shown that these do not differ significantly from the inputs and loads encountered in operation.\n\nNOTE Simulated inputs or loads might replace inputs or loads which are only present at system level or in faulty modes.\n\n"
+  },
+  {
+    "section": "7.7.4.6",
+    "title": "???",
+    "content": "\nA Software Validation Report shall be written, under the responsibility of the Validator, on the basis of the Software Validation Plan.\n\nRequirements from 7.7.4.7 to 7.7.4.11 refer to the Software Validation Report.\n\n"
+  },
+  {
+    "section": "7.7.4.7",
+    "title": "???",
+    "content": "\nThe Software Validation Report shall be written in accordance with the generic requirements established for the Validation Report (see 6.3.4.7 to 6.3.4.11).\n\n"
+  },
+  {
+    "section": "7.7.4.8",
+    "title": "???",
+    "content": "\nOnce integration is finished and overall software testing and analysis are complete, a Software Validation Report shall be produced as follows:\n\n- a) it shall state whether the objectives and criteria of the Software Validation Plan have been met. Deviations to the plan shall be recorded and justified;\n- b) it shall give a summary statement on the tests results and whether the whole software on its target machine fulfils the requirements set out in the Software Requirements Specification;\n- c) an evaluation of the test coverage on the requirements of the Software Requirements Specification shall be provided;\n- d) an evaluation of other verification activities in accordance to the Software Verification Plan and Report shall be done together with a check that requirements tracing is fully performed and covered;\n- e) if the Validator produces own test cases not given to the Tester the Software Validation Report shall document these in accordance with 6.3.4.7 to 6.3.4.11.\n\n"
+  },
+  {
+    "section": "7.7.4.9",
+    "title": "???",
+    "content": "\nThe Software Validation Report shall contain the confirmation that each combination of techniques or measures selected according to A is appropriate to the defined software safety integrity level. It shall contain an evaluation of the overall effectiveness of the combination of techniques and measures adopted, taking account of the size and complexity of the software produced and taking into account the actual results of testing, verification and validation activities.\n\n"
+  },
+  {
+    "section": "7.7.4.10",
+    "title": "???",
+    "content": "\nThe following shall be addressed in the Software Validation Report:\n\n- a) documentation of the identity and configuration of the software;\n- b) statement of appropriate identification of technical support software and equipment;\n- c) statement of appropriate identification of simulation models used;\n- d) statement about the adequacy of the Overall Software Test Specification;\n- e) collection and keeping track of any deviations found;\n- f) review and evaluation of all deviations in terms of risk (impact);\n- g) a statement that the project has performed appropriate handling of corrective actions in accordance with the change management process and procedures and with a clear identification of any discrepancies found;\n- h) statement of each restriction given by the deviations in a traceable way;\n- i) a conclusion whether the software is fit for its intended application, taking into account the application conditions and constraints.\n\n"
+  },
+  {
+    "section": "7.7.4.11",
+    "title": "???",
+    "content": "\nAny discrepancies found, including detected errors and non-compliances with this European Standard or with any of the software requirements or plans, as well as constraints and limitations, shall be clearly identified in a separate sub-clause of the Software Validation Report, evaluated regarding the safety integrity level and included in any Release Note which accompanies the delivered software.\n\n"
+  },
+  {
+    "section": "7.7.4.12",
+    "title": "???",
+    "content": "\nA Release Note which accompanies the delivered software shall include all restrictions in using the software. These restrictions are derived from:\n\n- a) the detected errors,\n- b) non-compliances with this European Standard,\n- c) degree of fulfilment of the requirements,\n- d) degree of fulfilment of any plan.\n\n"
+  },
+  {
+    "section": "8.1.1",
+    "title": "???",
+    "content": "\nA characteristic feature in many railway systems is the need to design each installation to meet the individual requirements for a specific application. A system configured by application data and/or by application algorithms allows approved generic software to be customised with the individual requirements for each specific application.\n\nThe objective for the development of application data is the correct deriving of the data from the given installation and the check of the intended behaviour, followed by an assessment of the used development process for that application data.\n\nThe requirements for the development of application algorithms are the same as the development of generic software as described in Clauses 1-7 and 9.\n\nA typical example is a system whose generic software is pre-configured for a generic railway application by a set of application algorithms, and which is then further configured to each specific installation by instantiation and interconnection of the application algorithms and by a set of configuration data. For instance, the signalling principles of an interlocking system (e.g. signal management, point management) may be implemented by a set of application algorithms.\n\nApplication data typically take the form of parameter values or descriptions (identity, type, location, etc.) of external objects. Application algorithms may take the form of e.g. function block diagrams, state charts and relay ladder diagrams, which determine the desired response of the system according to its inputs, its current state and specific parameter values. Application algorithms include logical connections and operations to be executed.\n\nThe application data/algorithms are usually produced using dedicated tools. They may be expressed in tabular or diagrammatic formats, which can be interpreted or compiled into executable codes often after conversion into source codes handled via specialised languages (with syntax and semantics).\n\nThe customisation of systems through configurability gives the designer different degrees of control over the detailed software functionality.\n\n"
+  },
+  {
+    "section": "8.1.2",
+    "title": "???",
+    "content": "\nThe procedures and the tools used for their development shall be appropriate to the system safety integrity level as determined by the function for which they are developed.\n\n"
+  },
+  {
+    "section": "8.1.3",
+    "title": "???",
+    "content": "\nThe sub-clauses below describe the requirements for the initial development of a configurable system and for the subsequent development of each set of application-specific data/algorithms.\n\n"
+  },
+  {
+    "section": "8.4.1.1",
+    "title": "???",
+    "content": "\nAn Application Preparation Plan shall be written, under the responsibility of the Requirements Manager or Designer, on the basis of the input documents from 8.2.\n\nThe requirements from 8.4.1.2 to 8.4.1.11 refer to the Application Preparation Plan.\n\n"
+  },
+  {
+    "section": "8.4.1.2",
+    "title": "???",
+    "content": "\nAn Application Preparation Plan shall be produced in order to define and detail the application development process, including all the activities, deliverables and roles in charge of them. It can be produced either for each specific application or for a class of specific applications, i.e. for a generic application.\n\n"
+  },
+  {
+    "section": "8.4.1.3",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall define a documentation structure for the application preparation process.\n\n"
+  },
+  {
+    "section": "8.4.1.4",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall choose techniques and measures from Table A.11. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "8.4.1.5",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall specify the procedures and application tools (with their classification based on 6.7) to be used in the application development process.\n\n"
+  },
+  {
+    "section": "8.4.1.6",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall include verification and validation activities to ensure that the application data/algorithms are complete, correct and compatible with each other and with the generic application, and to provide evidence that the application conditions of the generic application are met. These verification and validation activities and evidence can be replaced by verification and validation performed on the tools that produce the application data/algorithms. The results are gathered together in the Application Preparation Verification Report and the Application Test Report.\n\n"
+  },
+  {
+    "section": "8.4.1.7",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall include verification and validation activities to ensure that the application tools and the generic software are compatible with each other and with the specific application, and to provide evidence that their application conditions are met.\n\n"
+  },
+  {
+    "section": "8.4.1.8",
+    "title": "???",
+    "content": "\nA risk analysis shall be carried out covering the application development process, including the application tools and procedures, in order to validate the Application Preparation Plan and to meet the required software safety integrity level. The Application Preparation Plan shall include the risk analysis.\n\n"
+  },
+  {
+    "section": "8.4.1.9",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall specify the requirements for the independence between staff carrying out verification, validation and preparation tasks according to 5.1.\n\nNOTE Data preparation activities are carried out by application designers.\n\n"
+  },
+  {
+    "section": "8.4.1.10",
+    "title": "???",
+    "content": "\nThe Application Preparation Plan shall define a tool class for any hardware or software tools used in the application preparation lifecycle.\n\n"
+  },
+  {
+    "section": "8.4.1.11",
+    "title": "???",
+    "content": "\nWhere possible, the Application Preparation Plan shall call for notations for specifying requirements and design which are familiar to applications engineers. Where new notations are introduced, the necessary user documentation shall be provided, as well as training where appropriate.\n\n"
+  },
+  {
+    "section": "8.4.1.12",
+    "title": "???",
+    "content": "\nAn Application Data/Algorithms Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.1.13 refers to the Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.1.13",
+    "title": "???",
+    "content": "\nOnce the Application Preparation Plan has been established, verification shall address:\n\n- a) that the Application Preparation Plan meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 8.4.1.2 to 8.4.1.11,\n- b) the internal consistency of the Application Preparation Plan.\n\nThe results shall be recorded in an Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.1.14",
+    "title": "???",
+    "content": "\nThe implementation of the Application Preparation Plan shall be verified and validated for each specific application.\n\n"
+  },
+  {
+    "section": "8.4.2",
+    "title": "???",
+    "content": "\n# Application Requirements Specification\n\n"
+  },
+  {
+    "section": "8.4.2.1",
+    "title": "???",
+    "content": "\nAn Application Requirements Specification shall be written, under the responsibility of the Requirements Manager, on the basis of the input documents from 8.2.\n\nThe requirements from 8.4.2.2 to 8.4.2.3 refer to the Application Requirements Specification.\n\n\n"
+  },
+  {
+    "section": "8.4.2.2",
+    "title": "???",
+    "content": "\nThe requirements for the specific application shall include the requirements which are specific to the installation under consideration (e.g. track layout, signal locations, speed limits for a signalling system), as well as a recap or reference to the application conditions of the generic software and the application tools, and the standards with which the application shall comply (e.g. signalling principles for a signalling system).\n\n"
+  },
+  {
+    "section": "8.4.2.3",
+    "title": "???",
+    "content": "\nThe requirements related to the application data and algorithms processed by the generic software of the system shall be specified at this stage.\n\n"
+  },
+  {
+    "section": "8.4.2.4",
+    "title": "???",
+    "content": "\nAn Application Data/Algorithms Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.2.5 refers to the Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.2.5",
+    "title": "???",
+    "content": "\nOnce the Application Requirements Specification has been established, verification shall address\n\n- a) that the Application Requirements Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 8.4.2.2 to 8.4.2.3,\n- b) the internal consistency of the Application Requirements Specification.\n\nThe results shall be recorded in an Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.4.1",
+    "title": "???",
+    "content": "\nThe application development process shall include the production and compilation of the source code of the generic and specific data/algorithms, as well as verification and testing activities related to this production. The use of diagrammatic languages is recommended for producing the source code of application algorithms. Refer to the Table A.16.\n\n"
+  },
+  {
+    "section": "8.4.4.2",
+    "title": "???",
+    "content": "\nAn Application Test Report shall be written, under the responsibility of the Tester, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.4.3 refers to the Application Test Report.\n\n"
+  },
+  {
+    "section": "8.4.4.3",
+    "title": "???",
+    "content": "\nThe Application Test Report shall document the correct and complete execution of the tests defined in Application Test Specification.\n\n"
+  },
+  {
+    "section": "8.4.4.4",
+    "title": "???",
+    "content": "\nThe Application Preparation Verification Report shall\n\n- a) document every activity performed to ensure correctness and completeness of data/algorithm and their coherency with application principles and specific application architecture,\n- b) evaluate compatibility of data/algorithms with generic application.\n\n"
+  },
+  {
+    "section": "8.4.4.5",
+    "title": "???",
+    "content": "\nAn Application Test Specification shall be written, under the responsibility of the Tester, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.4.6 refers to the Application Test Specification.\n\n\n"
+  },
+  {
+    "section": "8.4.4.6",
+    "title": "???",
+    "content": "\nThe Application Test Specification shall specify tests to be carried out at intermediate or final stage of data/algorithms preparation, in order to ensure\n\n- a) coherency and completeness of data/algorithms with respect to application principles,\n- b) coherency and completeness of data/algorithms with respect to specific application architecture.\n\n"
+  },
+  {
+    "section": "8.4.4.7",
+    "title": "???",
+    "content": "\nAn Application Data/Algorithms Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.4.8 refers to the Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.4.8",
+    "title": "???",
+    "content": "\nOnce the Application Test Specification has been established, verification shall address\n\n- a) that the Application Test Specification meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 8.4.4.6,\n- b) the internal consistency of the Application Test Specification.\n\nThe results shall be recorded in an Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.5.1",
+    "title": "???",
+    "content": "\nFor some systems the application data/algorithms can be integrated with the generic hardware and software for a factory test before installation on the target system. This may not be necessary where a sufficient degree of confidence can be obtained by other means. The application shall then be installed on the target system, and integration tests within the complete installation shall be carried out. Finally the target system shall be commissioned as a fully operational system, and a final acceptance process of the target system in the complete installation shall be carried out. The Application Test Report shall document the correct and complete execution of tests defined in the Application Test Specification. The Application Preparation Verification Report shall check the completeness and correctness of tests performed on the complete installation.\n\n"
+  },
+  {
+    "section": "8.4.5.2",
+    "title": "???",
+    "content": "\nAn Application Test Specification shall be written, under the responsibility of the Tester, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.5.3 refers to the Application Test Specification.\n\n"
+  },
+  {
+    "section": "8.4.5.3",
+    "title": "???",
+    "content": "\nThe Application Test Specification shall specify tests to be carried out to ensure\n\n- a) correct integration of data/algorithms on generic hardware and software, if needed,\n- b) correct integration of data/algorithms with complete installation.\n\n"
+  },
+  {
+    "section": "8.4.5.4",
+    "title": "???",
+    "content": "\nAn Application Data/Algorithms Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 8.2.\n\nThe requirement in 8.4.5.5 refers to the Application Data/Algorithms Verification Report.\n\n"
+  },
+  {
+    "section": "8.4.5.5",
+    "title": "???",
+    "content": "\nOnce the Application Test Specification has been established, verification shall address that the Application Test Specification meets the specific requirements in 8.4.5.3.\n\n"
+  },
+  {
+    "section": "8.4.7.1",
+    "title": "???",
+    "content": "\nFor each new type of system configured by application data/algorithms, specific procedures and tools shall be developed to allow the application development process specified in 8.4.1 to be applied to installations of the new system. Development of these tools shall be carried out in accordance with this European Standard in parallel with the generic software and hardware for the system. The verification, validation and assessment activities shall ensure that the data preparation tools and the generic software are compatible.\n\n"
+  },
+  {
+    "section": "8.4.7.2",
+    "title": "???",
+    "content": "\nAny compilation process shall be validated and assessed. It shall be noted that specialised compilers are usually necessary for the data and algorithm conversion.\n\n"
+  },
+  {
+    "section": "8.4.7.3",
+    "title": "???",
+    "content": "\nAll application data/algorithms and associated documentation for each specific application shall be subject to the software deployment requirements as specified in 9.1.\n\n"
+  },
+  {
+    "section": "8.4.7.4",
+    "title": "???",
+    "content": "\nAll application data/algorithms and associated documentation shall be subject to the software maintenance requirements specified in 9.2.\n\n"
+  },
+  {
+    "section": "8.4.7.5",
+    "title": "???",
+    "content": "\nAll application data/algorithms and associated documentation shall be placed under configuration management according to the requirements specified in 6.5 and 6.7. The configuration management of application data/algorithms can be separate from the generic software part.\n\n"
+  },
+  {
+    "section": "8.4.7.6",
+    "title": "???",
+    "content": "\nThe Application Verification Report demonstrate the coverage and enforcement of the application conditions of the generic software and application tools.\n\n"
+  },
+  {
+    "section": "8.4.8.1",
+    "title": "???",
+    "content": "\nDevelopment of the generic software, which supports the execution of application data/algorithms, shall comply with the requirements in 7.1 to 7.7 of this European Standard. The following additional requirements shall also be observed.\n\n"
+  },
+  {
+    "section": "8.4.8.2",
+    "title": "???",
+    "content": "\nThe types or classes of function which can be configured by application data/algorithms in each system and subsystem shall be identified in the Software Requirements Specification documents of the generic software. The safety integrity level allocated to functions will determine the standards to be applied to the subsequent development of the application data/ algorithms for all installations of the system.\n\n"
+  },
+  {
+    "section": "8.4.8.3",
+    "title": "???",
+    "content": "\nDuring the design of the generic software the detailed interfaces between the generic software and the application data/algorithms shall be specified, unless this has already been specified at an earlier phase of the lifecycle, for example as a result of a requirement to use an existing application-specific language.\n\n"
+  },
+  {
+    "section": "8.4.8.4",
+    "title": "???",
+    "content": "\nA rigid separation between the generic software and the application data/algorithms shall be enforced, i.e. it shall be possible to recompile and update either the generic software or the application data/algorithms without needing to update the other, unless there has been a change to the defined interface between the generic software and the application data/algorithms. Likewise, the applications specific data/algorithms shall be separated from the application-generic data/algorithms.\n\n"
+  },
+  {
+    "section": "8.4.8.5",
+    "title": "???",
+    "content": "\nThe change control procedures shall ensure that any amendment to the generic software may only be installed after it has been established that either the revised software is compatible with the original application data/algorithms or the application data/algorithms have been revised.\n\n"
+  },
+  {
+    "section": "8.4.8.6",
+    "title": "???",
+    "content": "\nCare shall be taken in the verification process and validation test phase of the generic software in order to assure that all relevant combinations of data and algorithms are considered.\n\nIf all relevant combinations of data and algorithms have not been considered in the verification, testing and validation process of the generic software, it shall be clearly identified as a limit of use of the generic software. A complement to verification, testing and validation process of the generic software shall be performed when some data or algorithms are defined beyond this limit.\n\n"
+  },
+  {
+    "section": "8.4.8.7",
+    "title": "???",
+    "content": "\nThe generic software shall be designed to detect corrupted application data/algorithms where this is feasible.\n\n"
+  },
+  {
+    "section": "8.4.8.8",
+    "title": "???",
+    "content": "\nThe designers shall publish the Release Note of the generic software and application tools by the Overall Software Testing/Final Validation phase of the generic software and application tools. The contents of these documents shall be subject to verification and validation activities.\n\nThe following topics shall be addressed in the document \u201cApplication conditions of the generic software and application tools\u201d:\n\n1. references to the user manuals of the generic software and application tools;\n2. any constraints on the application data/algorithms e.g. imposed architecture or coding rules to meet the safety integrity levels.\n\n"
+  },
+  {
+    "section": "9.1.1.1",
+    "title": "???",
+    "content": "\nTo ensure that the software performs as required, preserving the required software safety integrity level and dependability when it is deployed in the final environment of application.\n\n"
+  },
+  {
+    "section": "9.1.4.1",
+    "title": "???",
+    "content": "\nThe deployment shall be carried out under the responsibility of the project manager.\n\n"
+  },
+  {
+    "section": "9.1.4.2",
+    "title": "???",
+    "content": "\nBefore delivering a software release, the software baseline shall be recorded and kept traceable under configuration management control. Pre-existing software and software developed according to a previous version of this European Standard shall also be included.\n\n"
+  },
+  {
+    "section": "9.1.4.3",
+    "title": "???",
+    "content": "\nThe software release shall be reproducible throughout the baseline lifecycle.\n\n"
+  },
+  {
+    "section": "9.1.4.4",
+    "title": "???",
+    "content": "\nA Release Note shall be written, under the responsibility of the Designer, on the basis of the input documents from 9.1.2.\n\nThe requirement in 9.1.4.5 refers to the Release Note.\n\n"
+  },
+  {
+    "section": "9.1.4.5",
+    "title": "???",
+    "content": "\nA Release Note shall be provided that defines\n\n- the application conditions which shall be adhered to,\n\n\nb) information of compatibility among software components and between software and hardware,\n\nc) all restrictions in using the software (see 7.7.4.12).\n\n"
+  },
+  {
+    "section": "9.1.4.6",
+    "title": "???",
+    "content": "\nA Software Deployment Manual shall be written on the basis of the input documents from 9.1.2.\n\n"
+  },
+  {
+    "section": "9.1.4.7",
+    "title": "???",
+    "content": "\nThe Software Deployment Manual shall define procedures in order to correctly identify and install a software release.\n\n"
+  },
+  {
+    "section": "9.1.4.8",
+    "title": "???",
+    "content": "\nIn case of incremental deployment (i.e., deployment of single components), it is highly recommended for SIL 3 and SIL 4, and recommended for SIL 1 and SIL 2, that the software is designed to include facilities which assure that activation of incompatible versions of software components is excluded.\n\n"
+  },
+  {
+    "section": "9.1.4.9",
+    "title": "???",
+    "content": "\nConfiguration management shall ensure that no harm results from the co-presence of different versions of the same software components where it cannot be avoided.\n\n"
+  },
+  {
+    "section": "9.1.4.10",
+    "title": "???",
+    "content": "\nA rollback procedure (i.e., capability to return to the previous release) shall be available when installing a new software release.\n\n"
+  },
+  {
+    "section": "9.1.4.11",
+    "title": "???",
+    "content": "\nThe software shall have embedded self-identification mechanisms, allowing its identification at the loading process and after loading into the target. The self-identification mechanism should indicate version information for the software and any configuration data as well as the product identity.\n\nNOTE The data within the code, containing the information about the software release, is recommended to be protected through coding (see Table A.3 \u201cError Detecting Codes\u201d).\n\n"
+  },
+  {
+    "section": "9.1.4.12",
+    "title": "???",
+    "content": "\nA Deployment Record shall be written on the basis of the input documents from 9.1.2.\n\n"
+  },
+  {
+    "section": "9.1.4.13",
+    "title": "???",
+    "content": "\nA Deployment Record shall give evidence that intended software has been loaded, by inspection of the embedded self-identification mechanisms (see 9.1.4.11). This record shall be stored among the delivered system related documents like other verifications and is part of the commissioning and acceptance.\n\n"
+  },
+  {
+    "section": "9.1.4.14",
+    "title": "???",
+    "content": "\nThe deployed software shall be traceable to delivered installations.\n\nNOTE This is of special importance when critical faults are discovered and need to be corrected in more than one installation.\n\n"
+  },
+  {
+    "section": "9.1.4.15",
+    "title": "???",
+    "content": "\nDiagnostic information shall be provided by the software, as part of fault monitoring.\n\n"
+  },
+  {
+    "section": "9.1.4.16",
+    "title": "???",
+    "content": "\nA Deployment Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 9.1.2.\n\n"
+  },
+  {
+    "section": "9.1.4.17",
+    "title": "???",
+    "content": "\nOnce the Software Deployment Manual has been established, verification shall address\n\na) that the Software Deployment Manual meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 9.1.4.7,\n\nb) the internal consistency of the Software Deployment Manual.\n\n"
+  },
+  {
+    "section": "9.1.4.18",
+    "title": "???",
+    "content": "\nOnce the Deployment Record has been established, verification shall address\n\na) that the Deployment Record meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 9.1.4.13,\n\nb) the internal consistency of the Deployment Record.\n\n"
+  },
+  {
+    "section": "9.1.4.19",
+    "title": "???",
+    "content": "\nOnce the Release Note has been established, verification shall address\n\n- a) that the Release Note meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 9.1.4.5,\n- b) the internal consistency of the Release Note.\n\nThe results shall be recorded in a Deployment Verification Report.\n\n"
+  },
+  {
+    "section": "9.1.4.20",
+    "title": "???",
+    "content": "\nMeasures shall be included in the software package to prevent or detect errors occurring during storage, transfer, transmission or duplication of executable code or data. The executable code is recommended to be coded (see Table A.3 \u201cError Detecting Codes\u201d) as part of checking the integrity of the code in the load process.\n\n"
+  },
+  {
+    "section": "9.2.1.1",
+    "title": "???",
+    "content": "\nTo ensure that the software performs as required, preserving the required software safety integrity level and dependability when making corrections, enhancements or adaptations to the software itself. See also 6.6 \u201cModification and change control\u201d of this European Standard and phase 13 \u201cModification and retrofit\u201d in EN 50126-1.\n\n"
+  },
+  {
+    "section": "9.2.4.1",
+    "title": "???",
+    "content": "\nAlthough this European Standard is not intended to be retrospective, applying primarily to new developments and only applying in its entirety to existing software if these are subjected to major modifications, 9.2 concerning software maintenance applies to all changes, even those of a minor nature. However, application of the whole this European Standard during upgrades and maintenance of existing software is highly recommended.\n\n"
+  },
+  {
+    "section": "9.2.4.2",
+    "title": "???",
+    "content": "\nFor any software safety integrity level, the supplier shall, before starting work on any change, decide whether the maintenance actions are to be considered as major or minor or whether the existing maintenance methods for the system are adequate. The decision shall be justified and recorded by the supplier and shall be submitted to the Assessor\u2019s evaluation.\n\n"
+  },
+  {
+    "section": "9.2.4.3",
+    "title": "???",
+    "content": "\nMaintenance shall be carried out in accordance with the guidelines contained in ISO/IEC 90003.\n\n"
+  },
+  {
+    "section": "9.2.4.4",
+    "title": "???",
+    "content": "\nMaintainability shall be designed as an inherent aspect of the software, in particular by following the requirements of 7.3, 7.4 and 7.5. ISO/IEC 9126 series shall also be employed in order to implement and verify a minimum level of maintainability.\n\n"
+  },
+  {
+    "section": "9.2.4.5",
+    "title": "???",
+    "content": "\nA Software Maintenance Plan shall be written on the basis of the input documents from 9.2.2.\n\nThe requirement 9.2.4.6 refers to the Software Maintenance Plan.\n\n"
+  },
+  {
+    "section": "9.2.4.6",
+    "title": "???",
+    "content": "\nProcedures for the maintenance of software shall be established and recorded in the Software Maintenance Plan. These procedures shall also address\n\n- a) control of error reporting, error logs, maintenance records, change authorisation and software/system configuration and the techniques and measures in Table A.10,\n- b) verification, validation and assessment of any modification,\n- c) definition of the Authority which approves the changed software, and\n- d) authorisation for the modification.\n\n"
+  },
+  {
+    "section": "9.2.4.7",
+    "title": "???",
+    "content": "\nA Software Maintenance Record shall be written on the basis of the input documents from 9.2.2.\n\nThe requirement in 9.2.4.8 refers to the Software Maintenance Record.\n\n"
+  },
+  {
+    "section": "9.2.4.8",
+    "title": "???",
+    "content": "\nA Software Maintenance Record shall be established for each Software Item before its first release, and it shall be maintained. In addition to the requirements of ISO/IEC 90003:2004 for _Maintenance Records and Reports_ (see ISO/IEC 90003:2004, section \u201cMaintenance\u201d), this Record shall also include\n\n- a) references to all the Software Change Records for that software item,\n- b) change impact assessment,\n- c) test cases for components, including revalidation and regression testing data, and\n- d) software configuration history.\n\n"
+  },
+  {
+    "section": "9.2.4.9",
+    "title": "???",
+    "content": "\nA Software Change Record shall be written on the basis of the input documents from 9.2.2.\n\nThe requirement in 9.2.4.10 refers to the Software Change Record.\n\n"
+  },
+  {
+    "section": "9.2.4.10",
+    "title": "???",
+    "content": "\nA Software Change Record shall be established for each maintenance activity. This record shall include\n\n- a) the modification or change request, version, nature of fault, required change and source for change,\n- b) an analysis of the impact of the maintenance activity on the overall system, including hardware, software, human interaction and the environment and possible interactions,\n- c) the detailed specification of the modification or change carried out, and\n- d) revalidation, regression testing and re-assessment of the modification or change to the extent required by the software safety integrity level. The responsibility for revalidation can vary from project to project, according to the software safety integrity level. Also the impact of the modification or change on the process of revalidation can be confined to different system levels (only changed components, all identified affected components, the complete system). Therefore the Software Validation Plan shall address both problems, according to the software safety integrity level. The degree of independence of revalidation shall be the same as that for validation.\n\n"
+  },
+  {
+    "section": "9.2.4.11",
+    "title": "???",
+    "content": "\nA Software Maintenance Verification Report shall be written, under the responsibility of the Verifier, on the basis of the input documents from 9.2.2.\n\nRequirements from 9.2.4.12 to 9.2.4.14 refer to the Software Maintenance Verification Report.\n\n"
+  },
+  {
+    "section": "9.2.4.12",
+    "title": "???",
+    "content": "\nOnce the Software Maintenance Plan has been established, verification shall address\n\n- a) that the Software Maintenance Plan meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 9.2.4.6,\n- b) the internal consistency of the Software Maintenance Plan.\n\n"
+  },
+  {
+    "section": "9.2.4.13",
+    "title": "???",
+    "content": "\nOnce the Software Maintenance Record has been established, verification shall address\n\n- a) that the Software Maintenance Record meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 9.2.4.8,\n- b) the internal consistency of the Software Maintenance Record.\n\n"
+  },
+  {
+    "section": "9.2.4.14",
+    "title": "???",
+    "content": "\nOnce the Software Change Record has been established, verification shall address\n\n- a) that the Software Change Record meets the general requirements for readability and traceability in 5.3.2.7 to 5.3.2.10 and in 6.5.4.14 to 6.5.4.17 as well as the specific requirements in 9.2.4.10,\n- b) the internal consistency of the Software Change Record.\n\n"
+  },
+  {
+    "section": "9.2.4.15",
+    "title": "???",
+    "content": "\nThe maintenance activities shall be carried out following the Software Maintenance Plan.\n\n"
+  },
+  {
+    "section": "9.2.4.16",
+    "title": "???",
+    "content": "\nThe techniques and measures from Table A.10 shall be chosen. The selected combination shall be justified as a set satisfying 4.8 and 4.9.\n\n"
+  },
+  {
+    "section": "9.2.4.17",
+    "title": "???",
+    "content": "\nMaintenance shall be performed with at least the same level of expertise, tools, documentation, planning and management as for the initial development of the software. This shall apply also to configuration management, change control, document control, and independence of involved parties.\n\n"
+  },
+  {
+    "section": "9.2.4.18",
+    "title": "???",
+    "content": "\nExternal supplier control, problem reporting and corrective actions shall be managed with the same criteria specified in the relevant paragraphs of the Software Quality Assurance (6.5) as for new software development.\n\n"
+  },
+  {
+    "section": "9.2.4.19",
+    "title": "???",
+    "content": "\nFor each reported problem or enhancement a safety impact analysis shall be made.\n\n"
+  },
+  {
+    "section": "9.2.4.20",
+    "title": "???",
+    "content": "\nFor software under maintenance, mitigation actions proportionate to the identified risk shall be taken in order to ensure the overall integrity of the system whilst the reported problems are investigated and corrected.\n\n"
+  }
+]
