@@ -1,4 +1,5 @@
 // Function to handle the drop event
+// Function to handle the drop event
 function handleDrop(event) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
@@ -7,9 +8,34 @@ function handleDrop(event) {
     reader.onload = function(e) {
         try {
             const jsonData = JSON.parse(e.target.result);
-            // Clear the previous tree if any
-            d3.select("svg").remove();
-            drawTree(jsonData);  // Call function to draw the tree with the new JSON data
+            console.log(jsonData)
+            //alert(jsonData)
+            
+            // Make an API call with the JSON data
+            fetch('http://127.0.0.1:5000/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to analyze the JSON file.');
+                    }
+                    return response.json();
+                })
+                .then(analyzedData => {
+                    // Clear the previous tree if any
+                    d3.select("svg").remove();
+
+                    // Draw the tree with the analyzed JSON data
+                    drawTree(analyzedData);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error processing the file. Please try again.');
+                });
         } catch (err) {
             alert("Invalid JSON file. Please upload a valid JSON.");
         }
@@ -17,6 +43,7 @@ function handleDrop(event) {
 
     reader.readAsText(file);
 }
+
 
 
 // Function to allow the file to be dragged over
