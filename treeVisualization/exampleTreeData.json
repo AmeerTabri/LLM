@@ -1,0 +1,61 @@
+{
+    "name": "",
+    "fill": "brown",
+    "children": [
+      {
+        "name": "1",
+        "fill": "#87CEEB",
+        "children": [
+          { "name": "1.1", "fill": "none", "stroke": "#87CEEB", "stroke-width": 2 },
+          {
+            "name": "1.2",
+            "fill": "#4682B4",
+            "children": [
+              { "name": "1.2.1", "fill": "none", "stroke": "#4682B4", "stroke-width": 2 },
+              { "name": "1.2.2", "fill": "none", "stroke": "#4682B4", "stroke-width": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "fill": "#32CD32",
+        "children": [
+          { "name": "2.1", "fill": "none", "stroke": "#32CD32", "stroke-width": 2 },
+          { "name": "2.2", "fill": "none", "stroke": "#32CD32", "stroke-width": 2 },
+          {
+            "name": "2.3",
+            "fill": "#006400",
+            "children": [
+              { "name": "2.3.1", "fill": "none", "stroke": "#006400", "stroke-width": 2 },
+              { "name": "2.3.2", "fill": "none", "stroke": "#006400", "stroke-width": 2 }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "fill": "#DC143C",
+        "children": [
+          {
+            "name": "3.1",
+            "fill": "#8B0000",
+            "children": [
+              { "name": "3.1.1", "fill": "none", "stroke": "#8B0000", "stroke-width": 2 },
+              { "name": "3.1.2", "fill": "none", "stroke": "#8B0000", "stroke-width": 2 }
+            ]
+          },
+          { "name": "3.2", "fill": "none", "stroke": "#DC143C", "stroke-width": 2 }
+        ]
+      },
+      {
+        "name": "4",
+        "fill": "#FFD700",
+        "children": [
+          { "name": "4.1", "fill": "none", "stroke": "#FFD700", "stroke-width": 2 },
+          { "name": "4.2", "fill": "none", "stroke": "#FFD700", "stroke-width": 2 }
+        ]
+      }
+    ]
+  }
+  
