@@ -1,7 +1,6 @@
 from tree import *
 import markdown 
 import re
-import math
 
 # generate all possible subsectins giving a section
 def generate_all_subsections(section):
@@ -57,7 +56,6 @@ def markdown_to_html(markdown_text):
     """
     return html_output_with_borders
 
-
 # Parsing the markdown files and extract sections and subsections from it  
 def parse_file(file_path, output_file_path, tree): 
     section_pattern = re.compile(r"^#+\s*(\d+(\.\d+)*)\s*(.*)") 
@@ -65,11 +63,11 @@ def parse_file(file_path, output_file_path, tree):
     current_section = None
     start = False
 
-    with open(file_path, "r", encoding="utf-8") as file:
+    with open(file_path, "r", encoding="utf-8") as file: 
         with open(output_file_path, "w", encoding="utf-8") as output_file:
             prev_section = ""
-            content = ""
-            for line in file:
+            content = "" 
+            for line in file: 
                 line = line.strip()
                 match = section_pattern.match(line)  # Try to match the section pattern
                 # New section found
@@ -81,7 +79,7 @@ def parse_file(file_path, output_file_path, tree):
                     if prev_section != "": 
                         tree.add_content(prev_section, content)  
                         output_file.write(content)  # Write section content
-                        print(prev_section, " ", content)
+                        # print(prev_section, " ", content)
                     content = ""
                     start = True
                     prev_section = section
@@ -99,10 +97,9 @@ def parse_file(file_path, output_file_path, tree):
                     if line.startswith("#"):
                         break 
                     section_content += line
-                print(prev_section, section_content)  
+                # print(prev_section, section_content)  
                 tree.add_content(prev_section, section_content) 
                 output_file.write(f"{section_content}") 
-
 
 # Visulization of the file  
 def save_as_html(tree, file_name):
@@ -111,6 +108,10 @@ def save_as_html(tree, file_name):
         title = node.title if node.title != "???" else "<span style='color: red;'>???</span>"
         if node.color == "green":
             title = f"<span style='color: green;'>{node.title}</span>"
+        elif node.title == "???":
+            title = "<span style='color: red;'>???</span>"
+        else:
+            title = node.title
         title_html = f"<span style='color: blue; font-weight: bold;'>{title}</span>" if node.title else title
         html = f"""
         <li>
@@ -188,3 +189,4 @@ def save_as_html(tree, file_name):
         for i, child in enumerate(tree.root.children):
             f.write(node_to_html(child, i))
         f.write("    </ul>\n  </li>\n</ul>\n</body>\n</html>")
+

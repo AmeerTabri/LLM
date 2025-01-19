@@ -1,0 +1,422 @@
+[
+  {
+    "section": "2",
+    "title": "Normative references",
+    "content": "\n\n\nThe following referenced documents are indispensable for the application of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.\n\n\n\n| EN 50126-1:1999     | Railway applications \u2013 The specification and demonstration of Reliability, Availability, Maintainability and Safety (RAMS) \u2013 Part 1: Basic requirements and generic process |\n\n| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n| EN 50129:2003       | Railway applications \u2013 Communication, signalling and processing systems \u2013 Safety related electronic systems for signalling                                                  |\n\n| EN ISO 9000         | Quality management systems \u2013 Fundamentals and vocabulary (ISO 9000:2005)                                                                                                    |\n\n| EN ISO 9001         | Quality management systems \u2013 Requirements (ISO 9001:2008)                                                                                                                   |\n\n| ISO/IEC 90003:2004  | Software engineering \u2013 Guidelines for the application of ISO 9001:2000 to computer software                                                                                 |\n\n| ISO/IEC 9126 series | Software engineering \u2013 Product quality                                                                                                                                      |\n\n\n\n"
+  },
+  {
+    "section": "3.1.1",
+    "title": "assessment",
+    "content": "\n\n\nprocess of analysis to determine whether software, which may include process, documentation, system, subsystem hardware and/or software components, meets the specified requirements and to form a judgement as to whether the software is fit for its intended purpose. Safety assessment is focused on but not limited to the safety properties of a system\n\n\n\n"
+  },
+  {
+    "section": "3.1.2",
+    "title": "assessor",
+    "content": "\n\n\nentity that carries out an assessment\n\n\n\n"
+  },
+  {
+    "section": "3.1.3",
+    "title": "commercial off-the-shelf (COTS) software",
+    "content": "\n\n\nsoftware defined by market-driven need, commercially available and whose fitness for purpose has been demonstrated by a broad spectrum of commercial users\n\n\n\n"
+  },
+  {
+    "section": "3.1.4",
+    "title": "component",
+    "content": "\n\n\na constituent part of software which has well-defined interfaces and behaviour with respect to the software architecture and design and fulfils the following criteria:\n\n\n\n- it is designed according to \u201cComponents\u201d (see Table A.20);\n\n- it covers a specific subset of software requirements;\n\n\n\n"
+  },
+  {
+    "section": "3.1.5",
+    "title": "configuration manager",
+    "content": "\n\n\nentity that is responsible for implementing and carrying out the processes for the configuration management of documents, software and related tools including change management\n\n\n\n"
+  },
+  {
+    "section": "3.1.6",
+    "title": "customer",
+    "content": "\n\n\nentity which purchases a railway control and protection system including the software\n\n\n\n"
+  },
+  {
+    "section": "3.1.7",
+    "title": "designer",
+    "content": "\n\n\nentity that analyses and transforms specified requirements into acceptable design solutions which have the required safety integrity level\n\n\n\n"
+  },
+  {
+    "section": "3.1.8",
+    "title": "entity",
+    "content": "\n\n\nperson, group or organisation who fulfils a role as defined in this European Standard\n\n\n\n"
+  },
+  {
+    "section": "3.1.9",
+    "title": "error, fault",
+    "content": "\n\n\ndefect, mistake or inaccuracy which could result in failure or in a deviation from the intended performance or behaviour\n\n\n\n"
+  },
+  {
+    "section": "3.1.10",
+    "title": "failure",
+    "content": "\n\n\nunacceptable difference between required and observed performance\n\n\n\n"
+  },
+  {
+    "section": "3.1.11",
+    "title": "fault tolerance",
+    "content": "\n\n\nbuilt-in capability of a system to provide continued correct provision of service as specified, in the presence of a limited number of hardware or software faults\n\n\n\n"
+  },
+  {
+    "section": "3.1.12",
+    "title": "firmware",
+    "content": "\n\n\nsoftware stored in read-only memory or in semi-permanent storage such as flash memory, in a way that is functionally independent of applicative software\n\n\n\n"
+  },
+  {
+    "section": "3.1.13",
+    "title": "generic software",
+    "content": "\n\n\nsoftware which can be used for a variety of installations purely by the provision of application-specific data and/or algorithms\n\n\n\n"
+  },
+  {
+    "section": "3.1.14",
+    "title": "implementer",
+    "content": "\n\n\nentity that transforms specified designs into their physical realisation\n\n\n\n"
+  },
+  {
+    "section": "3.1.15",
+    "title": "integration",
+    "content": "\n\n\nprocess of assembling software and/or hardware items, according to the architectural and design specification, and testing the integrated unit\n\n\n\n"
+  },
+  {
+    "section": "3.1.16",
+    "title": "integrator",
+    "content": "\n\n\nentity that carries out software integration\n\n\n\n"
+  },
+  {
+    "section": "3.1.17",
+    "title": "pre-existing software",
+    "content": "\n\n\nsoftware developed prior to the application currently in question, including COTS (commercial off-the shelf) and open source software\n\n\n\n"
+  },
+  {
+    "section": "3.1.18",
+    "title": "open source software",
+    "content": "\n\n\nsource code available to the general public with relaxed or non-existent copyright restrictions\n\n\n\n"
+  },
+  {
+    "section": "3.1.19",
+    "title": "programmable logic controller",
+    "content": "\n\n\nsolid-state control system which has a user programmable memory for storage of instructions to implement specific functions\n\n\n\n"
+  },
+  {
+    "section": "3.1.20",
+    "title": "project management",
+    "content": "\n\n\nadministrative and/or technical conduct of a project, including safety aspects\n\n\n\n"
+  },
+  {
+    "section": "3.1.21",
+    "title": "project manager",
+    "content": "\n\n\nentity that carries out project management\n\n\n\n"
+  },
+  {
+    "section": "3.1.22",
+    "title": "reliability",
+    "content": "\n\n\nability of an item to perform a required function under given conditions for a given period of time\n\n\n\n"
+  },
+  {
+    "section": "3.1.23",
+    "title": "robustness",
+    "content": "\n\n\nability of an item to detect and handle abnormal situations\n\n\n\n"
+  },
+  {
+    "section": "3.1.24",
+    "title": "requirements manager",
+    "content": "\n\n\nentity that carries out requirements management\n\n\n\n"
+  },
+  {
+    "section": "3.1.25",
+    "title": "requirements management",
+    "content": "\n\n\nthe process of eliciting, documenting, analysing, prioritising and agreeing on requirements and then controlling change and communicating to relevant stakeholders. It is a continuous process throughout a project\n\n\n\n"
+  },
+  {
+    "section": "3.1.26",
+    "title": "risk",
+    "content": "\n\n\ncombination of the rate of occurrence of accidents and incidents resulting in harm (caused by a hazard) and the degree of severity of that harm\n\n\n\n"
+  },
+  {
+    "section": "3.1.27",
+    "title": "safety",
+    "content": "\n\n\nfreedom from unacceptable levels of risk of harm to people\n\n\n\n"
+  },
+  {
+    "section": "3.1.28",
+    "title": "safety authority",
+    "content": "\n\n\nbody responsible for certifying that safety related software or services comply with relevant statutory safety requirements\n\n\n\n"
+  },
+  {
+    "section": "3.1.29",
+    "title": "safety function",
+    "content": "\n\n\na function that implements a part or whole of a safety requirement\n\n\n\n"
+  },
+  {
+    "section": "3.1.30",
+    "title": "safety-related software",
+    "content": "\n\n\nsoftware which performs safety functions\n\n\n\n"
+  },
+  {
+    "section": "3.1.31",
+    "title": "software",
+    "content": "\n\n\nintellectual creation comprising the programs, procedures, rules, data and any associated documentation pertaining to the operation of a system\n\n\n\n"
+  },
+  {
+    "section": "3.1.32",
+    "title": "software baseline",
+    "content": "\n\n\ncomplete and consistent set of source code, executable files, configuration files, installation scripts and documentation that are needed for a software release. Information about compilers, operating systems, pre-existing software and dependent tools is stored as part of the baseline. This will enable the organisation to\n\n\n\n"
+  },
+  {
+    "section": "3.1.33",
+    "title": "software deployment",
+    "content": "\n\n\ntransferring, installing and activating a deliverable software baseline that has already been released and assessed\n\n\n\n"
+  },
+  {
+    "section": "3.1.34",
+    "title": "software life-cycle",
+    "content": "\n\n\nthose activities occurring during a period of time that starts when software is conceived and ends when the software is no longer available for use. The software lifecycle typically includes a requirements phase, design phase, test phase, integration phase, deployment phase and a maintenance phase\n\n\n\n"
+  },
+  {
+    "section": "3.1.35",
+    "title": "software maintainability",
+    "content": "\n\n\ncapability of the software to be modified; to correct faults, improve performance or other attributes, or adapt it to a different environment\n\n\n\n"
+  },
+  {
+    "section": "3.1.36",
+    "title": "software maintenance",
+    "content": "\n\n\naction, or set of actions, carried out on software after deployment with the aim of enhancing or correcting its functionality\n\n\n\n"
+  },
+  {
+    "section": "3.1.37",
+    "title": "software safety integrity level",
+    "content": "\n\n\nclassification number which determines the techniques and measures that have to be applied to software\n\n\n\nNOTE Safety-related software has been classified into five safety integrity levels, where 0 is the lowest and 4 the highest.\n\n\n\n"
+  },
+  {
+    "section": "3.1.38",
+    "title": "supplier",
+    "content": "\n\n\nentity that designs and builds a railway control and protection system including the software or parts thereof\n\n\n\n"
+  },
+  {
+    "section": "3.1.39",
+    "title": "system safety integrity level",
+    "content": "\n\n\nclassification number which indicates the required degree of confidence that an integrated system comprising hardware and software will meet its specified safety requirements\n\n\n\n"
+  },
+  {
+    "section": "3.1.40",
+    "title": "tester",
+    "content": "\n\n\nan entity that carries out testing\n\n\n\n"
+  },
+  {
+    "section": "3.1.41",
+    "title": "testing",
+    "content": "\n\n\nprocess of executing software under controlled conditions as to ascertain its behaviour and performance compared to the corresponding requirements specification\n\n\n\n"
+  },
+  {
+    "section": "3.1.42",
+    "title": "tool class T1",
+    "content": "\n\n\ngenerates no outputs which can directly or indirectly contribute to the executable code (including data) of the software\n\n\n\nNOTE T1 examples include: a text editor or a requirement or design support tool with no automatic code generation capabilities; configuration control tools.\n\n\n\n"
+  },
+  {
+    "section": "3.1.43",
+    "title": "tool class T2",
+    "content": "\n\n\nsupports the test or verification of the design or executable code, where errors in the tool can fail to reveal defects but cannot directly create errors in the executable software\n\n\n\nNOTE T2 examples include: a test harness generator; a test coverage measurement tool; a static analysis tool.\n\n\n\n"
+  },
+  {
+    "section": "3.1.44",
+    "title": "tool class T3",
+    "content": "\n\n\ngenerates outputs which can directly or indirectly contribute to the executable code (including data) of the safety related system\n\n\n\nNOTE T3 examples include: a source code compiler, a data/algorithms compiler, a tool to change set-points during system operation; an optimising compiler where the relationship between the source code program and the generated object code is not obvious; a compiler that incorporates an executable run-time package into the executable code.\n\n\n\n"
+  },
+  {
+    "section": "3.1.45",
+    "title": "traceability",
+    "content": "\n\n\ndegree to which a relationship can be established between two or more products of a development process, especially those having a predecessor/successor or master/subordinate relationship to one another\n\n\n\n"
+  },
+  {
+    "section": "3.1.46",
+    "title": "validation",
+    "content": "\n\n\nprocess of analysis followed by a judgment based on evidence to determine whether an item (e.g. process, documentation, software or application) fits the user needs, in particular with respect to safety and quality and with emphasis on the suitability of its operation in accordance to its purpose in its intended environment\n\n\n\n"
+  },
+  {
+    "section": "3.1.47",
+    "title": "validator",
+    "content": "\n\n\nentity that is responsible for the validation\n\n\n\n"
+  },
+  {
+    "section": "3.1.48",
+    "title": "verification",
+    "content": "\n\n\nprocess of examination followed by a judgment based on evidence that output items (process, documentation, software or application) of a specific development phase fulfils the requirements of that phase with respect to completeness, correctness and consistency\n\n\n\nNOTE Verification is mostly based on document reviews (design, implementation, test documents etc.).\n\n\n\n"
+  },
+  {
+    "section": "3.1.49",
+    "title": "verifier",
+    "content": "\n\n\nentity that is responsible for one or more verification activities\n\n\n\n"
+  },
+  {
+    "section": "3.2",
+    "title": "Abbreviations",
+    "content": "\n\n\nFor the purposes of this document, the following abbreviations apply.\n\n\n\n| ASR    | Assessor                                                      |\n\n| ------ | ------------------------------------------------------------- |\n\n| COTS   | Commercial off-the-shelf                                      |\n\n| DES    | Designer                                                      |\n\n| HR     | Highly Recommended                                            |\n\n| IMP    | Implementer                                                   |\n\n| INT    | Integrator                                                    |\n\n| JSD    | Jackson System Development Method                             |\n\n| M      | Mandatory                                                     |\n\n| MASCOT | Modular Approach to Software Construction, Operation and Test |\n\n| NR     | Not Recommended                                               |\n\n| PM     | Project Manager                                               |\n\n| R      | Recommended                                                   |\n\n| RAMS   | Reliability, Availability, Maintainability and Safety         |\n\n\n\n| RQM   | Requirements Manager                             |\n\n| ----- | ------------------------------------------------ |\n\n| SDL   | Specification and Description Language           |\n\n| SFC   | Sequential Function Charts                       |\n\n| SIL   | Safety Integrity Level                           |\n\n| SOM   | Service Oriented Modeling                        |\n\n| SSADM | Structured Systems Analysis & Design Methodology |\n\n| TST   | Tester                                           |\n\n| V&V   | Verification and Validation                      |\n\n| VAL   | Validator                                        |\n\n| VER   | Verifier                                         |\n\n\n\n"
+  },
+  {
+    "section": "6.1.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. All necessary System, Hardware and Software Documentation as specified in the Software Verification Plan.\n\n\n\n"
+  },
+  {
+    "section": "6.1.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Overall Software Test Specification\n\n2. Overall Software Test Report\n\n3. Software Integration Test Specification\n\n4. Software Integration Test Report\n\n5. Software/Hardware Integration Test Specification\n\n6. Software/Hardware Integration Test Report\n\n7. Software Component Test Specification\n\n8. Software Component Test Report\n\n\n\n"
+  },
+  {
+    "section": "6.2.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. All necessary System, Hardware and Software Documentation.\n\n\n\n"
+  },
+  {
+    "section": "6.2.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Verification Plan\n\n2. Software Verification Report(s)\n\n3. Software Quality Assurance Verification Report\n\n\n\n"
+  },
+  {
+    "section": "6.3.2",
+    "title": "Input documents",
+    "content": "\n\n\nAll system, hardware and software documentation as specified in this European Standard.\n\n\n\n"
+  },
+  {
+    "section": "6.3.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Validation Plan\n\n2. Software Validation Report\n\n3. Software Validation Verification Report\n\n\n\n"
+  },
+  {
+    "section": "6.4.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Assessment Plan\n\n2. Software Assessment Report\n\n3. Software Assessment Verification Report\n\n\n\n"
+  },
+  {
+    "section": "6.5.2",
+    "title": "Input documents",
+    "content": "\n\n\nAll the documents available at each stage of the lifecycle.\n\n\n\n"
+  },
+  {
+    "section": "6.5.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Quality Assurance Plan\n\n2. Software Configuration Management Plan, if not available at system level\n\n3. Software Quality Assurance Verification Report\n\n\n\n"
+  },
+  {
+    "section": "6.6.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software Quality Assurance Plan\n\n2. Software Configuration Management Plan\n\n3. All relevant design, development and analysis documentation\n\n4. Change Requests\n\n5. Change impact analysis and authorisation\n\n\n\n"
+  },
+  {
+    "section": "6.6.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. All changed input documents\n\n2. Software Change records (see 9.2.4.11)\n\n3. New Configuration records\n\n\n\n"
+  },
+  {
+    "section": "6.7.2",
+    "title": "Input documents",
+    "content": "\n\n\nTools specification or manual.\n\n\n\n"
+  },
+  {
+    "section": "6.7.3",
+    "title": "Output documents",
+    "content": "\n\n\nTools validation report (when needed see 6.7.4.4 or 6.7.4.6).\n\n\n\n"
+  },
+  {
+    "section": "7.2.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. System Requirements Specification\n\n2. System Safety Requirements Specification\n\n3. System Architecture Description\n\n4. External Interface Specifications (e.g. Software/Software Interface Specification, Software/Hardware Interface Specification)\n\n5. Software Quality Assurance Plan\n\n6. Software Validation Plan\n\n\n\n"
+  },
+  {
+    "section": "7.2.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Requirements Specification\n\n2. Overall Software Test Specification\n\n3. Software Requirements Verification Report\n\n\n\n"
+  },
+  {
+    "section": "7.3.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software Requirements Specification\n\n\n\n"
+  },
+  {
+    "section": "7.3.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Architecture Specification\n\n2. Software Design Specification\n\n3. Software Interface Specifications\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  },
+  {
+    "section": "7.4.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software Design Specification\n\n\n\n"
+  },
+  {
+    "section": "7.4.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Component Design Specification\n\n2. Software Component Test Specification\n\n3. Software Component Design Verification Report\n\n\n\n"
+  },
+  {
+    "section": "7.5.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software Component Design Specification\n\n2. Software Component Test Specification\n\n\n\n"
+  },
+  {
+    "section": "7.5.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Source Code and supporting documentation\n\n2. Software Component Test Report\n\n3. Software Source Code Verification Report\n\n\n\n"
+  },
+  {
+    "section": "7.6.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software/Hardware Integration Test Specification\n\n2. Software Integration Test Specification\n\n\n\n"
+  },
+  {
+    "section": "7.6.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Integration Test Report\n\n2. Software/Hardware Integration Test Report\n\n3. Software Integration Verification Report\n\n\n\n"
+  },
+  {
+    "section": "7.7.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software Requirements Specification\n\n2. Overall Software Test Specification\n\n3. Software Verification Plan\n\n4. Software Validation Plan\n\n5. All Hardware and Software Documentation including intermediate verification results\n\n6. System Safety Requirements Specification\n\n\n\n"
+  },
+  {
+    "section": "7.7.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Overall Software Test Report\n\n2. Software Validation Report\n\n3. Release Note\n\n\n\n"
+  },
+  {
+    "section": "8.2",
+    "title": "Input documents",
+    "content": "\n\n\n1. Software Requirements Specification of generic software\n\n2. Software Architecture Specification of generic software\n\n3. Application conditions of the generic software and application tools\n\n4. User manuals of the generic software and application tools\n\n\n\n"
+  },
+  {
+    "section": "8.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Application Preparation Plan\n\n2. Application Requirements Specification\n\n3. Application Architecture and Design\n\n4. Application Test Specification\n\n5. Application Test Report\n\n6. Application Preparation Verification Report\n\n7. Source Code of Application Data/Algorithms\n\n8. Application Data/Algorithms Verification Report\n\n\n\n"
+  },
+  {
+    "section": "8.4.3",
+    "title": "Architecture and Design",
+    "content": "\n\n\nThe quantity and type of the generic hardware and software components to be used in the specific application shall be specified. The location of components, application data and algorithms in the specific application architecture shall be defined. The application data and algorithms processed by the generic software shall be designed at this stage.\n\n\n\n"
+  },
+  {
+    "section": "8.4.6",
+    "title": "Application Validation and Assessment",
+    "content": "\n\n\nValidation and assessment activities shall audit the performance of each stage of the life-cycle.\n\n\n\n"
+  },
+  {
+    "section": "9.1.2",
+    "title": "Input documents",
+    "content": "\n\n\nAll design, development and analysis documents relevant to the deployment.\n\n\n\n"
+  },
+  {
+    "section": "9.1.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Release and Deployment Plan\n\n2. Software Deployment Manual\n\n3. Release Notes\n\n4. Deployment Records\n\n5. Deployment Verification Report\n\n\n\n"
+  },
+  {
+    "section": "9.2.2",
+    "title": "Input documents",
+    "content": "\n\n\nAll relevant design, development and analysis documents\n\n\n\n"
+  },
+  {
+    "section": "9.2.3",
+    "title": "Output documents",
+    "content": "\n\n\n1. Software Maintenance Plan\n\n2. Software Change Records\n\n3. Software Maintenance Records\n\n4. Software Maintenance Verification Report\n\n\n\n"
+  }
+]
