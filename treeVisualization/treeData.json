@@ -5,70 +5,70 @@
   "children": [
     {
       "name": "1) Scope",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "1.1) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.2) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.3) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.4) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.5) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.6) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.7) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.8) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "1.9) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         }
       ]
@@ -77,360 +77,360 @@
       "name": "2) Normative references",
       "fill": "none",
       "color": "blue",
-      "stroke": "brown",
+      "stroke": "cyan",
       "stroke-width": 2
     },
     {
       "name": "3) Terms, definitions and abbreviations",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "3.1) Terms and definitions",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "3.1.1) assessment",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.2) assessor",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.3) commercial off-the-shelf (COTS) software",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.4) component",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.5) configuration manager",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.6) customer",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.7) designer",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.8) entity",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.9) error, fault",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.10) failure",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.11) fault tolerance",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.12) firmware",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.13) generic software",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.14) implementer",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.15) integration",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.16) integrator",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.17) pre-existing software",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.18) open source software",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.19) programmable logic controller",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.20) project management",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.21) project manager",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.22) reliability",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.23) robustness",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.24) requirements manager",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.25) requirements management",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.26) risk",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.27) safety",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.28) safety authority",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.29) safety function",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.30) safety-related software",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.31) software",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.32) software baseline",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.33) software deployment",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.34) software life-cycle",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.35) software maintainability",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.36) software maintenance",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.37) software safety integrity level",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.38) supplier",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.39) system safety integrity level",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.40) tester",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.41) testing",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.42) tool class T1",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.43) tool class T2",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.44) tool class T3",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.45) traceability",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.46) validation",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.47) validator",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.48) verification",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "3.1.49) verifier",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             }
           ]
@@ -439,213 +439,213 @@
           "name": "3.2) Abbreviations",
           "fill": "none",
           "color": "blue",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         }
       ]
     },
     {
       "name": "4) Objectives, conformance and software safety integrity levels",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "4.1) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.2) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.3) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.4) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.5) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.6) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.7) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.8) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.9) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "4.10) ???",
           "fill": "none",
           "color": "red",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         }
       ]
     },
     {
       "name": "5) Software management and organisation",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "5.1) Organisation, roles and responsibilities",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "5.1.1) Objective",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "5.1.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "5.1.2) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "5.1.2.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.1.2.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -654,54 +654,54 @@
         },
         {
           "name": "5.2) Personnel competence",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "5.2.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "5.2.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "5.2.2) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "5.2.2.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.2.2.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.2.2.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.2.2.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -710,131 +710,131 @@
         },
         {
           "name": "5.3) Lifecycle issues and documentation",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "5.3.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "5.3.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "5.3.2) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "5.3.2.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "5.3.2.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -845,24 +845,24 @@
     },
     {
       "name": "6) Software assurance",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "6.1) Software testing",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "6.1.1) Objective",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.1.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -871,54 +871,54 @@
               "name": "6.1.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.1.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.1.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.1.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.1.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.1.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.1.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.1.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -927,19 +927,19 @@
         },
         {
           "name": "6.2) Software verification",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "6.2.1) Objective",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.2.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -948,110 +948,110 @@
               "name": "6.2.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.2.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.2.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.2.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.2.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1060,26 +1060,26 @@
         },
         {
           "name": "6.3) Software validation",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "6.3.1) Objective",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.3.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1088,138 +1088,138 @@
               "name": "6.3.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.3.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.3.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.3.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.3.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1228,26 +1228,26 @@
         },
         {
           "name": "6.4) ???",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "red",
           "children": [
             {
               "name": "6.4.1) ???",
-              "fill": "brown",
+              "fill": "red",
               "color": "red",
               "children": [
                 {
                   "name": "6.4.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1256,152 +1256,152 @@
               "name": "6.4.2) ???",
               "fill": "none",
               "color": "red",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.4.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.4.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.4.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.18) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.4.4.19) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1410,26 +1410,26 @@
         },
         {
           "name": "6.5) Software quality assurance",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "6.5.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.5.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1438,138 +1438,138 @@
               "name": "6.5.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.5.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.5.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.5.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.5.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1578,26 +1578,26 @@
         },
         {
           "name": "6.6) Modification and change control",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "6.6.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.6.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.6.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1606,33 +1606,33 @@
               "name": "6.6.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.6.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.6.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.6.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.6.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1641,19 +1641,19 @@
         },
         {
           "name": "6.7) Support tools and languages",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "6.7.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.7.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1662,103 +1662,103 @@
               "name": "6.7.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.7.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "6.7.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "6.7.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "6.7.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1769,45 +1769,45 @@
     },
     {
       "name": "7) Generic software development",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "7.1) Lifecycle and documentation for generic software",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.1.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.1.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "7.1.2) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.1.2.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.1.2.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1816,26 +1816,26 @@
         },
         {
           "name": "7.2) Software requirements",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.2.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.2.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -1844,173 +1844,173 @@
               "name": "7.2.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.2.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.2.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.2.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.18) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.19) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.20) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.21) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.2.4.22) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2019,47 +2019,47 @@
         },
         {
           "name": "7.3) Architecture and Design",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.3.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.3.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.1.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.1.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.1.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2068,320 +2068,320 @@
               "name": "7.3.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.3.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.3.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.3.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.18) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.19) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.20) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.21) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.22) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.23) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.24) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.25) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.26) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.27) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.28) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.29) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.30) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.31) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.32) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.33) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.34) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.35) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.36) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.37) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.38) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.39) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.40) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.41) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.42) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.3.4.43) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2390,26 +2390,26 @@
         },
         {
           "name": "7.4) Component design",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.4.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.4.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2418,110 +2418,110 @@
               "name": "7.4.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.4.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.4.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.4.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.4.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2530,19 +2530,19 @@
         },
         {
           "name": "7.5) Component implementation and testing",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.5.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.5.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2551,89 +2551,89 @@
               "name": "7.5.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.5.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.5.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.5.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.5.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2642,26 +2642,26 @@
         },
         {
           "name": "7.6) Integration",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.6.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.6.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2670,110 +2670,110 @@
               "name": "7.6.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.6.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.6.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.6.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.6.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2782,19 +2782,19 @@
         },
         {
           "name": "7.7) Overall Software Testing / Final Validation",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "7.7.1) Objectives",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.7.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2803,103 +2803,103 @@
               "name": "7.7.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.7.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "7.7.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "7.7.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "7.7.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -2910,33 +2910,33 @@
     },
     {
       "name": "8) Development of application data or algorithms: systems configured by application data or algorithms",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "8.1) Objectives",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "8.1.1) ???",
               "fill": "none",
               "color": "red",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "8.1.2) ???",
               "fill": "none",
               "color": "red",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "8.1.3) ???",
               "fill": "none",
               "color": "red",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             }
           ]
@@ -2945,164 +2945,164 @@
           "name": "8.2) Input documents",
           "fill": "none",
           "color": "blue",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "8.3) Output documents",
           "fill": "none",
           "color": "blue",
-          "stroke": "brown",
+          "stroke": "#32CD32",
           "stroke-width": 2
         },
         {
           "name": "8.4) Requirements",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "8.4.1) Application Development Process",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "8.4.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.1.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "8.4.2) ???",
-              "fill": "brown",
+              "fill": "red",
               "color": "red",
               "children": [
                 {
                   "name": "8.4.2.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.2.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.2.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.2.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.2.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -3111,110 +3111,110 @@
               "name": "8.4.3) Architecture and Design",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "8.4.4) Application Data/Algorithms Production",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "8.4.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "8.4.5) Application Integration and Testing Acceptance",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "8.4.5.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.5.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.5.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.5.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.5.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -3223,117 +3223,117 @@
               "name": "8.4.6) Application Validation and Assessment",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "8.4.7) Application preparation procedures and tools",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "8.4.7.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.7.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.7.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.7.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.7.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.7.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
             },
             {
               "name": "8.4.8) Development of Generic Software",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "8.4.8.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "8.4.8.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -3344,24 +3344,24 @@
     },
     {
       "name": "9) Software deployment and maintenance",
-      "fill": "brown",
+      "fill": "cyan",
       "color": "blue",
       "children": [
         {
           "name": "9.1) Software deployment",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "9.1.1) Objective",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "9.1.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -3370,159 +3370,159 @@
               "name": "9.1.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "9.1.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "9.1.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "9.1.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.18) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.19) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.1.4.20) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -3531,19 +3531,19 @@
         },
         {
           "name": "9.2) Software maintenance",
-          "fill": "brown",
+          "fill": "#32CD32",
           "color": "blue",
           "children": [
             {
               "name": "9.2.1) Objective",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "9.2.1.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]
@@ -3552,159 +3552,159 @@
               "name": "9.2.2) Input documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "9.2.3) Output documents",
               "fill": "none",
               "color": "blue",
-              "stroke": "brown",
+              "stroke": "red",
               "stroke-width": 2
             },
             {
               "name": "9.2.4) Requirements",
-              "fill": "brown",
+              "fill": "red",
               "color": "blue",
               "children": [
                 {
                   "name": "9.2.4.1) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.2) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.3) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.4) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.5) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.6) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.7) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.8) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.9) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.10) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.11) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.12) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.13) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.14) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.15) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.16) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.17) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.18) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.19) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 },
                 {
                   "name": "9.2.4.20) ???",
                   "fill": "none",
                   "color": "red",
-                  "stroke": "brown",
+                  "stroke": "#FFD700",
                   "stroke-width": 2
                 }
               ]

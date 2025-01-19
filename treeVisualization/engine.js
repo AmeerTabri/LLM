@@ -1,50 +1,50 @@
 // Function to handle the drop event
-// Function to handle the drop event
 function handleDrop(event) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     const reader = new FileReader();
 
-    reader.onload = function(e) {
-        try {
-            const jsonData = JSON.parse(e.target.result);
-            console.log(jsonData)
-            //alert(jsonData)
-            
-            // Make an API call with the JSON data
-            fetch('http://127.0.0.1:5000/analyze', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(jsonData),
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to analyze the JSON file.');
-                    }
-                    return response.json();
-                })
-                .then(analyzedData => {
-                    // Clear the previous tree if any
-                    d3.select("svg").remove();
+    reader.onload = function (e) {
+        const markdownData = e.target.result;  // Read as plain text
+        console.log(markdownData);  // Log the content of the Markdown file
 
-                    // Draw the tree with the analyzed JSON data
-                    drawTree(analyzedData);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was an error processing the file. Please try again.');
-                });
-        } catch (err) {
-            alert("Invalid JSON file. Please upload a valid JSON.");
-        }
+        // Make an API call to send the Markdown data
+        fetch('http://127.0.0.1:5000/analyze', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain',  // Content type is plain text now
+            },
+            body: markdownData,  // Send the raw Markdown content
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();  // Parse the JSON response
+        })
+        .then(jsonData => {
+            console.log('Received JSON:', jsonData);  // Log the JSON data
+            parseJsonData(jsonData);  // Process the JSON data (if necessary)
+        
+            // Ensure any existing tree is removed before drawing a new one
+            d3.select("svg").remove();
+        
+            // Draw the tree with the analyzed JSON data
+            drawTree(jsonData);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while processing the file.');
+        });
     };
 
-    reader.readAsText(file);
+    reader.readAsText(file);  // Read the file as plain text (Markdown)
 }
 
-
+// Function to process the JSON data (example)
+function parseJsonData(jsonData) { 
+    console.log('Parsing JSON data:', jsonData); 
+}
 
 // Function to allow the file to be dragged over
 function handleDragOver(event) {
@@ -71,29 +71,34 @@ function drawTree(treeData) {
 
     var root = d3.hierarchy(treeData, function(d) { return d.children; });
     var nodes = root.descendants(); // Now you can call descendants on the root
+    
+    // console.log("Number of opened nodes:", nodes.filter(node => node.children).length);
 
-    console.log(nodes.length)
+
+    var treeDepth = d3.max(nodes, function(d) { return d.depth; });
      
     var margin = { top: 20, right: 90, bottom: 30, left: 90 },
-        width = 4000 - margin.left - margin.right,
-        // height = 1000 - margin.top - margin.bottom; 
-        height = 9 * 50;
+        width = 4000 - margin.left - margin.right,  
+        // height = countOpenedNodes(root) * 12; 
+        height =  window.innerHeight; 
 
+    var treemap = d3.tree().size([height, width]);
+   
     var svg = d3.select("body").append("svg")
         .attr("width", width + margin.right + margin.left)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var i = 0, duration = 300, root;
-
-    var treemap = d3.tree().size([height, width]);
+    var i = 0, duration = 300, root; 
 
     root = d3.hierarchy(treeData, function (d) { return d.children; });
     root.x0 = height / 2;
     root.y0 = 0;
 
     root.children.forEach(collapse);
+    // root.collapse;
+
     update(root);
 
     function collapse(d) {
@@ -104,14 +109,28 @@ function drawTree(treeData) {
         }
     }
 
-    function update(source) {
+    function countOpenedNodes(node) {
+        if (!node.children) return 1;  
+        let count = 1; 
+        for (const index in node.children) {  
+            count += countOpenedNodes(node.children[index]); 
+            console.log(count)
+        }
+        return count;
+    }
+    
+
+    function update(source) {  
         var treeData = treemap(root);
 
         var nodes = treeData.descendants(),
-            links = treeData.descendants().slice(1);
+            links = treeData.descendants().slice(1); 
+            
+        var openedNodesCount = countOpenedNodes(root); 
+        
 
         let maxWidthsByDepth = {}; 
-
+ 
         // Calculate the maximum text width for each depth
         nodes.forEach(function (d) {
             const textWidth = getWidthOfText(d.data.name, "sans-serif", "12px");
@@ -148,7 +167,13 @@ function drawTree(treeData) {
 
         nodeEnter.append('circle')
             .attr("r", 7) 
-            .style("fill", function (d) { return d.data.fill; });
+            .style("fill", function(d) {
+                return d.data.fill !== 'none' ? d.data.fill : "none"; 
+            })
+            .style("stroke", function(d) {
+                return d.data.fill !== 'none' ? "#6A7F8C" : "none"; 
+            })
+            .style("stroke-width", 2); 
 
         nodeEnter.append('text')
             .attr("dx", function (d) {
@@ -156,7 +181,7 @@ function drawTree(treeData) {
             })
             .attr("dy", -2)
             .attr("text-anchor", "middle")
-            .style("fill", function(d) {return d.data.color})
+            .style("fill", function(d) {return d.data.color}) 
             .text(function (d) { return d.data.name; })
             .each(function(d) {
                 var textWidth = this.getBBox().width;
@@ -187,7 +212,7 @@ function drawTree(treeData) {
                 var o = { x: source.x0, y: source.y0 };
                 return diagonal(o, o);
             })
-            .style("stroke-width", 1.3)
+            .style("stroke-width", 2)
             .style("stroke", function(d) {return "grey"});
 
 
@@ -239,7 +264,7 @@ function drawTree(treeData) {
                 d.children = d._children;
                 d._children = null;
             }
-            update(d);
+            update(d); 
         }
     }
-}
+} 
