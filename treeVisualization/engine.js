@@ -40,6 +40,75 @@ function handleDrop(event) {
 
     reader.readAsText(file);  // Read the file as plain text (Markdown)
 }
+ 
+
+document.getElementById("button").addEventListener("click", () => {
+    fetch('http://127.0.0.1:5000/titles', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(jsonData => {  
+        console.log('Received JSON:', jsonData);  // Log the JSON data
+        parseJsonData(jsonData);  // Process the JSON data (if necessary)
+    
+        // Ensure any existing tree is removed before drawing a new one
+        d3.select("svg").remove();
+    
+        // Draw the tree with the analyzed JSON data
+        drawTree(jsonData);
+    })
+    .catch(error => {
+        console.error('Error:', error);  // Log any errors
+    });
+});
+
+
+document.getElementById("button").addEventListener("click", () => {
+    const loading = document.getElementById("loading");
+    loading.style.display = "block"; // Show the loading logo
+    
+    fetch('http://127.0.0.1:5000/titles', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then(response => { 
+            if (!response.ok) {
+                loading.style.display = "none"; // Hide loading logo if there's an error
+                return response.json().then(data => { 
+                    alert(data.error || "An error occurred.");
+                });
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (response.ok) {
+                console.log("Headers generated:", data);
+                alert("Headers generated successfully!");
+            }
+        })
+        .catch(error => {
+            if (response.ok) {
+                console.error("Error:", error);
+                alert("An error occurred while generating headers.");
+            }
+        })
+        .finally(() => {
+            // Loading should already be hidden in error cases, but ensure it's hidden
+            loading.style.display = "none";
+        });
+});
+
+
 
 // Function to process the JSON data (example)
 function parseJsonData(jsonData) { 
@@ -80,7 +149,7 @@ function drawTree(treeData) {
     var margin = { top: 20, right: 90, bottom: 30, left: 90 },
         width = 4000 - margin.left - margin.right,  
         // height = countOpenedNodes(root) * 12; 
-        height =  window.innerHeight; 
+        height =  window.innerHeight*.7; 
 
     var treemap = d3.tree().size([height, width]);
    
@@ -158,12 +227,16 @@ function drawTree(treeData) {
         var node = svg.selectAll('g.node')
             .data(nodes, function (d) { return d.id || (d.id = ++i); });
 
-        var nodeEnter = node.enter().append('g')
+            var nodeEnter = node.enter().append('g')
             .attr('class', 'node')
             .attr("transform", function (d) {
                 return "translate(" + source.y0 + "," + source.x0 + ")";
             })
-            .on('click', click);
+            .on('click', click)
+            .on('contextmenu', function (event, d) { 
+                window.open('C:/Users/Ameer Tabri/Desktop/LLM/treeVisualization/input1.md');   
+                console.log("Left-clicked on node:"); 
+            });
 
         nodeEnter.append('circle')
             .attr("r", 7) 
