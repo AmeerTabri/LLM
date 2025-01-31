@@ -1,5 +1,5 @@
-// Function to handle the drop event
-function handleDrop(event) {
+// Function to handle the drop event for Markdown files
+function handleMdDrop(event) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     const reader = new FileReader();
@@ -40,7 +40,62 @@ function handleDrop(event) {
 
     reader.readAsText(file);  // Read the file as plain text (Markdown)
 }
- 
+
+// Function to handle the drop event for Data files
+function handleDataDrop(event) {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const data = e.target.result;  // Read as plain text
+        console.log(data);  // Log the content of the Data file
+
+        // Make an API call to send the Data file
+        fetch('http://127.0.0.1:5000/data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain',  // Content type is plain text now
+            },
+            body: data,  // Send the raw Data content
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();  // Parse the JSON response
+        })
+        .then(jsonData => {
+            console.log('Received JSON:', jsonData);  // Log the JSON data
+            parseJsonData(jsonData);  // Process the JSON data (if necessary)
+        
+            // Ensure any existing tree is removed before drawing a new one
+            d3.select("svg").remove();
+        
+            // Draw the tree with the analyzed JSON data
+            drawTree(jsonData);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while processing the file.');
+        });
+    };
+
+    reader.readAsText(file);  // Read the file as plain text (Data)
+}
+
+// Attach the event listeners to the drop zones
+document.getElementById('drop-zone-md').addEventListener('drop', handleMdDrop);
+document.getElementById('drop-zone-data').addEventListener('drop', handleDataDrop);
+
+// Prevent default behavior when dragging over the drop zones (to allow dropping)
+document.getElementById('drop-zone-md').addEventListener('dragover', function(event) {
+    event.preventDefault();
+});
+document.getElementById('drop-zone-data').addEventListener('dragover', function(event) {
+    event.preventDefault();
+});
+
 
 document.getElementById("button").addEventListener("click", () => {
     fetch('http://127.0.0.1:5000/titles', {
@@ -196,7 +251,6 @@ function drawTree(treeData) {
             links = treeData.descendants().slice(1); 
             
         var openedNodesCount = countOpenedNodes(root); 
-        
 
         let maxWidthsByDepth = {}; 
  
@@ -234,7 +288,9 @@ function drawTree(treeData) {
             })
             .on('click', click)
             .on('contextmenu', function (event, d) { 
-                window.open('C:/Users/Ameer Tabri/Desktop/LLM/treeVisualization/input1.md');   
+                let section = 8;
+                window.open(`C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`);
+
                 console.log("Left-clicked on node:"); 
             });
 
@@ -286,7 +342,7 @@ function drawTree(treeData) {
                 return diagonal(o, o);
             })
             .style("stroke-width", 2)
-            .style("stroke", function(d) {return "grey"});
+            .style("stroke", function(d) {return "white"});
 
 
         var linkUpdate = linkEnter.merge(link);
