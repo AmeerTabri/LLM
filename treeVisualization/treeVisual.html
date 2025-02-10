@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <title>Tree Diagram</title>
     <style>
-        body {
-            background: linear-gradient(135deg, #374a60, #1d3d51); /* Dark gray gradient */
-            color: #ffffff; /* Light text for contrast */
-        }
-
         .node text {
             font: 12px sans-serif;
             fill: black;
@@ -21,24 +16,14 @@
         }
 
         /* Styling the drop zone */
-        #drop-zone-md {
-            border: 3px dashed #ddd;
+        #drop-zone {
+            border: 2px dashed #ccc;
             padding: 20px;
             width: 400px;
             margin: 20px auto;
             text-align: center;
             font-size: 18px;
-            color: #ffffff;
-        }
-
-        #drop-zone-data {
-            border: 3px dashed #ddd;
-            padding: 20px;
-            width: 400px;
-            margin: 20px auto;
-            text-align: center;
-            font-size: 18px;
-            color: #ffffff;
+            color: #888;
         }
 
         /* Styling the button */
@@ -59,24 +44,34 @@
         #button:hover {
             background-color: #11596d;
         }
+
+
+        
     </style>
 </head>
 <body>
     <button id="button">Generate Headings</button>
-    <!-- Drop Zone for Markdown -->
-    <div id="drop-zone-md">Upload MarkDown file here</div>
-
-    <!-- Drop Zone for Data file -->
-    <div id="drop-zone-data">Upload Data file here</div>
-
+    <div id="drop-zone">Upload Markdown file here</div>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="engine.js"></script>
 
-    <div id="loading" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); z-index: 9999; display: none; justify-content: center; align-items: center;">
+    <div id="loading" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 9999; display: none; justify-content: center; align-items: center;">
         <div style="text-align: center; color: white; font-family: Arial, sans-serif; animation: fadeIn 0.5s;">
-            <div class="spinner" style="margin: 0 auto; margin-top: 300px; width: 50px; height: 50px; border: 5px solid rgba(255, 255, 255, 0.8); border-radius: 50%; border-top-color: white; animation: spin 1s linear infinite;"></div>
+            <div class="spinner" style="margin: 0 auto; margin-top: 300px; width: 50px; height: 50px; border: 5px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: white; animation: spin 1s linear infinite;"></div>
             <p style="margin-top: 15px; font-size: 18px;">Generating...</p>
         </div>
+    </div> 
+    <div style="text-align: center;  margin: 20px;">
+        <label for="part-number" style="font-size: 16px; margin-right: 10px;">Enter a number:</label>
+        <input type="number" id="part-number" min="1" style="width: 60px; font-size: 16px;" />
+        <button id="generate-parts" style="margin-left: 10px; padding: 5px 10px; background-color: #1e89aa; color: white; border: none; border-radius: 5px; cursor: pointer;">Generate</button>
+    </div>
+    <div style="position: fixed; top: 10px;background-color: #1e89aa; color: white; left: 10px;">
+        <label for="parts-dropdown" style="font-size: 20px; margin-right: 10;position:relative;">Select a part:</label>
+        <select id="parts-dropdown" style="font-size: 16px; padding: 5px;"></select>
     </div>
 </body>
 </html>
+
+
+

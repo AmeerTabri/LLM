@@ -1,5 +1,43 @@
-// Function to handle the drop event for Markdown files
-function handleMdDrop(event) {
+
+
+
+function generateParts() {
+    alert("Generate Parts function called!");
+    console.log("Generate Parts function called!");
+
+    const input = document.getElementById("part-number");
+    const dropdown = document.getElementById("parts-dropdown");
+
+    // Clear previous options
+    dropdown.innerHTML = "";
+
+    const number = parseInt(input.value, 10);
+
+    if (isNaN(number) || number < 1) {
+        alert("Please enter a valid number greater than 0.");
+        return;
+    }
+
+    for (let i = 1; i <= number; i++) {
+        const option = document.createElement("option");
+        option.value = `part${i}`;
+        option.textContent = `Part ${i}`;
+        dropdown.appendChild(option);
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Attach event listener to the "Generate" button
+    document.getElementById("generate-parts").addEventListener("click", generateParts);
+
+    console.log("Event listener attached to 'Generate' button.");
+});
+
+
+
+// Function to handle the drop event
+function handleDrop(event) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     const reader = new FileReader();
@@ -40,62 +78,7 @@ function handleMdDrop(event) {
 
     reader.readAsText(file);  // Read the file as plain text (Markdown)
 }
-
-// Function to handle the drop event for Data files
-function handleDataDrop(event) {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    const reader = new FileReader();
-
-    reader.onload = function (e) {
-        const data = e.target.result;  // Read as plain text
-        console.log(data);  // Log the content of the Data file
-
-        // Make an API call to send the Data file
-        fetch('http://127.0.0.1:5000/data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'text/plain',  // Content type is plain text now
-            },
-            body: data,  // Send the raw Data content
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();  // Parse the JSON response
-        })
-        .then(jsonData => {
-            console.log('Received JSON:', jsonData);  // Log the JSON data
-            parseJsonData(jsonData);  // Process the JSON data (if necessary)
-        
-            // Ensure any existing tree is removed before drawing a new one
-            d3.select("svg").remove();
-        
-            // Draw the tree with the analyzed JSON data
-            drawTree(jsonData);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred while processing the file.');
-        });
-    };
-
-    reader.readAsText(file);  // Read the file as plain text (Data)
-}
-
-// Attach the event listeners to the drop zones
-document.getElementById('drop-zone-md').addEventListener('drop', handleMdDrop);
-document.getElementById('drop-zone-data').addEventListener('drop', handleDataDrop);
-
-// Prevent default behavior when dragging over the drop zones (to allow dropping)
-document.getElementById('drop-zone-md').addEventListener('dragover', function(event) {
-    event.preventDefault();
-});
-document.getElementById('drop-zone-data').addEventListener('dragover', function(event) {
-    event.preventDefault();
-});
-
+ 
 
 document.getElementById("button").addEventListener("click", () => {
     fetch('http://127.0.0.1:5000/titles', {
@@ -251,6 +234,7 @@ function drawTree(treeData) {
             links = treeData.descendants().slice(1); 
             
         var openedNodesCount = countOpenedNodes(root); 
+        
 
         let maxWidthsByDepth = {}; 
  
@@ -288,9 +272,7 @@ function drawTree(treeData) {
             })
             .on('click', click)
             .on('contextmenu', function (event, d) { 
-                let section = 8;
-                window.open(`C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`);
-
+                window.open('C:/Users/Ameer Tabri/Desktop/LLM/treeVisualization/input1.md');   
                 console.log("Left-clicked on node:"); 
             });
 
@@ -342,7 +324,7 @@ function drawTree(treeData) {
                 return diagonal(o, o);
             })
             .style("stroke-width", 2)
-            .style("stroke", function(d) {return "white"});
+            .style("stroke", function(d) {return "grey"});
 
 
         var linkUpdate = linkEnter.merge(link);
@@ -397,3 +379,5 @@ function drawTree(treeData) {
         }
     }
 } 
+
+
