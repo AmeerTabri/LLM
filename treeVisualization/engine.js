@@ -1,43 +1,5 @@
-
-
-
-function generateParts() {
-    alert("Generate Parts function called!");
-    console.log("Generate Parts function called!");
-
-    const input = document.getElementById("part-number");
-    const dropdown = document.getElementById("parts-dropdown");
-
-    // Clear previous options
-    dropdown.innerHTML = "";
-
-    const number = parseInt(input.value, 10);
-
-    if (isNaN(number) || number < 1) {
-        alert("Please enter a valid number greater than 0.");
-        return;
-    }
-
-    for (let i = 1; i <= number; i++) {
-        const option = document.createElement("option");
-        option.value = `part${i}`;
-        option.textContent = `Part ${i}`;
-        dropdown.appendChild(option);
-    }
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Attach event listener to the "Generate" button
-    document.getElementById("generate-parts").addEventListener("click", generateParts);
-
-    console.log("Event listener attached to 'Generate' button.");
-});
-
-
-
-// Function to handle the drop event
-function handleDrop(event) {
+// Function to handle the drop event for Markdown files
+function handleMdDrop(event) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     const reader = new FileReader();
@@ -47,7 +9,7 @@ function handleDrop(event) {
         console.log(markdownData);  // Log the content of the Markdown file
 
         // Make an API call to send the Markdown data
-        fetch('http://127.0.0.1:5000/analyze', {
+        fetch('http://127.0.0.1:5000/markdown', {
             method: 'POST',
             headers: {
                 'Content-Type': 'text/plain',  // Content type is plain text now
@@ -79,6 +41,106 @@ function handleDrop(event) {
     reader.readAsText(file);  // Read the file as plain text (Markdown)
 }
  
+// Function to handle the drop event for Data files
+function handleDataDrop(event) {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const markdownData = e.target.result;  // Read as plain text
+        console.log(markdownData);  // Log the content of the Markdown file
+
+        // Make an API call to send the Markdown data
+        fetch('http://127.0.0.1:5000/data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'text/plain',  // Content type is plain text now
+            },
+            body: markdownData,  // Send the raw Markdown content
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();  // Parse the JSON response
+        })
+        .then(responseData => {
+            console.log('Received JSON:', responseData);
+
+            const { num_of_parts, data } = responseData;
+
+            // Display the number of parts if needed
+            console.log(`Number of parts: ${num_of_parts}`);
+
+            // Ensure any existing tree is removed before drawing a new one
+            d3.select("svg").remove();
+
+            // Draw the tree with the analyzed JSON data
+            drawTree(data);
+
+            // Dynamically update the dropdown with the number of parts from response
+            const dropdown = document.getElementById("parts-dropdown");
+            dropdown.innerHTML = ""; // Clear any existing options
+
+            // Add options based on num_of_parts
+            for (let i = 1; i <= num_of_parts; i++) {
+                const option = document.createElement("option");
+                option.value = `${i}`;
+                option.textContent = `Part ${i}`;
+                dropdown.appendChild(option);
+            }
+            
+            dropdown.addEventListener("change", handlePartSelection);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while processing the file.');
+        });
+    };
+
+    reader.readAsText(file);  // Read the file as plain text (Markdown)
+}
+ 
+// Function to handle part selection
+function handlePartSelection(event) {
+    const selectedPart = event.target.value;  // Get the selected part number
+
+    // Send the selected part to the backend
+    fetch('http://127.0.0.1:5000/parts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ part_number: selectedPart }), // Send the part number in the body
+    })
+    .then(response => response.json()) // Parse the response as JSON
+    .then(jsonData => {
+        console.log('Received JSON:', jsonData);  // Log the JSON data
+
+        // Ensure any existing tree is removed before drawing a new one
+        d3.select("svg").remove();
+
+        // Draw the tree with the analyzed JSON data
+        drawTree(jsonData);
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+ 
+// Attach the event listeners to the drop zones
+document.getElementById('drop-zone-md').addEventListener('drop', handleMdDrop);
+document.getElementById('drop-zone-data').addEventListener('drop', handleDataDrop);
+
+// Prevent default behavior when dragging over the drop zones
+document.getElementById('drop-zone-md').addEventListener('dragover', handleDragOver);
+document.getElementById('drop-zone-data').addEventListener('dragover', handleDragOver);
+
+// Function to allow the file to be dragged over
+function handleDragOver(event) {
+    event.preventDefault();
+}
+
 
 document.getElementById("button").addEventListener("click", () => {
     fetch('http://127.0.0.1:5000/titles', {
@@ -147,21 +209,10 @@ document.getElementById("button").addEventListener("click", () => {
 });
 
 
-
 // Function to process the JSON data (example)
 function parseJsonData(jsonData) { 
     console.log('Parsing JSON data:', jsonData); 
 }
-
-// Function to allow the file to be dragged over
-function handleDragOver(event) {
-    event.preventDefault();
-}
-
-// Set up the drag-and-drop area
-const dropZone = document.getElementById("drop-zone");
-dropZone.addEventListener("dragover", handleDragOver);
-dropZone.addEventListener("drop", handleDrop);
 
 // Function to create the tree diagram from the JSON data
 function drawTree(treeData) {
@@ -234,7 +285,6 @@ function drawTree(treeData) {
             links = treeData.descendants().slice(1); 
             
         var openedNodesCount = countOpenedNodes(root); 
-        
 
         let maxWidthsByDepth = {}; 
  
@@ -262,19 +312,52 @@ function drawTree(treeData) {
             d.y = totalWidth;
         });
 
-        var node = svg.selectAll('g.node')
+        var node = svg.selectAll('g.node') 
             .data(nodes, function (d) { return d.id || (d.id = ++i); });
 
             var nodeEnter = node.enter().append('g')
             .attr('class', 'node')
             .attr("transform", function (d) {
                 return "translate(" + source.y0 + "," + source.x0 + ")";
-            })
+            }) 
             .on('click', click)
-            .on('contextmenu', function (event, d) { 
-                window.open('C:/Users/Ameer Tabri/Desktop/LLM/treeVisualization/input1.md');   
-                console.log("Left-clicked on node:"); 
+            .on('contextmenu', function(d) {   
+                let section = d.data.name.split(" ")[0];  
+                window.open(`C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`);  
+
+                // // Dynamically create the button
+                // let button = document.createElement("button");
+                // button.innerHTML = `Show content`;
+                // button.style.position = "absolute";
+                // button.style.left = `${event.pageX + 5}px`;  // Position slightly offset to avoid overlap
+                // button.style.top = `${event.pageY + 5}px`;   // Position slightly offset to avoid overlap
+                // document.body.appendChild(button);            // Append the button to the body
+                
+                // // Button click event to print the name
+                // button.addEventListener("click", function() { 
+                //     button.remove();  // Remove the button after click
+                // });
+            })
+            .on("mouseover", function(d) {
+                let nodeElement = d3.select(this);
+                
+                // Store timeout reference
+                d.hoverTimeout = setTimeout(() => {
+                    nodeElement.append("text")
+                        .attr("class", "hover-text")
+                        .attr("x", 0)  
+                        .attr("y", -15) // Position above the node
+                        .attr("text-anchor", "middle") 
+                        .style("fill", "white")  
+                        .style("font-size", "12px")
+                        .text(d.data.name);
+                }, 1000); // 1 second delay
+            })
+            .on("mouseout", function(d) {
+                clearTimeout(d.hoverTimeout); // Cancel the timeout if mouse leaves early
+                d3.select(this).select(".hover-text").remove(); // Remove text
             });
+        
 
         nodeEnter.append('circle')
             .attr("r", 7) 
@@ -284,7 +367,8 @@ function drawTree(treeData) {
             .style("stroke", function(d) {
                 return d.data.fill !== 'none' ? "#6A7F8C" : "none"; 
             })
-            .style("stroke-width", 2); 
+            .style("stroke-width", 2) 
+            
 
         nodeEnter.append('text')
             .attr("dx", function (d) {
@@ -324,7 +408,7 @@ function drawTree(treeData) {
                 return diagonal(o, o);
             })
             .style("stroke-width", 2)
-            .style("stroke", function(d) {return "grey"});
+            .style("stroke", function(d) {return "white"});
 
 
         var linkUpdate = linkEnter.merge(link);
@@ -379,5 +463,3 @@ function drawTree(treeData) {
         }
     }
 } 
-
-

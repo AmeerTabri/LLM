@@ -61,8 +61,8 @@ def process_data_file(tree):
     tree.tree_to_custom_json()
 
 
-def extract_elements(file_path): 
-    trees = {} 
+def extract_elements(file_path):  
+    trees.clear()
     doc_name = "" 
     with open(file_path, "r") as file:  
         for line in file:
@@ -92,21 +92,21 @@ def extract_elements(file_path):
                     
                 trees[part].add_child(section=clause, title=title if title != "REQUIREMENT" else "???", classification=classification)  
 
-    return trees
 
 
 # Analyze the markdown file
-@app.route('/analyze', methods=['POST'])
+@app.route('/markdown', methods=['POST'])
 def analyze_markdown():
     try:
         markdown_data = request.data.decode('utf-8')
         tree = Tree()
 
         # Save the tree to the global dictionary
-        trees["current_tree"] = tree
+        # trees["current_tree"] = tree 
 
         save_md_file(markdown_data)
-        process_file(file_path, tree)
+        process_file(file_path, tree) 
+        save_as_html(tree, "./z.html") 
 
         json_file_path = "treeVisualization/treeData.json"
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
@@ -118,7 +118,7 @@ def analyze_markdown():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-    
+  
 # Analyze the data file
 @app.route('/data', methods=['POST'])
 def analyze_data():
@@ -126,15 +126,46 @@ def analyze_data():
         data = request.data.decode(encoding="utf-8")   
         save_data_file(data)  
  
-        trees = extract_elements(data_file_path)    
+        extract_elements(data_file_path)    
         process_data_file(trees[1])
         save_as_html(trees[1], "./z.html")
+
+        num_of_parts = len(trees)
 
         json_file_path = "treeVisualization/treeData.json"
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
             json_data = json.load(json_file)
 
-        # Return the JSON data as a response
+        response_data = {
+            "num_of_parts": num_of_parts,
+            "data": json_data
+        }
+
+        # Return the JSON data as a response 
+        return jsonify(response_data), 200
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# Toggle between parts
+@app.route('/parts', methods=['POST'])
+def change_part():
+    try: 
+        part_number = request.json.get('part_number')  # This is a string like "part1" 
+        print(f"Selected part: {part_number}")
+ 
+        part_index = int(part_number.replace('part', ''))   
+ 
+        selected_part = trees[part_index]  
+        process_data_file(selected_part)
+        save_as_html(selected_part, "./z.html")
+ 
+        json_file_path = "treeVisualization/treeData.json"
+        with open(json_file_path, 'r', encoding="utf-8") as json_file:
+            json_data = json.load(json_file)
+
+        # Return the selected part data as JSON
         return jsonify(json_data), 200
 
     except Exception as e:
@@ -164,5 +195,6 @@ def generate_headers():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
