@@ -17,6 +17,7 @@ output_file_path = f"outputs/output{file_num}.md"
 
 # Global storage for tree objects
 trees = {}
+curr_part = 1
 
 def process_tree(tree):
     def process_node(node):
@@ -98,15 +99,13 @@ def extract_elements(file_path):
 @app.route('/markdown', methods=['POST'])
 def analyze_markdown():
     try:
-        markdown_data = request.data.decode('utf-8')
-        tree = Tree()
+        markdown_data = request.data.decode('utf-8') 
 
-        # Save the tree to the global dictionary
-        # trees["current_tree"] = tree 
+        trees[curr_part] = Tree()
 
         save_md_file(markdown_data)
-        process_file(file_path, tree) 
-        save_as_html(tree, "./z.html") 
+        process_file(file_path, trees[curr_part]) 
+        save_as_html(trees[curr_part], "./z.html") 
 
         json_file_path = "treeVisualization/treeData.json"
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
@@ -156,6 +155,8 @@ def change_part():
         print(f"Selected part: {part_number}")
  
         part_index = int(part_number.replace('part', ''))   
+
+        curr_part = part_index
  
         selected_part = trees[part_index]  
         process_data_file(selected_part)
@@ -189,6 +190,34 @@ def generate_headers():
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
             json_data = json.load(json_file)
    
+        # Return the JSON data as a response
+        return jsonify(json_data), 200
+    
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# Generate header for a single node
+@app.route('/node_title', methods=['POST'])
+def generate_node_header():
+    try: 
+        data = request.get_json() 
+        name = data.get('name') 
+        elements = name.split(' ', 1)
+        section = elements[0]
+        title = elements[1]
+        
+        print(section + ' ' + title)  
+
+        trees[curr_part].find_node(section).color = 'green' 
+   
+        trees[curr_part].tree_to_custom_json()
+        save_as_html(trees[curr_part], "./z.html") 
+
+        json_file_path = "treeVisualization/treeData.json"
+        with open(json_file_path, 'r', encoding="utf-8") as json_file:
+            json_data = json.load(json_file)
+
         # Return the JSON data as a response
         return jsonify(json_data), 200
     

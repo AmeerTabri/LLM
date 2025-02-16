@@ -141,6 +141,37 @@ function handleDragOver(event) {
     event.preventDefault();
 }
 
+// a flag that states when the user right click on a node
+let contextMenuActive = false;
+
+
+function generate_heading(name) { 
+    console.log(name); // Print the name to the console
+
+    // Send a request to the backend
+    fetch('http://127.0.0.1:5000/node_title', { // Update with your actual backend URL
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' // Sending JSON data
+        },
+        body: JSON.stringify({ name: name }) // Send the name in the request body
+    }) 
+    .then(response => response.json()) // Parse the response as JSON
+    .then(jsonData => {
+        console.log('Received JSON:', jsonData);  // Log the JSON data
+
+        // Ensure any existing tree is removed before drawing a new one
+        d3.select("svg").remove();
+
+        // Draw the tree with the analyzed JSON data
+        drawTree(jsonData);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
 
 document.getElementById("button").addEventListener("click", () => {
     fetch('http://127.0.0.1:5000/titles', {
@@ -312,6 +343,7 @@ function drawTree(treeData) {
             d.y = totalWidth;
         });
 
+
         var node = svg.selectAll('g.node') 
             .data(nodes, function (d) { return d.id || (d.id = ++i); });
 
@@ -320,44 +352,71 @@ function drawTree(treeData) {
             .attr("transform", function (d) {
                 return "translate(" + source.y0 + "," + source.x0 + ")";
             }) 
-            .on('click', click)
-            .on('contextmenu', function(d) {   
-                let section = d.data.name.split(" ")[0];  
-                window.open(`C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`);  
+            .on('click', click) 
+            .on('mouseover', function() {
+                // Change the cursor to a pointer on hover
+                d3.select(this).style('cursor', 'pointer');
+            })
+            .on('mouseout', function() {
+                // Revert back to the default cursor
+                d3.select(this).style('cursor', 'default');
+            })
+            .on('contextmenu', function(d) {
+                contextMenuActive = true;
 
-                // // Dynamically create the button
-                // let button = document.createElement("button");
-                // button.innerHTML = `Show content`;
-                // button.style.position = "absolute";
-                // button.style.left = `${event.pageX + 5}px`;  // Position slightly offset to avoid overlap
-                // button.style.top = `${event.pageY + 5}px`;   // Position slightly offset to avoid overlap
-                // document.body.appendChild(button);            // Append the button to the body
-                
-                // // Button click event to print the name
-                // button.addEventListener("click", function() { 
-                //     button.remove();  // Remove the button after click
-                // });
-            })
-            .on("mouseover", function(d) {
-                let nodeElement = d3.select(this);
-                
-                // Store timeout reference
-                d.hoverTimeout = setTimeout(() => {
-                    nodeElement.append("text")
-                        .attr("class", "hover-text")
-                        .attr("x", 0)  
-                        .attr("y", -15) // Position above the node
-                        .attr("text-anchor", "middle") 
-                        .style("fill", "white")  
-                        .style("font-size", "12px")
-                        .text(d.data.name);
-                }, 1000); // 1 second delay
-            })
-            .on("mouseout", function(d) {
-                clearTimeout(d.hoverTimeout); // Cancel the timeout if mouse leaves early
-                d3.select(this).select(".hover-text").remove(); // Remove text
-            });
+                event.preventDefault(); // Prevent the default right-click menu 
+                let section = d.data.name.split(" ")[0]; 
+
+                let buttonGroup = d3.select(this).append("g")
+                    .attr("class", "context-menu-button")
+                    .attr("transform", "translate(0, -30)"); // Position it above the node
+   
+                // Create a background rectangle for the button
+                buttonGroup.append("rect")
+                    .attr("width", 120)
+                    .attr("height", d.data.color != "white" ? 60 : 30)
+                    .attr("x", -60) // Center it horizontally
+                    .attr("y", -15)
+                    .attr("rx", 5) // Rounded corners
+                    .attr("fill", "white") // Background color
+                    .style("opacity", 0.9);
+            
+                // Create the button text for "Show Content"
+                buttonGroup.append("text")
+                    .attr("class", "button-text")
+                    .attr("x", 0)
+                    .attr("y", 4)
+                    .attr("text-anchor", "middle")
+                    .style("fill", "black")
+                    .style("cursor", "pointer")
+                    .text("Show Content")
+                    .on("click", function() { 
+                        window.open(`C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`);
+                    });
+
+                    // Create the button text for "generate heading"
+                    if (d.data.color != "white") {
+                        buttonGroup.append("text")
+                        .attr("class", "button-text")
+                        .attr("x", 0)
+                        .attr("y", 33)
+                        .attr("text-anchor", "middle")
+                        .style("fill", "black")
+                        .style("cursor", "pointer")
+                        .text("Generate Heading")
+                        .on("click", function() { 
+                            generate_heading(d.data.name);
+                        });
+                    }
         
+            
+                // Add an event to remove the context menu if the user clicks anywhere else on the screen
+                d3.select("body").on("click", function() {
+                    d3.select(".context-menu-button").remove(); 
+                    contextMenuActive = false; 
+                });
+            });
+
 
         nodeEnter.append('circle')
             .attr("r", 7) 
@@ -452,14 +511,16 @@ function drawTree(treeData) {
         }
 
         function click(d) {
-            if (d.children) {
-                d._children = d.children;
-                d.children = null;
-            } else {
-                d.children = d._children;
-                d._children = null;
+            if (contextMenuActive === false) {
+                if (d.children) {
+                    d._children = d.children;
+                    d.children = null;
+                } else {
+                    d.children = d._children;
+                    d._children = null;
+                }
+                update(d); 
             }
-            update(d); 
-        }
+        } 
     }
 } 
