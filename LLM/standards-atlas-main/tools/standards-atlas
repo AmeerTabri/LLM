@@ -1,0 +1,394 @@
+#!/bin/bash
+# vim: ft=sh:sw=4:et
+# SPDX-License-Identifier: LGPL-3.0-only
+
+
+### command line processing
+
+autopublish=0
+autoreference=0
+readableindex=0
+norecreate=0
+contentcsv=0
+basiccontent=0
+
+usage() { 
+    echo -e "Usage:
+
+    $0
+
+    Options:
+    [-i] Enable readable Index, default: Off
+    [-t] Enable automatic publishing, default: Off
+    [-n] No recreation of doorstop items, default: Off
+    [-b] basic content only, default: Off
+    [-c] Write CSV list of all TOC entries as input for document digesting, default: Off
+    [-l] Enable automatic reference/linking to all travelogues, default: Off
+    [-d <path/stdatlasdir>] Describes the path where the doorstop files will be created, default: /tmp/standards-atlas 
+    [-g <gitrepo>] Currently not implemented
+    [-r <MYREQ>] Additional requirements
+    [-p <STDANDARD>] Parent standards for additional requirements" 1>&2; exit 0; 
+}
+
+while getopts "ihlntbcd:g:r:p:" arg; do
+    case $arg in
+        i)
+            readableindex=1
+            ;;
+        d)
+            stdatlasdir="${OPTARG}"
+            ;;
+        g)
+            gitrepo="${OPTARG}"
+            ;;
+        r)
+            myreqs="${OPTARG}"
+            ;;
+        p)
+            myparent="${OPTARG}"
+            ;;
+        n)
+            norecreate=1
+            ;;
+        l)
+            autoreference=1
+            ;;
+        t)
+            autopublish=1
+            ;;
+        b)
+            basiccontent=1
+            ;;
+        c)
+            contentcsv=1
+            readableindex=1
+            ;;
+        h | *)
+            usage
+            exit 0
+    esac
+done
+
+
+### some default settings
+
+stdatlasdir="${stdatlasdir:-/tmp/standards-atlas}"
+myreqs="${myreqs:-SOHP}"
+myparent="${myparent:-EN50716}"
+mydigits=3
+atlastooldir="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+atlashomedir="$(dirname "$atlastooldir")"
+atlasdatadir="$atlashomedir/data"
+atlaslocaldir="$atlashomedir/local"
+standards=( IEC61508 IEC61508-3-1 ISO26262 PAS8926 EN50126 EN50129 EN50716 )
+# standards=( IEC11889 )
+
+echoerr() { printf "%s\n" "$*" >&2; }
+
+### sanity checks and preparation
+
+if [ ! -d "$atlasdatadir" ]; then
+    echoerr "Cannot find Atlas Home $atlasdatadir! I am lost, giving up."
+    exit 1
+fi
+
+if [ ! -d "$stdatlasdir" ]; then
+    echo "Creating $stdatlasdir"
+    mkdir -p $stdatlasdir || exit 1;
+fi
+
+cd $stdatlasdir
+
+if [ ! -d "$stdatlasdir/.git" ]; then
+    echo "$stdatlasdir is not controlled by git, initiating git"
+    git init $stdatlasdir
+fi
+
+
+
+zeroPad(){
+    # zero_pad <string> <length>
+    [ ${#1} -lt $2 ] && printf "%0$(($2-${#1}))d" ''
+    printf "%s\n" "$1"
+}
+
+setAttributes()
+{
+    local standard=$1
+    local name=$2
+    cat <<EOD >>./requirements/${standard}/.doorstop.yml
+attributes:
+  defaults:
+    type: standard
+    rationale: ''
+    notes: []
+    standard:
+      mandatory: true
+      name: ${name}
+      numID: ''
+      refID: ''
+      volume: ''
+      level: ''
+      text: ''
+EOD
+}
+
+
+addItem()
+{
+    local item=$1
+    local requirement=$2
+    partShift="${partShift:-0}"
+    partDigits="${partDigits:-0}"
+    local title=''
+    local text=''
+    local typeMarker=''
+    local headline=''
+    local partNR=$(cut -s -d'-' -f1 <<<$item)
+    if [ -n "$partNR" ]; then
+        partNR=${partNR/§/-}
+        StdPart="-${partNR}"
+        partNR=$((partNR+partShift))
+        while [ ${#partNR} -lt "$partDigits" ]; do
+            partNR="0${partNR}"
+        done
+        item=$(cut -s -d'-' -f2 <<<$item)
+    else
+        StdPart=""
+    fi
+    # substitution for clauses A-ZZ
+    local clausesub=$(cut -s -d':' -f1 <<<$item)
+    if [ -n "$clausesub" ]; then
+        item=$(cut -s -d':' -f2 <<<$item)
+    fi
+    clause=$(cut -s -d'.' -f1 <<<$item)
+    s1clause=$(cut -s -d'.' -f2 <<<$item)
+    s2clause=$(cut -s -d'.' -f3 <<<$item)
+    s3clause=$(cut -s -d'.' -f4 <<<$item)
+    s4clause=$(cut -s -d'.' -f5 <<<$item)
+    s5clause=$(cut -s -d'.' -f6 <<<$item)
+    if [[ "$s5clause" =~ .*\..* ]]; then
+        echoerr "$item has more than 5 subclause levels"
+        echoerr "Only 5 levels are supported, there will be 'item already exists' errors."
+    fi
+    if [ -z "$clause" ]; then
+        clause=$item
+    fi
+    typeID=${clause:0:1}
+    if [[ $clause =~ [a-z] ]]; then
+        clause=${clause:1}
+    fi
+    if [ -n "$clausesub" ]; then
+        level=${clausesub}
+    else
+        level="${clause}"
+    fi
+    if [ -n "$partNR" ]; then
+        dsname="${partNR/-/}$(zeroPad ${clause} 2)"
+        level="${partNR/-/}.${level}"
+    else
+        dsname="$(zeroPad ${clause} 2)"
+        level="$level"
+    fi
+    index="$clause"
+    if [ -n "$s1clause" ]; then
+        if [[ "$s1clause" =~ \+ ]]; then
+            s1clause=${s1clause:1}
+            dsname="${dsname}$(printf '%03d' ${s1clause})"
+        else
+            dsname="${dsname}$(printf '%02d' ${s1clause})"
+        fi
+        index="${index}.${s1clause}"
+        level="${level}.${s1clause}"
+    fi
+    if [ -n "$s2clause" ]; then
+        if [[ "$s2clause" =~ \+ ]]; then
+            s2clause=${s2clause:1}
+            dsname="${dsname}$(printf '%03d' ${s2clause})"
+        else
+            dsname="${dsname}$(printf '%02d' ${s2clause})"
+        fi
+        index="${index}.${s2clause}"
+        level="${level}.${s2clause}"
+    fi
+    if [ -n "$s3clause" ]; then
+        dsname="${dsname}$(printf '%02d' ${s3clause})"
+        index="${index}.${s3clause}"
+        level="${level}.${s3clause}"
+    fi
+    if [ -n "$s4clause" ]; then
+        dsname="${dsname}${s4clause}"
+        # dsname="${dsname}$(printf '%02d' ${s4clause})"
+        index="${index}.${s4clause}"
+        level="${level}.${s4clause}"
+        if [ "${#s4clause}" -gt 1 ]; then
+            echoerr "multi-digit s4clause detected for ${name}${StdPart}:${year} ${index}"
+            echoerr "this may cause problems with item ordering"
+        fi
+    fi
+    if [ -n "$s5clause" ]; then
+        dsname="${dsname}${s5clause}"
+        # dsname="${dsname}$(printf '%02d' ${s5clause})"
+        index="${index}.${s5clause}"
+        level="${level}.${s5clause}"
+        if [ "${#s5clause}" -gt 1 ]; then
+            echoerr "multi-digit s5clause detected for ${name}${StdPart}:${year} ${index}"
+            echoerr "this may cause problems with item ordering"
+        fi
+    fi
+    pad=$(printf "%*s" "$digits")
+    pad=${pad// /0}
+    dsname=$(printf "%s%s" $dsname "${pad:${#dsname}}")
+    indexString="${name}${StdPart}:${year} ${index}"
+    locID=$(echo -n $indexString | md5sum | cut -c 1-32)
+    title=$(grep "TOC;$locID" ${atlasdatadir}/${requirement} | cut -d\; -f4)
+    typeMarker=$(grep "TOC;$locID" ${atlasdatadir}/${requirement} | cut -d\; -f5)
+    if [ -z "$title" ]; then
+        xString="${name}:${oyr}${StdPart} ${index}"
+        xID=$(echo -n $xString | md5sum | cut -c 1-32)
+        title=$(grep "TOC;$xID" ${atlasdatadir}/${requirement} | cut -d\; -f4)
+    fi
+    if [ $uselocal -gt 0 ]; then
+        title=$(grep "TOC;$locID" ${atlaslocaldir}/${requirement} | cut -d\; -f4)
+        typeMarker=$(grep "TOC;$locID" ${atlaslocaldir}/${requirement} | cut -d\; -f5)
+        headline=$(grep "TEXT;$locID" ${atlaslocaldir}/${requirement} | cut -d\; -f4)
+        text=$(grep "TEXT;$locID" ${atlaslocaldir}/${requirement} | cut -d\; -f5)
+    fi
+    if [ -z "$headline" ]; then
+        headline=$(grep "TEXT;$locID" ${atlasdatadir}/${requirement} | cut -d\; -f4)
+    fi
+    if [ -z "$text" ]; then
+        text=$(grep "TEXT;$locID" ${atlasdatadir}/${requirement} | cut -d\; -f5)
+    fi
+    if [ -z "$title" -a -n "$headline" ]; then
+        title="$headline"
+    fi
+    if [[ -n "$typeMarker" && "$typeMarker" =~ [A-Z] && "$basiccontent" == 1 ]]; then
+
+        # we may want to limit the output of the standards-atlas to the basic
+        # content structure and the manually loaded headings, for example to
+        # use this structure to identify the appropriate sections in the actual
+        # document for further processing.  To distinguish between the content
+        # that has been manually secured and any content that extends beyond
+        # the content of the standard texts, the additional headings should be
+        # marked with type indicators in capital letters. These can then be
+        # filtered out again here.
+
+        typeMarker=''
+        title=''
+        text=''
+    fi
+    if [ "$typeID" == 'r' ]; then
+        title="${title:-REQUIREMENT}"
+        text="${text:-REQUIREMENT}"
+        type='requirement'
+    elif [ "$typeID" == 's' ]; then
+        title="${title:-SCOPE}"
+        text="${text:-SCOPE}"
+        type='scope'
+    elif [ "$typeID" == 'o' ]; then
+        title="${title:-OBJECTIVE}"
+        text="${text:-OBJECTIVE}"
+        type='objective'
+    elif [ "$typeID" == 't' ]; then
+        title="${title:-TERM}"
+        text="${text:-TERM}"
+        type='term'
+    elif [ "$typeID" == 'c' ]; then
+        title="${title:-CLAUSE}"
+        text="${text:-CLAUSE}"
+        type='clause'
+    else
+        title="${title:-TOC}"
+        text="${text:-TOC}"
+        typeID='u'
+        type='toc'
+    fi
+    if [ -z "$typeMarker" ]; then
+        typeMarker="$typeID"
+    fi
+    if [ "${typeMarker,,}" != "$typeID"  ]; then
+        echoerr "Type ID mismatch for $indexString: Marker $typeMarker ID $typeID"
+    fi
+    markdown=$(echo "# $index $title~"${text//\"/} | tr '~' '\n' | sed 's/^/    /')
+    short=${title:0:40}
+    cat <<EOD >./defaults.yml
+type: '$type'
+header: '$short'
+text: |
+$markdown
+idx: $indexString
+ref: ''
+references:
+- path: .*\.md
+  type: pattern
+  keyword: $indexString
+standard:
+  name: ${name}
+  numID: '$dsname'
+  refID: '$locID'
+EOD
+if [ "$readableindex" -eq 1 ]; then
+    locString="$indexString"
+else
+    locString="$dsname"
+fi
+echo "TOC;$locID;${locString};$title;$typeMarker" >>header${standard}
+echo "TEXT;$locID;${locString};$headline;$text" >>text${standard}
+echo "$locID;${standard}-${dsname};$indexString" >>uid-ref-map
+if [ "$contentcsv" -eq 0 ]; then
+    doorstop add -l $level -d defaults.yml -n $dsname $requirement --noreorder
+else
+    echo "TOC;$locID;${locString};$title;$typeMarker" >>heading-data.csv
+fi
+}
+
+### create standard documents
+if [ "$norecreate" -eq 0 ]; then
+    for standard in ${standards[@]} $myreqs
+    do
+        if [ -f "$atlasdatadir/$standard" ]; then
+            . $atlasdatadir/$standard
+        else
+            echoerr WARNING: no datafile for $standard
+            parent=$myparent
+            digits=$mydigits
+            partShift=0
+            partDigits=0
+            structure=()
+        fi
+        if [ -f "$atlaslocaldir/$standard" ]; then
+            uselocal=1
+        else
+            uselocal=0
+        fi
+        if [ -z "$parent" ]; then
+            doorstop create -d $digits -s '-' ${standard} ./requirements/${standard}
+        else
+            doorstop create -d $digits -s '-' ${standard} ./requirements/${standard} --parent ${parent}
+        fi
+
+        setAttributes ${standard} ${name} 
+
+        echo "#---data---#" >>header${standard}
+
+        for index in ${!structure[@]}
+        do
+            volume=${structure[$index]}
+            year=${volume:0:4}
+            volume=${volume:5}
+            for item in $(eval echo ${volume})
+            do
+                addItem ${item} ${standard}
+            done
+        done
+    done
+fi
+
+if [ "$autoreference" -eq 1 ]; then
+    $atlastooldir/referenceItems $stdatlasdir
+fi
+
+if [ "$autopublish" -eq 1 ]; then
+    doorstop publish all ./requirements
+fi

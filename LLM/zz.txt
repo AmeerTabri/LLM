@@ -1,0 +1,45 @@
+- does "scope" and "requirement" means missing headings? and what other keywords says so
+- is the format consistent with each file?
+- what are the meaning of the classification and should we consider them
+- files with problems: IEC 61508-3-1
+- when droping the md file, is it a single part or is it all of them
+
+- what does standard atlas is all about in the grand theme of things
+- do i need to modify the code or just add mine
+- how to integrate the tree structure with the ability to generate headings
+
+
+what should we do:
+- scope and other is a missing title
+- we should contanerize the app to run  of every computer (maybe use docker)
+- add a seprate directory under tools for our project
+
+##################################################################################################################
+
+What we added from last time:
+- parsed the files from the data directory of standart atlas and show the tree for each part
+- added an option to drop the data file in adition to the markdown
+- we can navigate through different parts of the tree
+- right click on a node to redirect to the content
+
+What should we do to finish:
+- adjust the height according to the number of nodes.
+- add headings to a specific node and not just for the whole document.
+- solve the refresh problem.
+- redirecting to the same page and not creating a new one everytime.
+- save the progress (for example as a json file).
+- improve header generation.
+* containerize the web aplication so that it would work on different devices (for example by using docker)
+* finalize and optimize the code (remove redundancy and clean the code and test it)
+* add the code to the standart atlas as a separate directory in tools
+
+Things to consider:
+- the parsing depends on the format of the data
+
+##################################################################################################################
+
+what should we add to the presentation
+- the progress of the project - what we did and what we didn't
+- the reesults of everything
+- show a live demo
+- add a user guide to how to use it
