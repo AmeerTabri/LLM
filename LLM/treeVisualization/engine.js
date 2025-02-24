@@ -144,6 +144,17 @@ function handleDragOver(event) {
 // a flag that states when the user right click on a node
 let contextMenuActive = false;
 
+let openedNodesState = { 
+    // "3 Terms, definitions and abbreviations": true, 
+    // "4 Requirements for the safety of software in relation to the intended function": true, 
+    // "5 Software management and organisation": true, 
+    // "6 Software assurance": true, 
+    // "7 Generic software development": true, 
+    // "8 Development of application data or algorithms: systems configured by application data or algorithms": true, 
+    // "9 Software deployment and maintenance": true
+};  // This will store the open/close state of nodes
+
+
 
 function generate_heading(name) { 
     console.log(name); // Print the name to the console
@@ -276,14 +287,16 @@ function drawTree(treeData) {
 
     var treeDepth = d3.max(nodes, function(d) { return d.depth; });
      
-    var margin = { top: 20, right: 90, bottom: 30, left: 90 },
+    var margin = { top: 2000, right: 90, bottom: 30, left: 90 },
         width = 4000 - margin.left - margin.right,  
-        height = countOpenedNodes(root) * 0.5; 
-        // height =  window.innerHeight*.7; 
+        // height = countOpenedNodes(root) * 0.5; 
+        height =  window.innerHeight * 20; 
 
- 
-    var treemap = d3.tree().size([height, width]);
+
+    // var treemap = d3.tree().size([height, width]);
+    var treemap = d3.tree().nodeSize([25, 200]);
    
+
     var svg = d3.select("body").append("svg")
         .attr("width", width + margin.right + margin.left)
         .attr("height", height + margin.top + margin.bottom) // Set dynamic height
@@ -302,14 +315,17 @@ function drawTree(treeData) {
 
     update(root);
 
+    
     function collapse(d) {
-        if (d.children) {
+        if (d.children && openedNodesState[d.data.name] !== undefined) {
+        // if (d.children ) {
+            console.log(d.data.name)
             d._children = d.children;
             d._children.forEach(collapse);
             d.children = null;
         }
     }
- 
+
 
     function update(source) {  
         var treeData = treemap(root);
