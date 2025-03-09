@@ -1,0 +1,193 @@
+body {
+    background: linear-gradient(135deg, #1d3d51, #1d3d51);
+    color: #ffffff;
+}
+
+/* Node styles */
+.node text {
+    font: 12px sans-serif;
+    fill: black;
+}
+
+/* Link styles */
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+/* Drop md zone styling */
+#drop-zone-md {
+    border: 3px dashed #ddd;
+    padding: 16px;
+    width: 400px;
+    top: 7;
+    margin: 0 auto 0; 
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+} 
+
+/* Drop data zone styling */
+#drop-zone-data {
+    border: 3px dashed #ddd; 
+    padding: 16px;
+    width: 400px;
+    margin: 70px auto 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Buttons Container Styling */
+#buttons-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 53px;  
+    background-color: #1d3d51;
+    padding: 5px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+ 
+/* Download Button styling */
+#download-btn {
+    position: fixed;   
+    display: none;
+    left: 50%;    
+    transform: translate(-50%);  
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid #1e89aa;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#download-btn:hover {
+    background-color: #1e89aa; /* Darker green when hovered */
+}
+
+/* Generate headings Button styling */
+#button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #1e89aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#button:hover {
+    background-color: #11596d;
+}
+
+/* Loading screen */
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+#dropdown-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #1e89aa;
+    color: white;
+    opacity: 0.95;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center; 
+} 
+
+#dropdown-container label {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+#parts-dropdown {
+    font-size: 16px;
+    padding: 2px 10px;
+    font-family: sans-serif;
+    font-weight: normal;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+#parts-dropdown:hover {
+    background-color: #e0e0e0; /* A slightly darker shade of white */
+}  
+
+
+/* Loading Screen */
+#loading {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9999; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;  
+}
+
+
+/* Spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid white;
+    border-radius: 50%;
+    border-top-color: #1e89aa;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#loading p {
+    color: white;
+    font: 18px sans-serif;
+    margin: 15px 0 0 0; 
+    text-align: center;
+    transform: translateX(-15px);  
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tree Diagram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="buttons-container">
+        <button id="button">Generate Headings</button> 
+        <button id="download-btn">Download File</button>
+ 
+        <!-- Drop Zone for Markdown -->
+        <div id="drop-zone-md">Upload MarkDown file here</div>
+         
+        <div id="dropdown-container">
+            <label for="parts-dropdown">Select a part:</label>
+            <select id="parts-dropdown"></select>
+        </div>
+    </div>
+
+      
+    <!-- Drop Zone for Data file -->
+    <div id="drop-zone-data">Upload Data file here</div>
+      
+  
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="script.js"></script>
+
+    <div id="loading">
+        <div>
+            <div class="spinner"></div>
+            <p>Generating...</p>
+        </div>
+    </div>
+
+</body>
+</html>
