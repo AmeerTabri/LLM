@@ -1,0 +1,532 @@
+name="markdown1"
+
+TOC;4f7a4ad445137cd4bbea776dc646fbb6;markdown1:2025 1;Scope;u
+TOC;9b4b7f1a6d9770f6d8091a2bb2904a2b;markdown1:2025 1.1;???;u
+TOC;2d19ab2126e7f9b3a6b8a4b8efb9de99;markdown1:2025 1.2;???;u
+TOC;23122f8a8552b88180a40b2be35e4975;markdown1:2025 1.3;???;u
+TOC;96de556234e810c5b0843204b5d42b72;markdown1:2025 1.4;???;u
+TOC;fa084908b72c364ca4ab79e07379bfa8;markdown1:2025 1.5;???;u
+TOC;7a22c6c02f52ac63b839d702cc1b1853;markdown1:2025 1.6;???;u
+TOC;fb3c106c56c2fd5f687e3a4334e65fd3;markdown1:2025 1.7;???;u
+TOC;6d0151972f94a02050531b81f6b2b191;markdown1:2025 1.8;???;u
+TOC;bfec5f4ecb853c3181c2a4b9002fa70e;markdown1:2025 1.9;???;u
+TOC;6acdb14f53efc95cc4ec9f1a0c6c3da0;markdown1:2025 2;Normative references;u
+TOC;44b2e4db798f98a1a23c5a4a3d7ad352;markdown1:2025 3;Terms, definitions and abbreviations;u
+TOC;1bb0814fe017aefb17804289d0852c4b;markdown1:2025 3.1;Terms and definitions;u
+TOC;59763fe03c110e68b69d4ae7b8230fe9;markdown1:2025 3.1.1;assessment;u
+TOC;0c1f8db0e021f156ed2aab4ab86924a1;markdown1:2025 3.1.2;assessor;u
+TOC;7f2a7f98656bce4639b2c4db0e3a36c9;markdown1:2025 3.1.3;commercial off-the-shelf (COTS) software;u
+TOC;dfd4f763ad31efc22f56e32d6169a9fe;markdown1:2025 3.1.4;component;u
+TOC;8f650fb19427bb45732a2db4a0247b38;markdown1:2025 3.1.5;configuration manager;u
+TOC;6a84a5766c6e881a3461c3cfdd0a8453;markdown1:2025 3.1.6;customer;u
+TOC;953a04fd538713c9bf23d6a2e4310985;markdown1:2025 3.1.7;designer;u
+TOC;7c80b6489463a7fd04d3a3d30012e397;markdown1:2025 3.1.8;entity;u
+TOC;f87b679f740243ef0b2d5e1299abf276;markdown1:2025 3.1.9;error, fault;u
+TOC;85b0eb3976d02ca15d5c7a6d1c57c8e4;markdown1:2025 3.1.10;failure;u
+TOC;1a6d3d7f837d82fa5ca482fe9a29c8db;markdown1:2025 3.1.11;fault tolerance;u
+TOC;3c8bc413e92a5e31aa90b5c34093e5ec;markdown1:2025 3.1.12;firmware;u
+TOC;1c7f90295e30c1418b8bc35a4c906d6a;markdown1:2025 3.1.13;generic software;u
+TOC;2a9d7b7f63a0c42e27e0c62521c2f1f8;markdown1:2025 3.1.14;implementer;u
+TOC;231a86a42e978bd49ef0a6886a4ae4c5;markdown1:2025 3.1.15;integration;u
+TOC;67a0e8a5354767ab31e8d7ff0b4884b0;markdown1:2025 3.1.16;integrator;u
+TOC;4d0c1f8d52e1f7d58b41c60a9f3f91e7;markdown1:2025 3.1.17;pre-existing software;u
+TOC;33876e6c3a3969b8e7ea0f40abf02835;markdown1:2025 3.1.18;open source software;u
+TOC;6a227bf0dbed4bc58150c5d2d44a57d7;markdown1:2025 3.1.19;programmable logic controller;u
+TOC;9028f78e4c60f18d63f780c717b4be73;markdown1:2025 3.1.20;project management;u
+TOC;32db0f29f2b7d8b61a63a4281b0f1f62;markdown1:2025 3.1.21;project manager;u
+TOC;be0f3b4b121a1d53b2156b83366e4e8c;markdown1:2025 3.1.22;reliability;u
+TOC;7e3f1bca547f57a160f68b7465a77d43;markdown1:2025 3.1.23;robustness;u
+TOC;f8c6c348700c64c0fdc9edca76e3d95a;markdown1:2025 3.1.24;requirements manager;u
+TOC;cbf07bdb57e8a02c4c1c623f4452c6c7;markdown1:2025 3.1.25;requirements management;u
+TOC;3c8db02b41e2412990b98333cb93b7fe;markdown1:2025 3.1.26;risk;u
+TOC;7e16d6e232cc3bcf658d27a7d4ed76c9;markdown1:2025 3.1.27;safety;u
+TOC;0c8b7d04b76c0726a3a9b1eec9ad8a82;markdown1:2025 3.1.28;safety authority;u
+TOC;7d243c12606b83a1f82e923b25d93715;markdown1:2025 3.1.29;safety function;u
+TOC;2356fa7b314bdbbc3a76c3a2ab154981;markdown1:2025 3.1.30;safety-related software;u
+TOC;76a1f5b85a68cf8b57fef31c4218f64b;markdown1:2025 3.1.31;software;u
+TOC;1b30f50677111fa859f0934321b9c41f;markdown1:2025 3.1.32;software baseline;u
+TOC;533cf4314e5776314916be5c86bda212;markdown1:2025 3.1.33;software deployment;u
+TOC;47f4c7b35048f3a698c5e83c8b98dce2;markdown1:2025 3.1.34;software life-cycle;u
+TOC;45b8f28be9982280e6c57951000b3ab9;markdown1:2025 3.1.35;software maintainability;u
+TOC;4b5e1d75a4fe6e64a85d7c097bc18951;markdown1:2025 3.1.36;software maintenance;u
+TOC;2dca02035ffb7ad9f3386ed057f22130;markdown1:2025 3.1.37;software safety integrity level;u
+TOC;42658fd577b93e4295636dbb334dc5b4;markdown1:2025 3.1.38;supplier;u
+TOC;402ff40ccdbf1c22b0738b59f13a21cf;markdown1:2025 3.1.39;system safety integrity level;u
+TOC;6f840b441a6c9f51919d8e5dbd929b97;markdown1:2025 3.1.40;tester;u
+TOC;693bcb2aaf7c1a27a67900b1a29d21c8;markdown1:2025 3.1.41;testing;u
+TOC;2a0e8fbb5e8999e43e05372c372f9a6a;markdown1:2025 3.1.42;tool class T1;u
+TOC;035db5a1fbe9fa3df5c9e64abf8f7f9e;markdown1:2025 3.1.43;tool class T2;u
+TOC;8d9a219fe84001f1f788f5b8c1f2339d;markdown1:2025 3.1.44;tool class T3;u
+TOC;48ed85c9c178268fe4890d44e8a6c6f3;markdown1:2025 3.1.45;traceability;u
+TOC;437d42083650c69be9b6b7e204207a72;markdown1:2025 3.1.46;validation;u
+TOC;16b0ebd0c1452c343444a274fc22a67;markdown1:2025 3.1.47;validator;u
+TOC;16b0ebd0c1452c9683438a274fc22a27;markdown1:2025 3.1.48;verification;u
+TOC;16b0ebd0c1452c96545454524fc22a79;markdown1:2025 3.1.49;verifier;u
+TOC;72a755c703dcf423d902db8e1f7b4ec3;markdown1:2025 3.2;Abbreviations;u
+TOC;9b3c34772cbcd444320c19e9d8b07d97;markdown1:2025 4;Requirements for the safety of software in relation to the intended function;u
+TOC;08152993b17732085d74e31b75b9b372;markdown1:2025 4.1;???;u
+TOC;6e2638f08dbad4fda3ff6a330b277fe1;markdown1:2025 4.2;???;u
+TOC;68554dbffdb58a14091d6b3515c0e9b3;markdown1:2025 4.3;???;u
+TOC;8de0459e08174f59b7a2382f32134717;markdown1:2025 4.4;???;u
+TOC;73e086d4435b295dc49cc9ff2e2ae13f;markdown1:2025 4.5;???;u
+TOC;08014f4d8636d8e2a7648e5c16b4bc9a;markdown1:2025 4.6;???;u
+TOC;d9454b99d4b33b7d8c9572da006a991f;markdown1:2025 4.7;???;u
+TOC;be1079e3629f8c49b217dfd187346a61;markdown1:2025 4.8;???;u
+TOC;f2db02978a157c7035a2ab2800329b69;markdown1:2025 4.9;???;u
+TOC;f918b2d0cf6a8c8b768c7eafae5d3522;markdown1:2025 4.10;???;u
+TOC;ad44b87c6a10ba352872b61b8a58249a;markdown1:2025 5;Software management and organisation;u
+TOC;29d564035a426c24f324c519c87ec47b;markdown1:2025 5.1;Organisation, roles and responsibilities;u
+TOC;88d7e41f3492a1b34744a9d5c5675c39;markdown1:2025 5.1.1;Objective;u
+TOC;57141b4ab2cf5a3d2440532380b39eb7;markdown1:2025 5.1.1.1;???;u
+TOC;1bce97d94cc1e16a0748d7b3c37865d9;markdown1:2025 5.1.2;Requirements;u
+TOC;da0b24bff1b5b67e4d3207411f91fecd;markdown1:2025 5.1.2.1;???;u
+TOC;2761acbf592537a1dce0a02a92b6b8b7;markdown1:2025 5.1.2.2;???;u
+TOC;79ec5608a8ac5d099c0f593465a1d35d;markdown1:2025 5.1.2.3;???;u
+TOC;01a897adaf6a547617736d6e9fe8f95e;markdown1:2025 5.1.2.4;???;u
+TOC;5db5f1efeeaad6fcb7316cc9c9d3a0ad;markdown1:2025 5.1.2.5;???;u
+TOC;6cd34f1a7f3c7b0d80f61a1789cf9c12;markdown1:2025 5.1.2.6;???;u
+TOC;080de0d6234043ad106f64b91a70515d;markdown1:2025 5.1.2.7;???;u
+TOC;9eebf2e6325598e1d6b74b21f14db840;markdown1:2025 5.1.2.8;???;u
+TOC;ccf869d88de35193d5e2f81c9d47c077;markdown1:2025 5.1.2.9;???;u
+TOC;ac9ab750de8c6b9b4b2e0de6069279d4;markdown1:2025 5.1.2.10;???;u
+TOC;60a148556fc0f6d84bfa49ff1f9fa842;markdown1:2025 5.1.2.11;???;u
+TOC;af531cf03c80b35ff2cc7b7f5b104a4f;markdown1:2025 5.1.2.12;???;u
+TOC;4a5a81290d171c6f18cc2c801342a33b;markdown1:2025 5.1.2.13;???;u
+TOC;3092b110e9d59244451ab421d87a9bfe;markdown1:2025 5.1.2.14;???;u
+TOC;27b9e5cae155faab229c1630d51a0b65;markdown1:2025 5.2;Personnel competence;u
+TOC;89a25cc69aaf16f30e49c46da2082f0b;markdown1:2025 5.2.1;Objectives;u
+TOC;56ec79e105357cde4cc423ff4c4e4679;markdown1:2025 5.2.1.1;???;u
+TOC;ffec45a73286bb4da189d75c50159b44;markdown1:2025 5.2.2;Requirements;u
+TOC;1c5764b41b98b3cc26d93749f404365f;markdown1:2025 5.2.2.1;???;u
+TOC;809c56c5e0b08378f6bc0b97c87f34db;markdown1:2025 5.2.2.2;???;u
+TOC;3f3d82bb9d9e6c2b734c623e3803e306;markdown1:2025 5.2.2.3;???;u
+TOC;f22f929f4888b3be6994154d04f7bfae;markdown1:2025 5.2.2.4;???;u
+TOC;6fc0242e5fa1ca55e1a055a0b71b84e9;markdown1:2025 5.3;Lifecycle issues and documentation;u
+TOC;f3bba59380361fd338e5f5e72e9b50fa;markdown1:2025 5.3.1;Objectives;u
+TOC;ffec0a2a0f0b43c95e9b5070f01551c4;markdown1:2025 5.3.1.1;???;u
+TOC;61f0efc1d39eaf0ec33d95f4c968d28d;markdown1:2025 5.3.1.2;???;u
+TOC;d05a6fa560d9b8c6d9873d314ecf7285;markdown1:2025 5.3.2;Requirements;u
+TOC;d4c62a933fcfe4a8d4eb14c1b71d33a9;markdown1:2025 5.3.2.1;???;u
+TOC;0b47a67edc77ba3f3fe18185a9113076;markdown1:2025 5.3.2.2;???;u
+TOC;7c57ae440bf9b11675cfb9758d28acdf;markdown1:2025 5.3.2.3;???;u
+TOC;fa56a93e06349802da5d7f4012631101;markdown1:2025 5.3.2.4;???;u
+TOC;490a80fd6c301d3181328f26fd0c8bb9;markdown1:2025 5.3.2.5;???;u
+TOC;5a576b55bba28ab106c0970b63e04df9;markdown1:2025 5.3.2.6;???;u
+TOC;07334418b8a76d7cce800d62325f4742;markdown1:2025 5.3.2.7;???;u
+TOC;0c3cce975f9b5a8e7edebfaac18be074;markdown1:2025 5.3.2.8;???;u
+TOC;41874b27f9b4b276abf0c1533d23a3c7;markdown1:2025 5.3.2.9;???;u
+TOC;5c238e3645008c7f6979d3c5db831c8b;markdown1:2025 5.3.2.10;???;u
+TOC;52216c32a66fcb7f9026a036f99d13b4;markdown1:2025 5.3.2.11;???;u
+TOC;80f1633506f04cb91b31ad5731997386;markdown1:2025 5.3.2.12;???;u
+TOC;0a722e018b56e3be4c227f8c3d73f0fa;markdown1:2025 5.3.2.13;???;u
+TOC;d27070256fc6bbd9b39c4c8d81030017;markdown1:2025 5.3.2.14;???;u
+TOC;0b6071b119bbf8b607a6c3d9f625b8ba;markdown1:2025 6;Software assurance;u
+TOC;ef378eb1b8db47c3b6096a8a8c1cd85b;markdown1:2025 6.1;Software testing;u
+TOC;69e735ed5f2e903971d1354047db44be;markdown1:2025 6.1.1;Objective;u
+TOC;59d6f99e6a17e42c7ae837230c5073f2;markdown1:2025 6.1.1.1;???;u
+TOC;218401606cb971c824ea5a944f97c7ba;markdown1:2025 6.1.2;Input documents;u
+TOC;1f5e22785a53e6b65c37249e5b6b54a5;markdown1:2025 6.1.3;Output documents;u
+TOC;f24d9a7cc9f2c9fe40258b85fa02287b;markdown1:2025 6.1.4;Requirements;u
+TOC;6ae9272e0b60a09a69863532153b2d0d;markdown1:2025 6.1.4.1;???;u
+TOC;3f3f89f4f42e2bb2fdba460602ed8e60;markdown1:2025 6.1.4.2;???;u
+TOC;bdfe264ac3a87873c3f67d62db0a8a43;markdown1:2025 6.1.4.3;???;u
+TOC;8dff1575a0192b23e45a524b89f22f34;markdown1:2025 6.1.4.4;???;u
+TOC;93e4b4631bfa3e635fae6c1251c02435;markdown1:2025 6.1.4.5;???;u
+TOC;f8b6e8999607205db1c0c226b5c9d8d1;markdown1:2025 6.2;Software verification;u
+TOC;db47623db1a3546b497d7cd19d9e0a0b;markdown1:2025 6.2.1;Objective;u
+TOC;10e1abf4731a4cdebc05a785f0b48f13;markdown1:2025 6.2.1.1;???;u
+TOC;739a6d0a9d68780ca7d4206d1c467e1d;markdown1:2025 6.2.2;Input documents;u
+TOC;6235c6d20581deeb624235993d9c72a1;markdown1:2025 6.2.3;Output documents;u
+TOC;47a1d45df8a8ab47e6ac47f5864dff73;markdown1:2025 6.2.4;Requirements;u
+TOC;f8a9a7f91a6b9d5bbf8a57f1e6b34ea7;markdown1:2025 6.2.4.1;???;u
+TOC;39768f7e8d20e46f3f1c7410e1a684c7;markdown1:2025 6.2.4.2;???;u
+TOC;5cb27863124483e7a5395e49b09a0cb7;markdown1:2025 6.2.4.3;???;u
+TOC;bdcc7fbc2c0db4fa2e83cb84b9c2254a;markdown1:2025 6.2.4.4;???;u
+TOC;ae0e44d5bff32d9b963c2b4749cc2559;markdown1:2025 6.2.4.5;???;u
+TOC;11072f7d6f7d9fc682a201c9ca24e689;markdown1:2025 6.2.4.6;???;u
+TOC;2c2574d287a764fa75a9b6bb3ed77f4d;markdown1:2025 6.2.4.7;???;u
+TOC;ff8d7c7a129519285a687601c699036d;markdown1:2025 6.2.4.8;???;u
+TOC;8397033197bb7b618344fb345ab62988;markdown1:2025 6.2.4.9;???;u
+TOC;3460cb3b9f1d418dbcf1fc7e02adf4e1;markdown1:2025 6.2.4.10;???;u
+TOC;197c097b4671f1c83f7a3b9458f22b0b;markdown1:2025 6.2.4.11;???;u
+TOC;234a64bc2a0c1b9f0e084cc8ed2d9b4b;markdown1:2025 6.2.4.12;???;u
+TOC;7ac9375cc0a7352be7ac5a1d42625b6a;markdown1:2025 6.2.4.13;???;u
+TOC;547f9b1be387d0076580579f7e17b7f7;markdown1:2025 6.3;Software validation;u
+TOC;fd0d82f6ff46b55a2b2d04c5d197e8b0;markdown1:2025 6.3.1;Objective;u
+TOC;59d71a4b4793a95abbe65ec9c34d63b7;markdown1:2025 6.3.1.1;???;u
+TOC;6e22c60b456b27bc6b98c4731e82c1d9;markdown1:2025 6.3.1.2;???;u
+TOC;fa8e7a8abdb263433d3b7642b5764ea2;markdown1:2025 6.3.2;Input documents;u
+TOC;4b81b400676a56ec7db88d00f1ec23a2;markdown1:2025 6.3.3;Output documents;u
+TOC;38bc3b490f32ab1a86a5b80465c4d85c;markdown1:2025 6.3.4;Requirements;u
+TOC;ed2f7fe8e9a634d3ed4f072dc10f9f0b;markdown1:2025 6.3.4.1;???;u
+TOC;ff8f7b38d93a09ad73b29a4d8a85e900;markdown1:2025 6.3.4.2;???;u
+TOC;40f82688f0c201e50cfba2fe6c7d5476;markdown1:2025 6.3.4.3;???;u
+TOC;1b4c79fa22decc5dbe07a71743665b78;markdown1:2025 6.3.4.4;???;u
+TOC;8d3acdc68f22d5d16f94ab3761ab5b77;markdown1:2025 6.3.4.5;???;u
+TOC;ed12fdf95393ac90370e4ed52ec9d22e;markdown1:2025 6.3.4.6;???;u
+TOC;fe4150e69ad708b1d5e1b842e71f6ec7;markdown1:2025 6.3.4.7;???;u
+TOC;02d4507ab68b68a75e1848857b71ad89;markdown1:2025 6.3.4.8;???;u
+TOC;ab7a9f70a4e7b1a73685b89f5a1ef234;markdown1:2025 6.3.4.9;???;u
+TOC;af7c67b6c47f45ec6b7aeb7c0b572e52;markdown1:2025 6.3.4.10;???;u
+TOC;5c7f1fe983a62d71327e0a4572f1d98b;markdown1:2025 6.3.4.11;???;u
+TOC;cd92c95d47085a2d66a1598a3d4c4fa9;markdown1:2025 6.3.4.12;???;u
+TOC;af2731b47898b6b7b7a0a32eb3494694;markdown1:2025 6.3.4.13;???;u
+TOC;13e914d8c3771787b282674cd26b00fe;markdown1:2025 6.3.4.14;???;u
+TOC;fb47617876f77ec0d08a1d9c472d5d84;markdown1:2025 6.3.4.15;???;u
+TOC;7059f1a6fc274d4a3626c41b87ff978b;markdown1:2025 6.3.4.16;???;u
+TOC;58c3e3b2e5d52feeb8e0a6f015b64cd6;markdown1:2025 6.3.4.17;???;u
+TOC;f5a9a8e8e3d9c57e25ec02ef8989e595;markdown1:2025 6.4;???;u
+TOC;7398235a1596d8c9c3b3ab7ec6f77a17;markdown1:2025 6.4.1;???;u
+TOC;ae73e4f70a491b97fe9bb1d0d7c87b93;markdown1:2025 6.4.1.1;???;u
+TOC;bbc8fa2da768f6c75d4bce2d26c9c865;markdown1:2025 6.4.1.2;???;u
+TOC;ef3974ac767a8b5172b67a6b0d7fd845;markdown1:2025 6.4.2;???;u
+TOC;279b704b07e39cb5d2f437cf01f3e3fd;markdown1:2025 6.4.3;Output documents;u
+TOC;957cb970c636622d7b8a88d20bc5a648;markdown1:2025 6.4.4;Requirements;u
+TOC;ee70d30ad58245a01548a1f72c23e149;markdown1:2025 6.4.4.1;???;u
+TOC;60f7e325fa77db33c9b4cd60b13415b5;markdown1:2025 6.4.4.2;???;u
+TOC;9b44ab11a72784ed49a1bb6b7bfa49a0;markdown1:2025 6.4.4.3;???;u
+TOC;4ccfffd4adbc795eb8d5f07a8a6a5a4e;markdown1:2025 6.4.4.4;???;u
+TOC;fa0e3a2a1b872b508208459f32a1000e;markdown1:2025 6.4.4.5;???;u
+TOC;dd6bb3e7ad63e7c5c17dbed493f7c8e1;markdown1:2025 6.4.4.6;???;u
+TOC;f60c98a6b7d575a90ff3b4f8f358d9a1;markdown1:2025 6.4.4.7;???;u
+TOC;91bc204b491fffeccf7d78e6ef1f4d60;markdown1:2025 6.4.4.8;???;u
+TOC;619f0bb7edbb8e3ac2a9cc67be0f9008;markdown1:2025 6.4.4.9;???;u
+TOC;40e94ac15c60ed5df178bc522b1ab3ad;markdown1:2025 6.4.4.10;???;u
+TOC;f3ef21d7a48c4164b050eb85c3e276a4;markdown1:2025 6.4.4.11;???;u
+TOC;ed69a8a58ff566b1b6c3133441633a42;markdown1:2025 6.4.4.12;???;u
+TOC;84e438517302b276476cb9b2a0e319bb;markdown1:2025 6.4.4.13;???;u
+TOC;08f764960e71d826ee58b2dff00e129f;markdown1:2025 6.4.4.14;???;u
+TOC;35d5d0647126f70213f4984fc792a58b;markdown1:2025 6.4.4.15;???;u
+TOC;501d37a33d850c9337f8e255aff3016d;markdown1:2025 6.4.4.16;???;u
+TOC;d61fcd0a8bcd171a11d27637bbf951b0;markdown1:2025 6.4.4.17;???;u
+TOC;92cfa567fa842b347990b3815e636af9;markdown1:2025 6.4.4.18;???;u
+TOC;710d15eaf4c548df5f6d8711d0d9b347;markdown1:2025 6.4.4.19;???;u
+TOC;6f0cb8d82576d0903bfb28a8dba40bb3;markdown1:2025 6.5;Software quality assurance;u
+TOC;1b6a7ab5f48cdabfae8f8c5d5180de59;markdown1:2025 6.5.1;Objectives;u
+TOC;fb89f5cfd5cbe6f66d7c3be1f7e105eb;markdown1:2025 6.5.1.1;???;u
+TOC;f52aefc2e093f7c9a3c5182db4d86c09;markdown1:2025 6.5.1.2;???;u
+TOC;d45e3a5f5c725d00498a4c1e3c3f177b;markdown1:2025 6.5.2;Input documents;u
+TOC;8fa7b68c7e59f8f4b1f0b2a3bbf99c26;markdown1:2025 6.5.3;Output documents;u
+TOC;5db7e29b1f2e0727d5d8d8493f6159e6;markdown1:2025 6.5.4;Requirements;u
+TOC;7e3156c31c01d0a27fdc86e1b3a407df;markdown1:2025 6.5.4.1;???;u
+TOC;5b7b929cbf1e6d081cf1154baf949b7a;markdown1:2025 6.5.4.2;???;u
+TOC;ee6ebc5d347b3b8a1eb211b8f9877569;markdown1:2025 6.5.4.3;???;u
+TOC;bf1fe659f451d0c58202b8ca82cf2054;markdown1:2025 6.5.4.4;???;u
+TOC;286cdefdc35d49911f036bb17097f1d1;markdown1:2025 6.5.4.5;???;u
+TOC;dfa13b5b07b232987a88c03e8b14a8c5;markdown1:2025 6.5.4.6;???;u
+TOC;8d4a2a908af4d930eae0b4f02f7f8ff4;markdown1:2025 6.5.4.7;???;u
+TOC;9d11fc5c5c19d7db5c5e0a257c7f5b71;markdown1:2025 6.5.4.8;???;u
+TOC;493c4ca767d5c738f56d7fe3fd649859;markdown1:2025 6.5.4.9;???;u
+TOC;6c1a0bdfd6d364dc4895d7ef53b32f66;markdown1:2025 6.5.4.10;???;u
+TOC;613764c902b31925b0b40fc8db89f97b;markdown1:2025 6.5.4.11;???;u
+TOC;7f9202128b38159e82da1cc10e24b4eb;markdown1:2025 6.5.4.12;???;u
+TOC;34718a27e9b1051299fc92a60e2067f7;markdown1:2025 6.5.4.13;???;u
+TOC;88bcf615a0c951d27234a1d1a991ee8f;markdown1:2025 6.5.4.14;???;u
+TOC;4bfa8d777f1b0173cc6500f68c832f3b;markdown1:2025 6.5.4.15;???;u
+TOC;df8eb4fc6c43522b2cfb36e402d52a22;markdown1:2025 6.5.4.16;???;u
+TOC;26b53de4da735c12f6cf4ab4606a271d;markdown1:2025 6.5.4.17;???;u
+TOC;dc7d27c9289a573c02b3b29f77c9c763;markdown1:2025 6.6;Modification and change control;u
+TOC;ba02e4d2044debf0dbca9374405b8d34;markdown1:2025 6.6.1;Objectives;u
+TOC;99f23a49723d11b32f43a5b7cf409440;markdown1:2025 6.6.1.1;???;u
+TOC;1a578b2791738c512f00f4065725a00a;markdown1:2025 6.6.1.2;???;u
+TOC;4b2a0e809469195da263f539b3d967c0;markdown1:2025 6.6.2;Input documents;u
+TOC;019b3a4f5b1ad0b8b89498fbb08c0ae3;markdown1:2025 6.6.3;Output documents;u
+TOC;45d5248b320b5a7b47a9d6b06f59a78d;markdown1:2025 6.6.4;Requirements;u
+TOC;b2f6bfb68fe2c9034b3d2e40be678ef2;markdown1:2025 6.6.4.1;???;u
+TOC;556f9036720c90bc5f33a4740c70e71e;markdown1:2025 6.6.4.2;???;u
+TOC;2e4be29b1cb3ad267306c1f6c2140c39;markdown1:2025 6.7;Support tools and languages;u
+TOC;fe6ab3f0154417e99ef3e510a6a99d4b;markdown1:2025 6.7.1;Objectives;u
+TOC;45e4d004897a49e4b44a4b08759e4a74;markdown1:2025 6.7.1.1;???;u
+TOC;fa8f1745d00439678924e07407de8988;markdown1:2025 6.7.2;Input documents;u
+TOC;8d057b39d07868f87ffbc9a9e55be22b;markdown1:2025 6.7.3;Output documents;u
+TOC;67fda94a747429f70026e9f91b7c99a9;markdown1:2025 6.7.4;Requirements;u
+TOC;74098b69e18e09a0049a953f6e736cf1;markdown1:2025 6.7.4.1;???;u
+TOC;299c1407e9f8e2fa53db4d7c5722d9a7;markdown1:2025 6.7.4.2;???;u
+TOC;ae7b8a7b20b480564df8d7a29abf0e7c;markdown1:2025 6.7.4.3;???;u
+TOC;98fdb23dbd37d03f26837d2ea7a465d3;markdown1:2025 6.7.4.4;???;u
+TOC;f8f6a45d2706f453c0a2b69a850ad2ed;markdown1:2025 6.7.4.5;???;u
+TOC;76d7d1d55848aebdd6b18b4f31c3720c;markdown1:2025 6.7.4.6;???;u
+TOC;9a957be4c91c0ab8d953ac86109be51f;markdown1:2025 6.7.4.7;???;u
+TOC;bbdb63a118fe79fe9e12016faed5d312;markdown1:2025 6.7.4.8;???;u
+TOC;59ad3480a417c6d0b65b7bcdcb0843ed;markdown1:2025 6.7.4.9;???;u
+TOC;dd7866f7ff0eaf3d2ffb74d6e6b7f07d;markdown1:2025 6.7.4.10;???;u
+TOC;7ff4adf2c7e712bdb29528e0d18ab3fa;markdown1:2025 6.7.4.11;???;u
+TOC;25a22d19e69445b97762b27d15574fc5;markdown1:2025 6.7.4.12;???;u
+TOC;1a8cb1fce25a04ad529fb3b18d11ca3c;markdown1:2025 7;Generic software development;u
+TOC;6c0151e39296decd62472fd47734047c;markdown1:2025 7.1;Lifecycle and documentation for generic software;u
+TOC;0a5b9051c1cb790476cd52d58a615df2;markdown1:2025 7.1.1;Objectives;u
+TOC;3d80b1e9e9c1ac00781e2577be35653b;markdown1:2025 7.1.1.1;???;u
+TOC;8b9e9f1f02d1553278c9bb4f2beec82f;markdown1:2025 7.1.2;Requirements;u
+TOC;9e5c897edb5b49125c2b70886ff1d6e2;markdown1:2025 7.1.2.1;???;u
+TOC;45ab2de14041cc9f85d03865f62ae81e;markdown1:2025 7.1.2.2;???;u
+TOC;d7d2f2327c35f3a42103b09e855478bb;markdown1:2025 7.2;Software requirements;u
+TOC;86becc5ad3a96328a76c0c1de5058e8f;markdown1:2025 7.2.1;Objectives;u
+TOC;bb3d199850dc5b7c4be0f7bc99f4d6c9;markdown1:2025 7.2.1.1;???;u
+TOC;f598b8a58fc42e6b20667fcb2738e05e;markdown1:2025 7.2.1.2;???;u
+TOC;4e29221b1ed5c76c67643d1e0b6994e7;markdown1:2025 7.2.2;Input documents;u
+TOC;4cfd4abfb736d02b4c18d79da7311f57;markdown1:2025 7.2.3;Output documents;u
+TOC;d07465d15a249de7bb8491a28a902b85;markdown1:2025 7.2.4;Requirements;u
+TOC;f7b4a9cf8b3be4a5b3a7b9b75dbb1b24;markdown1:2025 7.2.4.1;???;u
+TOC;0d872cdb65a4ac6bdbb5f3d126b21145;markdown1:2025 7.2.4.2;???;u
+TOC;f7a99c21c9d0832cf29a16b3be55db1e;markdown1:2025 7.2.4.3;???;u
+TOC;3c225b2184fa8f0cdd9d0a16e06f69f3;markdown1:2025 7.2.4.4;???;u
+TOC;d5f406107a2f32c74f0c58b9db63d82d;markdown1:2025 7.2.4.5;???;u
+TOC;4b568fe9784b7c9e9e1e1a34d14ef57e;markdown1:2025 7.2.4.6;???;u
+TOC;9f18d703b8a961f426f4cb12c7ec7730;markdown1:2025 7.2.4.7;???;u
+TOC;5b6a0db397e64ad8e94b53994b1fc505;markdown1:2025 7.2.4.8;???;u
+TOC;bf3ee4d6fd61cf798b2c0d9d953a0e88;markdown1:2025 7.2.4.9;???;u
+TOC;8d6d35d3e4d9d8c20d9e09a7f67a98fa;markdown1:2025 7.2.4.10;???;u
+TOC;5971c1a7b08e7d69f93775d3e1da0f6a;markdown1:2025 7.2.4.11;???;u
+TOC;27c4d0f990c9a8fc1d410503cd8c7b8c;markdown1:2025 7.2.4.12;???;u
+TOC;592a415a01a26b08a87b31d5be6a0f29;markdown1:2025 7.2.4.13;???;u
+TOC;3ac9bdb64b9e1c0d3d6b324aad6a4b9b;markdown1:2025 7.2.4.14;???;u
+TOC;d7c02a017041e560f7ed87f1f5f5a2c4;markdown1:2025 7.2.4.15;???;u
+TOC;1e322d5e3d8b759a1eb5de83638302a1;markdown1:2025 7.2.4.16;???;u
+TOC;0cd593aa4de31d8b6c2f91c3d5597d96;markdown1:2025 7.2.4.17;???;u
+TOC;cd4a7f9c6e83ed3218d53591a309e7fc;markdown1:2025 7.2.4.18;???;u
+TOC;9832d027348f4c9d8c6e2156ecb626ac;markdown1:2025 7.2.4.19;???;u
+TOC;4642a823c7207178f9d312552d5fa63f;markdown1:2025 7.2.4.20;???;u
+TOC;279277a78b72f0642ab1b92cb96e2275;markdown1:2025 7.2.4.21;???;u
+TOC;fa74e5f23347f950b8c0b465b4397b0b;markdown1:2025 7.2.4.22;???;u
+TOC;92bda243f83a0d424ca015f91e38390f;markdown1:2025 7.3;Architecture and Design;u
+TOC;96f59d29a8d8d7f6f85bfc11049bc0ac;markdown1:2025 7.3.1;Objectives;u
+TOC;1b4022bb8e6b1453ed51e387e7483ad0;markdown1:2025 7.3.1.1;???;u
+TOC;ed1de208d931595d2cc13a039d606b70;markdown1:2025 7.3.1.2;???;u
+TOC;93c3382305096b458607f2dbabfba7a1;markdown1:2025 7.3.1.3;???;u
+TOC;b7ccce31936551d0fcf9066f0ae61085;markdown1:2025 7.3.1.4;???;u
+TOC;dc34b234d06e1be8f21839b4185a6cd7;markdown1:2025 7.3.1.5;???;u
+TOC;df440f947d6f5c536a66a9a93d83c631;markdown1:2025 7.3.2;Input documents;u
+TOC;ab67d0a468d64a23bf5cfdb469a4c3e4;markdown1:2025 7.3.3;Output documents;u
+TOC;3c3e64b9ad72fbad6b0544a033af1982;markdown1:2025 7.3.4;Requirements;u
+TOC;92c606bb92d39a5a29b165a5e77cdbb5;markdown1:2025 7.3.4.1;???;u
+TOC;4ec5f7d51de08e636582ff2560fa0e4b;markdown1:2025 7.3.4.2;???;u
+TOC;fe34902b415848c8b020d75a4b84e426;markdown1:2025 7.3.4.3;???;u
+TOC;91d9817dbf3777d0e5d859464eea3155;markdown1:2025 7.3.4.4;???;u
+TOC;3c21de0392449936d7b74ca72b61e274;markdown1:2025 7.3.4.5;???;u
+TOC;0c98e1e05ed522f4f6d4fe48e29553eb;markdown1:2025 7.3.4.6;???;u
+TOC;9f325e7a9479c4e7b23b697b09f7bfe2;markdown1:2025 7.3.4.7;???;u
+TOC;da94e317d604bc4a45866a967378d0e0;markdown1:2025 7.3.4.8;???;u
+TOC;8f04e7682fd84ff88cfe2a8a55803bc7;markdown1:2025 7.3.4.9;???;u
+TOC;4c7d52c602b447dbb055cbfd56a3a7a5;markdown1:2025 7.3.4.10;???;u
+TOC;5524ac7e402e7cbecbb130d8a3ae80c0;markdown1:2025 7.3.4.11;???;u
+TOC;57e5b5759f8e981b78a6fa72f44e4a89;markdown1:2025 7.3.4.12;???;u
+TOC;9571fba64c96c9115a4b1d9ff28dbd53;markdown1:2025 7.3.4.13;???;u
+TOC;7f2548da267f5159a967a1b8a57be7cf;markdown1:2025 7.3.4.14;???;u
+TOC;cd1d1ca5a3a5420ac2dff47773f67044;markdown1:2025 7.3.4.15;???;u
+TOC;237b5cd8f10196a9908ef559dc3b0fd7;markdown1:2025 7.3.4.16;???;u
+TOC;80a3a68e1d6d4ad0b49ef7c8462287a3;markdown1:2025 7.3.4.17;???;u
+TOC;f9d3a95b4445a7e9bd64b0cb9605632d;markdown1:2025 7.3.4.18;???;u
+TOC;3d89b7b8b95c60b3c39db2325c8f8fe6;markdown1:2025 7.3.4.19;???;u
+TOC;21e738c8ad39e6235d55b0a939b3f8f2;markdown1:2025 7.3.4.20;???;u
+TOC;688b61748e16cd0d7b2122ed754cb501;markdown1:2025 7.3.4.21;???;u
+TOC;56616b1ffcf9491d9879e8833fc71a0a;markdown1:2025 7.3.4.22;???;u
+TOC;0dbba36c576fb8e1e5cd3b0d52e7a3cf;markdown1:2025 7.3.4.23;???;u
+TOC;7f004ea6cc7d567a9c0f7a63b6072a4f;markdown1:2025 7.3.4.24;???;u
+TOC;ff70659772da5b7f5fa8b13c06a184e3;markdown1:2025 7.3.4.25;???;u
+TOC;5e735d4e3f026d4c1e1db2b50561c6bc;markdown1:2025 7.3.4.26;???;u
+TOC;eb6cb7d8269f2c63b7e62f8339fe623d;markdown1:2025 7.3.4.27;???;u
+TOC;fb6870b0fe0d24b9bbf1e4e9db94693c;markdown1:2025 7.3.4.28;???;u
+TOC;d7f28e539f01e6b71f660fa634271825;markdown1:2025 7.3.4.29;???;u
+TOC;2fa87e8366258b1f1fa7b57016b31b3c;markdown1:2025 7.3.4.30;???;u
+TOC;0b76352f77214469b09d4e7c5959d41a;markdown1:2025 7.3.4.31;???;u
+TOC;1b543fd7a7f640a1a3890a0c342015ef;markdown1:2025 7.3.4.32;???;u
+TOC;342af7283cd31844d5f122b9b4c80879;markdown1:2025 7.3.4.33;???;u
+TOC;56c731288c88f2c1fc55b05e0bc16301;markdown1:2025 7.3.4.34;???;u
+TOC;3c9bb5b56b97a36ef56d78c7649ff847;markdown1:2025 7.3.4.35;???;u
+TOC;4a0a6b03b253263ac9a0e05cf340e590;markdown1:2025 7.3.4.36;???;u
+TOC;cd28259f4a31d6d618246440b98a9ed9;markdown1:2025 7.3.4.37;???;u
+TOC;9f585773057c233c4c724cbcc6ff9ca2;markdown1:2025 7.3.4.38;???;u
+TOC;fc3b5e98e56c024680e63fae9818c989;markdown1:2025 7.3.4.39;???;u
+TOC;0df6c9b0ca3760fefbe1f729de5360f0;markdown1:2025 7.3.4.40;???;u
+TOC;36d49d9245178fe7b779db6ef4d5158a;markdown1:2025 7.3.4.41;???;u
+TOC;ba12db722fc34b14ab3b949d2e97fdc4;markdown1:2025 7.3.4.42;???;u
+TOC;93a554ec7b7c5fe4b8f0807a53c30369;markdown1:2025 7.3.4.43;???;u
+TOC;45b60c2997a65ec384b70a590810b5a4;markdown1:2025 7.4;Component design;u
+TOC;1cde76ff47776cbda70f06b277ed379b;markdown1:2025 7.4.1;Objectives;u
+TOC;d3a55638ec606cb72ed9f1c13e31a02f;markdown1:2025 7.4.1.1;???;u
+TOC;3f2e01d0eac83a628aff6509a2831c0c;markdown1:2025 7.4.1.2;???;u
+TOC;1bcda5a8a2f71a706c2c5e5a649a5379;markdown1:2025 7.4.2;Input documents;u
+TOC;6f8f1c6e9f68b819a4f6db3c6d24b8b4;markdown1:2025 7.4.3;Output documents;u
+TOC;275ba41329f45b0f85c56ecbcd85b865;markdown1:2025 7.4.4;Requirements;u
+TOC;0c71e365775a429f88a1397c212c5b3a;markdown1:2025 7.4.4.1;???;u
+TOC;7a239a93a7b86ab5c87cde7b5cf4969f;markdown1:2025 7.4.4.2;???;u
+TOC;3d4a96a2226471b82d5a10f474bf5243;markdown1:2025 7.4.4.3;???;u
+TOC;51e9b38fda9b0b01ae0bde16b4f7f986;markdown1:2025 7.4.4.4;???;u
+TOC;90c7ec0868e1ed6319c27ebfc6c84fa5;markdown1:2025 7.4.4.5;???;u
+TOC;51896182b88f514a40801dce0f1b11f1;markdown1:2025 7.4.4.6;???;u
+TOC;598bb5578e2a97c1a55bcb3d3b40828a;markdown1:2025 7.4.4.7;???;u
+TOC;3b923876be990eacde8328e0e10cbeb4;markdown1:2025 7.4.4.8;???;u
+TOC;4f6ac5a9c5b3b5c75087edb017e7d8e1;markdown1:2025 7.4.4.9;???;u
+TOC;7c6a0c7887e6e3458b0b07ed6dff2e45;markdown1:2025 7.4.4.10;???;u
+TOC;41a56827fa9edb1ab4d0fa83238fa4a9;markdown1:2025 7.4.4.11;???;u
+TOC;eed83b9cc054f50a7b53663c313846b3;markdown1:2025 7.4.4.12;???;u
+TOC;83321989a0408d71b510c3f1f730da2d;markdown1:2025 7.4.4.13;???;u
+TOC;fc0b25e9a24f29e8ac9b957ab1f564cf;markdown1:2025 7.5;Component implementation and testing;u
+TOC;db6b69b1b28f8ff87c7a5e19d8e27979;markdown1:2025 7.5.1;Objectives;u
+TOC;bc12a40b9b0f0bc6897a8c0bc1e44ee2;markdown1:2025 7.5.1.1;???;u
+TOC;075560b95fa5f283edcbb967ff839697;markdown1:2025 7.5.2;Input documents;u
+TOC;0735b237b05ac7815d3b2d42feac3e7b;markdown1:2025 7.5.3;Output documents;u
+TOC;65c9fe04c8e5eb42d085c8da362b54a4;markdown1:2025 7.5.4;Requirements;u
+TOC;521d55d0830176cda442320968ed7427;markdown1:2025 7.5.4.1;???;u
+TOC;09e0f8832f5744fd9e5d02d5c61e36d0;markdown1:2025 7.5.4.2;???;u
+TOC;82abf4dfce2b44a8bf248bb3a6da5076;markdown1:2025 7.5.4.3;???;u
+TOC;d90b18d876d349bb89bc97a4e83fa712;markdown1:2025 7.5.4.4;???;u
+TOC;28b467183c772742ab7d7ad6ef49ed1e;markdown1:2025 7.5.4.5;???;u
+TOC;6c7d04da070f935b7f2f94402d2ab982;markdown1:2025 7.5.4.6;???;u
+TOC;5971ab8d60763b684ed99d6b86460151;markdown1:2025 7.5.4.7;???;u
+TOC;4cf4a4f4c95394ffad52a1ca6a3b7edb;markdown1:2025 7.5.4.8;???;u
+TOC;8f08db420eb3329a42830d55a930325b;markdown1:2025 7.5.4.9;???;u
+TOC;9d4bc515fd410190d568491c73a3729e;markdown1:2025 7.5.4.10;???;u
+TOC;5445b1b7cfad5315d63165b460b1a38f;markdown1:2025 7.6;Integration;u
+TOC;42d21142128f8c6d5bc0fbb90f0dbf7e;markdown1:2025 7.6.1;Objectives;u
+TOC;758d56f6878c1ebdb4fda72ad577babe;markdown1:2025 7.6.1.1;???;u
+TOC;01d5c28a0d6a0c1740f8dbb3b0c8b2b5;markdown1:2025 7.6.1.2;???;u
+TOC;7dbd82f4ef31969f1bdb6a0a7a56f1ed;markdown1:2025 7.6.2;Input documents;u
+TOC;cf4d9c11b4d1105c8c125fa542902f39;markdown1:2025 7.6.3;Output documents;u
+TOC;24b19356c08a505fa957a40fd10109ed;markdown1:2025 7.6.4;Requirements;u
+TOC;6f3f30238756aebc5635755d79d90597;markdown1:2025 7.6.4.1;???;u
+TOC;84c7c57f10a0bda098eb8bc97c3c1c29;markdown1:2025 7.6.4.2;???;u
+TOC;703772ab2064c6878c29e0ec7db3d08d;markdown1:2025 7.6.4.3;???;u
+TOC;48c86b2be23f0b21d5064a2bb71a110f;markdown1:2025 7.6.4.4;???;u
+TOC;95d82cc1b8d3b01f0625ac15fc3a47a1;markdown1:2025 7.6.4.5;???;u
+TOC;f5d7b37fe8a3b26e03577e8c9a8a1749;markdown1:2025 7.6.4.6;???;u
+TOC;7e7cc4a25e41b9c9c05751b8abbe89ba;markdown1:2025 7.6.4.7;???;u
+TOC;8d26c0fe7241e7ff560eaf4c1c5d82c0;markdown1:2025 7.6.4.8;???;u
+TOC;df90e9c5d073c74a170bc82f8854d9f7;markdown1:2025 7.6.4.9;???;u
+TOC;543d58a7a639c9ed5b56be7c5989780d;markdown1:2025 7.6.4.10;???;u
+TOC;078118dc66da8cf212a871f79bb0c478;markdown1:2025 7.6.4.11;???;u
+TOC;60b5e85c9c462211a7de6fd52f83299c;markdown1:2025 7.6.4.12;???;u
+TOC;47a0e2b8037a5bcbf92fce7e5fa83a19;markdown1:2025 7.6.4.13;???;u
+TOC;db6b2b397f070dc90e36d4e6f34b2f8b;markdown1:2025 7.7;Overall Software Testing / Final Validation;u
+TOC;acbe760a2d3b8c51a6f5c78792413e5e;markdown1:2025 7.7.1;Objectives;u
+TOC;f8a66ed56c647f9b8c86a67ff6cb57e4;markdown1:2025 7.7.1.1;???;u
+TOC;30e2d2c8da440bb6b185d7784a9be4b3;markdown1:2025 7.7.2;Input documents;u
+TOC;7a2c8b1563e1b762775f053f37d9a971;markdown1:2025 7.7.3;Output documents;u
+TOC;1be1b8be775968bce4c5c1b43b6b015f;markdown1:2025 7.7.4;Requirements;u
+TOC;f0efcc7b5d0036b0a8f42a41b6edc10c;markdown1:2025 7.7.4.1;???;u
+TOC;82341f755e9b5a10b72bbd1ccf1c6090;markdown1:2025 7.7.4.2;???;u
+TOC;4825b8cf4eeb91135da30206385a5d8c;markdown1:2025 7.7.4.3;???;u
+TOC;17356c4c312497ed6da02daae08db430;markdown1:2025 7.7.4.4;???;u
+TOC;ff5f89d45b7726ed1a52b4c4ec45b42b;markdown1:2025 7.7.4.5;???;u
+TOC;ef35c36f3b56561ca7b3d59a95791f70;markdown1:2025 7.7.4.6;???;u
+TOC;fbfc4f6df9b6021f9806189d422423e9;markdown1:2025 7.7.4.7;???;u
+TOC;43286c9072f67f63fc4a5ab2ab0c4655;markdown1:2025 7.7.4.8;???;u
+TOC;f9e080de2189cfcb5fe7c4b9fc0bc771;markdown1:2025 7.7.4.9;???;u
+TOC;97ab23d8b888c140d5037f67452c06a2;markdown1:2025 7.7.4.10;???;u
+TOC;ef4153e9380adbeedcf13219ea1d0730;markdown1:2025 7.7.4.11;???;u
+TOC;ab60f78c22d3483a9677b5b9bca9f995;markdown1:2025 7.7.4.12;???;u
+TOC;25e49ffab2f541c5ac4606bb56c4d158;markdown1:2025 8;Development of application data or algorithms: systems configured by application data or algorithms;u
+TOC;5fcd30c6a024b0f0cfbf8b1d759b69e9;markdown1:2025 8.1;Objectives;u
+TOC;43d0a513cfe1575191b7c2d693dbb09c;markdown1:2025 8.1.1;???;u
+TOC;4b0a9bb7e5f62d1b5c4c7c1313850069;markdown1:2025 8.1.2;???;u
+TOC;1cb5242f0348b13b91d9431b2f2715bc;markdown1:2025 8.1.3;???;u
+TOC;328a9e4b3d7c32fa53a7e48188ff96d3;markdown1:2025 8.2;Input documents;u
+TOC;13c40ca9ca9a4dbb9c58d0149337a58c;markdown1:2025 8.3;Output documents;u
+TOC;40efbc74bb6e7f5934d41ea6ad06f3e6;markdown1:2025 8.4;Requirements;u
+TOC;24a2ff02b15645285c7e8ec5bff1a7ba;markdown1:2025 8.4.1;Application Development Process;u
+TOC;06cbd41a20bcba1f8b1ca7273c4d6e3b;markdown1:2025 8.4.1.1;???;u
+TOC;8eaa17750546b42bb55b4389c4ed6e8a;markdown1:2025 8.4.1.2;???;u
+TOC;56c2838a702f755edb9be91de364c0d9;markdown1:2025 8.4.1.3;???;u
+TOC;2b2e6ed49e87e41c2187004b98a25d79;markdown1:2025 8.4.1.4;???;u
+TOC;4a6e073c0d00d67e0b1e50a27a23e2a2;markdown1:2025 8.4.1.5;???;u
+TOC;4b5865943baf79c823d27c3d36a92d1c;markdown1:2025 8.4.1.6;???;u
+TOC;ac6e315d3a86e7383e5e37b77c35c9a5;markdown1:2025 8.4.1.7;???;u
+TOC;89c70b5b4478f47f9c344a75c1be6d1f;markdown1:2025 8.4.1.8;???;u
+TOC;0ba4e49f593033a9039de30fdcd05056;markdown1:2025 8.4.1.9;???;u
+TOC;4894a7385fa7023f26bfcbb6f19188a2;markdown1:2025 8.4.1.10;???;u
+TOC;d47fc8d01313e7847ff17bc8f024c379;markdown1:2025 8.4.1.11;???;u
+TOC;8abf8d2ffb993ffad1d33d7f9a850a52;markdown1:2025 8.4.1.12;???;u
+TOC;702df7a05f4b02c0d67a4c458d8bb2f0;markdown1:2025 8.4.1.13;???;u
+TOC;702df7a05f4b02c4543676558d8bb2f0;markdown1:2025 8.4.1.14;???;u
+TOC;6d89717d881f6da75a0e68de8ea370c4;markdown1:2025 8.4.2;???;u
+TOC;7e71355213bfb8d02c090b62a3a79db7;markdown1:2025 8.4.2.1;???;u
+TOC;94fe3469d76fcb6c5b3c6bb7d1049a27;markdown1:2025 8.4.2.2;???;u
+TOC;2f9e5b7cf3b9e8e222e0f3cd1fdfd396;markdown1:2025 8.4.2.3;???;u
+TOC;ad7b4bb87f47ff14e9bc8dba55701050;markdown1:2025 8.4.2.4;???;u
+TOC;5480ff81007ea74562b680dd53d26c97;markdown1:2025 8.4.2.5;???;u
+TOC;2ad244a9e28d81c8156dff8716ad8533;markdown1:2025 8.4.3;Architecture and Design;u
+TOC;784ba9d7f25c6b91c9a61f4ae4588a79;markdown1:2025 8.4.4;Application Data/Algorithms Production;u
+TOC;22ac626d01d9871686bcd9e65f9249fd;markdown1:2025 8.4.4.1;???;u
+TOC;92ef198022ffba95d4f406a383a8d358;markdown1:2025 8.4.4.2;???;u
+TOC;967ba15f6c835a7b3c7e5fce60b970da;markdown1:2025 8.4.4.3;???;u
+TOC;289de927234b8c92a746b4fa2a30ec64;markdown1:2025 8.4.4.4;???;u
+TOC;96f98b36d967db4b5f2e5319c36f15da;markdown1:2025 8.4.4.5;???;u
+TOC;4589a2ad9065422058d5cfcf159cf9ef;markdown1:2025 8.4.4.6;???;u
+TOC;f4c1b4b0ab50c2f7a0a2c64ebc5be5e9;markdown1:2025 8.4.4.7;???;u
+TOC;6beaa30beedca24d76e88b00c5c18d4b;markdown1:2025 8.4.4.8;???;u
+TOC;f9cbd5a43d7f4e7a2497eae8a215301f;markdown1:2025 8.4.5;Application Integration and Testing Acceptance;u
+TOC;ee4c89c5198b1bfb3ca40b207b4707fe;markdown1:2025 8.4.5.1;???;u
+TOC;92d0e9c89ca8f56f2ec625e1f46417ba;markdown1:2025 8.4.5.2;???;u
+TOC;1b079978c295d2d0a98f1a2cc89fae1f;markdown1:2025 8.4.5.3;???;u
+TOC;7632fd36b6c5ad3018fa8832f2d28872;markdown1:2025 8.4.5.4;???;u
+TOC;79a8dbd1c6a25465c9ed7d5768c221b1;markdown1:2025 8.4.5.5;???;u
+TOC;f5d268f5b3b0e28b16d17950ecae740d;markdown1:2025 8.4.6;Application Validation and Assessment;u
+TOC;dfb57207d35b71215c2b5f0b8e05bb3a;markdown1:2025 8.4.7;Application preparation procedures and tools;u
+TOC;5dba4d0a05ed318a4a59bc539b39494e;markdown1:2025 8.4.7.1;???;u
+TOC;85b64e79ab75bb25e8d5c23cb5b8bc28;markdown1:2025 8.4.7.2;???;u
+TOC;1c4d2e80198e202349a915e63204917c;markdown1:2025 8.4.7.3;???;u
+TOC;859ad05553e264aa99c70be3d85b508a;markdown1:2025 8.4.7.4;???;u
+TOC;57c7ee0a64c2a050f014b3f88d0b6491;markdown1:2025 8.4.7.5;???;u
+TOC;2fd35db83db5c10a09b12e4bc3e6b010;markdown1:2025 8.4.7.6;???;u
+TOC;acac32b7ad28d2e9d930e5b9c67cb2d0;markdown1:2025 8.4.8;Development of Generic Software;u
+TOC;1c5d9f7cc1a5ca5c0b2ac36d6028b6c7;markdown1:2025 8.4.8.1;???;u
+TOC;1be8fc2b4b8b67cb189f6fc8a234e34d;markdown1:2025 8.4.8.2;???;u
+TOC;10d08c58c43d1a439b54cb9fd9c99124;markdown1:2025 8.4.8.3;???;u
+TOC;02d2a345ea5db8c122bb05c6015d99cf;markdown1:2025 8.4.8.4;???;u
+TOC;309a76a01a243ab6b703b2e6ff303b01;markdown1:2025 8.4.8.5;???;u
+TOC;94e213f4b22c04bc34050722c5352f49;markdown1:2025 8.4.8.6;???;u
+TOC;256560c5040ccaa2bb417592cf6c0d1e;markdown1:2025 8.4.8.7;???;u
+TOC;29b03f1518479f9ac348d973ed4a0551;markdown1:2025 8.4.8.8;???;u
+TOC;35d604a03d9b377941d24ec7e550d0c2;markdown1:2025 9;Software deployment and maintenance;u
+TOC;3e9b18747c90c8a3060eaa61ffbff29d;markdown1:2025 9.1;Software deployment;u
+TOC;5593890b392d49ab9477ef90ff6c8b50;markdown1:2025 9.1.1;Objective;u
+TOC;f16a1f7e8c4e4a679a16c7e0b798e682;markdown1:2025 9.1.1.1;???;u
+TOC;33e8d7fa56662b1d28ec55e8bb78783d;markdown1:2025 9.1.2;Input documents;u
+TOC;edc96ad2519f1c4d6985e7c163c2e038;markdown1:2025 9.1.3;Output documents;u
+TOC;0568f8e6b212e9f67cd8c9b8a44c3bff;markdown1:2025 9.1.4;Requirements;u
+TOC;f1c91182a399907dbe7e426cd0fc875b;markdown1:2025 9.1.4.1;???;u
+TOC;7e34874f7eb19041840a9673ac0387cc;markdown1:2025 9.1.4.2;???;u
+TOC;4bbcd0717e91b4fe6a1e597432dba0e9;markdown1:2025 9.1.4.3;???;u
+TOC;ff6941fa26d01756d9a5e572ecf6c8d9;markdown1:2025 9.1.4.4;???;u
+TOC;8f0c99f9b7729d4890e4d040ca4d5f24;markdown1:2025 9.1.4.5;???;u
+TOC;637b207ac90c8c10ff4083a16f210349;markdown1:2025 9.1.4.6;???;u
+TOC;9b72789d9d1f1450325cf9970d5184b6;markdown1:2025 9.1.4.7;???;u
+TOC;1564b44c2a6d7d05b827b3e63f4f8c5b;markdown1:2025 9.1.4.8;???;u
+TOC;ff9ef90db004c58fe66d276bd98a5e9f;markdown1:2025 9.1.4.9;???;u
+TOC;cf64e021fcb6e40da22a0c85a7406e4e;markdown1:2025 9.1.4.10;???;u
+TOC;27b67a4d2d9539f8a2b20d67ad06a99d;markdown1:2025 9.1.4.11;???;u
+TOC;2c30f5f9ef717edc56c2304ed4b68985;markdown1:2025 9.1.4.12;???;u
+TOC;da75b8e84dbeddf01db8658b6d33d217;markdown1:2025 9.1.4.13;???;u
+TOC;f95cc6e9e56943b2995cc5d03501d496;markdown1:2025 9.1.4.14;???;u
+TOC;193e3ebaffc4b84a9b6f8757bbd7f93f;markdown1:2025 9.1.4.15;???;u
+TOC;26ae85f626ba21c70c8cb29d2257e5d0;markdown1:2025 9.1.4.16;???;u
+TOC;f5fd9b77d0d81cbbafba706018d84734;markdown1:2025 9.1.4.17;???;u
+TOC;d724b3f302b39cb054216405e7a8a0b4;markdown1:2025 9.1.4.18;???;u
+TOC;70d8fe74155663fd2859a1acb13e3a57;markdown1:2025 9.1.4.19;???;u
+TOC;29fe0b23cc6cce07a46f26746ec439ae;markdown1:2025 9.1.4.20;???;u
+TOC;bb3682d0f3435453455a3fc2f3930743;markdown1:2025 9.2;Software maintenance;u
+TOC;bb3682d0f3e56e69473a3fc2f3930743;markdown1:2025 9.2.1;Objective;u
+TOC;db4106c3c59a5a106256742c5e9be669;markdown1:2025 9.2.1.1;???;u
+TOC;3a6115c99492d606a7be2ef3f4b1838b;markdown1:2025 9.2.2;Input documents;u
+TOC;9387a041d0c1b4311a48c4c7bfcf33cc;markdown1:2025 9.2.3;Output documents;u
+TOC;3a1d0d7a6e2eb56c1cc0f4a310d97abf;markdown1:2025 9.2.4;Requirements;u
+TOC;231504a6ab94bfc178b1043cb6a41e5f;markdown1:2025 9.2.4.1;???;u
+TOC;cb102347cf9d98f57b218040ecfc2261;markdown1:2025 9.2.4.2;???;u
+TOC;9a988b28d2e3d29956d7c1c41e33cf18;markdown1:2025 9.2.4.3;???;u
+TOC;50a8cdb2ab7b2f513c003d45f57c3c9c;markdown1:2025 9.2.4.4;???;u
+TOC;60e8b3ab2dbbe69fd8f7fd7b78fdaf2d;markdown1:2025 9.2.4.5;???;u
+TOC;46be2839d8ff4b463f17c5bc4d3a6157;markdown1:2025 9.2.4.6;???;u
+TOC;f2a6c7a9ed61c4f32fdd79838b76032b;markdown1:2025 9.2.4.7;???;u
+TOC;fb2053d82075ef95e035ee078987c855;markdown1:2025 9.2.4.8;???;u
+TOC;d2f1d360913a764a5f915d84e6b0fbcf;markdown1:2025 9.2.4.9;???;u
+TOC;7d23bc5c063cf054bda48d8f98a5601f;markdown1:2025 9.2.4.10;???;u
+TOC;bc2b362c77983d171e5d2d930c5c85e6;markdown1:2025 9.2.4.11;???;u
+TOC;89f6cc404b0ed85907d74d9a1ed4a217;markdown1:2025 9.2.4.12;???;u
+TOC;405c594cf6e4ad7c5cda7a76011c6199;markdown1:2025 9.2.4.13;???;u
+TOC;36a502767bc290cf3b4b2349e5f6ec5d;markdown1:2025 9.2.4.14;???;u
+TOC;ce8f8e416e460e8d22a215c3cbfdbb0a;markdown1:2025 9.2.4.15;???;u
+TOC;5e05cc35bff91f251db34b32c0b5732d;markdown1:2025 9.2.4.16;???;u
+TOC;38b1b7a8330e63e009df6a4bdeffb0fc;markdown1:2025 9.2.4.17;???;u
+TOC;d6479c4979c6d0d168f9463f688a9a2b;markdown1:2025 9.2.4.18;???;u
+TOC;ee22f95e578423fe053ae7e49ff6e19d;markdown1:2025 9.2.4.19;???;u
+TOC;2c611c79c0f7e271395c249a7a7c74f9;markdown1:2025 9.2.4.20;???;u
