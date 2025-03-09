@@ -58,8 +58,10 @@ TOC;2a0e8fbb5e8999e43e05372c372f9a6a;markdown1:2025 3.1.42;tool class T1;u
 TOC;035db5a1fbe9fa3df5c9e64abf8f7f9e;markdown1:2025 3.1.43;tool class T2;u
 TOC;8d9a219fe84001f1f788f5b8c1f2339d;markdown1:2025 3.1.44;tool class T3;u
 TOC;48ed85c9c178268fe4890d44e8a6c6f3;markdown1:2025 3.1.45;traceability;u
-TOC;437d42083650c69be9b6b7e204207a72;markdown1:2025 3.1.46;traceability matrix;u
-TOC;16b0ebd0c1452c968c3f8a274fc22a77;markdown1:2025 3.1.47;user;u
+TOC;437d42083650c69be9b6b7e204207a72;markdown1:2025 3.1.46;validation;u
+TOC;16b0ebd0c1452c343444a274fc22a67;markdown1:2025 3.1.47;validator;u
+TOC;16b0ebd0c1452c9683438a274fc22a27;markdown1:2025 3.1.48;verification;u
+TOC;16b0ebd0c1452c96545454524fc22a79;markdown1:2025 3.1.49;verifier;u
 TOC;72a755c703dcf423d902db8e1f7b4ec3;markdown1:2025 3.2;Abbreviations;u
 TOC;9b3c34772cbcd444320c19e9d8b07d97;markdown1:2025 4;Requirements for the safety of software in relation to the intended function;u
 TOC;08152993b17732085d74e31b75b9b372;markdown1:2025 4.1;???;u
@@ -435,6 +437,7 @@ TOC;4894a7385fa7023f26bfcbb6f19188a2;markdown1:2025 8.4.1.10;???;u
 TOC;d47fc8d01313e7847ff17bc8f024c379;markdown1:2025 8.4.1.11;???;u
 TOC;8abf8d2ffb993ffad1d33d7f9a850a52;markdown1:2025 8.4.1.12;???;u
 TOC;702df7a05f4b02c0d67a4c458d8bb2f0;markdown1:2025 8.4.1.13;???;u
+TOC;702df7a05f4b02c4543676558d8bb2f0;markdown1:2025 8.4.1.14;???;u
 TOC;6d89717d881f6da75a0e68de8ea370c4;markdown1:2025 8.4.2;???;u
 TOC;7e71355213bfb8d02c090b62a3a79db7;markdown1:2025 8.4.2.1;???;u
 TOC;94fe3469d76fcb6c5b3c6bb7d1049a27;markdown1:2025 8.4.2.2;???;u
@@ -501,6 +504,7 @@ TOC;f5fd9b77d0d81cbbafba706018d84734;markdown1:2025 9.1.4.17;???;u
 TOC;d724b3f302b39cb054216405e7a8a0b4;markdown1:2025 9.1.4.18;???;u
 TOC;70d8fe74155663fd2859a1acb13e3a57;markdown1:2025 9.1.4.19;???;u
 TOC;29fe0b23cc6cce07a46f26746ec439ae;markdown1:2025 9.1.4.20;???;u
+TOC;bb3682d0f3435453455a3fc2f3930743;markdown1:2025 9.2;Software maintenance;u
 TOC;bb3682d0f3e56e69473a3fc2f3930743;markdown1:2025 9.2.1;Objective;u
 TOC;db4106c3c59a5a106256742c5e9be669;markdown1:2025 9.2.1.1;???;u
 TOC;3a6115c99492d606a7be2ef3f4b1838b;markdown1:2025 9.2.2;Input documents;u

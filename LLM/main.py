@@ -15,27 +15,27 @@ print("k\n")
 parse_file(file_path, output_file_path, tree)
 save_as_html(tree, f"outputs/output{file_num}.html")
 
-def process_tree(tree):
-    def process_node(node):
-        section = node.section
-        title = node.title
-        content = node.content
-        context = tree.parent(node).title
+# def process_tree(tree):
+#     def process_node(node):
+#         section = node.section
+#         title = node.title
+#         content = node.content
+#         context = tree.parent(node).title
 
-        if title == "???":
-            generated_title = generate_title(content, context) 
-            tree.add_title(section, generated_title) 
+#         if title == "???":
+#             generated_title = generate_title(content, context) 
+#             tree.add_title(section, generated_title) 
 
-    i = 0
-    queue = deque(tree.root.children)  
-    while queue:
-        node = queue.popleft()    
-        if node.title == "???":
-            i += 1
-            process_node(node)
-        if i == 9:
-            break
-        queue.extend(node.children)
+#     i = 0
+#     queue = deque(tree.root.children)  
+#     while queue:
+#         node = queue.popleft()    
+#         if node.title == "???":
+#             i += 1
+#             process_node(node)
+#         if i == 9:
+#             break
+#         queue.extend(node.children)
 
 
 # def process_tree(tree):
@@ -91,6 +91,6 @@ def process_tree(tree):
 # save_as_html(tree, f"outputs/large_titled_output{file_num}.html")
 
 
-process_tree(tree) 
-save_as_html(tree, f"outputs/titled_output{file_num}.html")
-# tree.tree_to_custom_json()
+# process_tree(tree) 
+# save_as_html(tree, f"outputs/titled_output{file_num}.html")
+# # tree.tree_to_custom_json()

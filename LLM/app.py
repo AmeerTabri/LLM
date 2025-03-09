@@ -15,8 +15,8 @@ file_path = f"inputs/input{file_num}.md"
 data_file_path = f"inputs/data{file_num}.text"
 output_file_path = f"outputs/output{file_num}.md"
 
-# Global storage for tree objects
-trees = {}
+
+trees = {} # Global storage for tree objects
 curr_part = 1
 
 def process_tree(tree):
@@ -26,7 +26,7 @@ def process_tree(tree):
         content = node.content
         # context = tree.parent(node).title
          
-        if title == "???":
+        if node.color == "red":
             generated_title = generate_title(content)
             tree.add_title(section, generated_title)
 
@@ -82,17 +82,50 @@ def extract_elements(file_path):
                     continue
 
                 part = int(match.group(2)) if match.group(2) else 1
-                clause = match.group(4)  
+                section = match.group(4)  
                 title = elements[3]
                 classification = elements[4]
                 
-                # print(str(part) + " " + clause + " " + title + " " + classification)   
-
                 if part not in trees:
                     trees[part] = Tree()
                     
-                trees[part].add_child(section=clause, title=title if title != "REQUIREMENT" else "???", classification=classification)  
+                if section != "0":
+                    trees[part].add_child(section=section, title=title, classification=classification)  
 
+
+def collect_sections(node): 
+    sections = set() 
+    sections.add(node.section)
+     
+    for child in node.children:
+        sections.update(collect_sections(child))
+    
+    return sections
+
+
+# check if two trees contains the same nodes
+def check_equivalence(tree1, tree2):
+    def collect_sections(node): 
+        sections = set() 
+        sections.add(node.section)
+        
+        for child in node.children:
+            sections.update(collect_sections(child))
+        
+        return sections
+ 
+    tree2_sections = collect_sections(tree2.root)
+    
+    # Check if all nodes in tree1 have a section in tree2
+    def check_node_sections(node):
+        if node.section not in tree2_sections: 
+            return False
+        for child in node.children:
+            if not check_node_sections(child):
+                return False
+        return True
+
+    return check_node_sections(tree1.root)
 
 
 # Analyze the markdown file
@@ -101,11 +134,24 @@ def analyze_markdown():
     try:
         markdown_data = request.data.decode('utf-8') 
 
-        trees[curr_part] = Tree()
+        tree = Tree()
+
+        print("k")
 
         save_md_file(markdown_data)
-        process_file(file_path, trees[curr_part]) 
-        save_as_html(trees[curr_part], "./z.html") 
+        process_file(file_path, tree) 
+
+        print("kk") 
+
+        # Check equivalence
+        if not check_equivalence(tree, trees[curr_part]): 
+            return jsonify({"incorrect": "Markdown file does not correspond with data file"}), 400
+
+        save_as_html(tree, "./z.html") 
+
+        print("kkk") 
+
+        trees[curr_part] = tree
 
         json_file_path = "treeVisualization/treeData.json"
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
@@ -115,8 +161,8 @@ def analyze_markdown():
         return jsonify(json_data), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
-    
+        return jsonify({"error": f"An unexpected error occurred: {str(e)}"}), 500
+
   
 # Analyze the data file
 @app.route('/data', methods=['POST'])
@@ -166,23 +212,22 @@ def change_part():
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
             json_data = json.load(json_file)
 
-        # Return the selected part data as JSON
-        return jsonify(json_data), 200
+        # Return the selected part data and curr_part as JSON
+        return jsonify({"curr_part": curr_part, "data": json_data}), 200
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 
-# Generate headers for the tree
-@app.route('/titles', methods=['POST'])
+# Generate headings for the tree
+@app.route('/headings', methods=['POST'])
 def generate_headers():
     try:
         # Retrieve the tree from the global dictionary
-        tree = trees.get("current_tree")
+        tree = trees[curr_part]
         if not tree:
             return jsonify({"error": "No tree data available"}), 400
- 
-        print(tree)
+  
         process_tree(tree) 
         tree.tree_to_custom_json()
         
@@ -197,8 +242,8 @@ def generate_headers():
         return jsonify({"error": str(e)}), 500
 
 
-# Generate header for a single node
-@app.route('/node_title', methods=['POST'])
+# Generate heading for a single node
+@app.route('/node_heading', methods=['POST'])
 def generate_node_header():
     try: 
         data = request.get_json() 
@@ -209,7 +254,10 @@ def generate_node_header():
         
         print(section + ' ' + title)  
 
-        trees[curr_part].find_node(section).color = 'green' 
+        node = trees[curr_part].find_node(section)  
+        content = node.content
+        generated_title = generate_title(content, context = "") 
+        trees[curr_part].add_title(section, generated_title) 
    
         trees[curr_part].tree_to_custom_json()
         save_as_html(trees[curr_part], "./z.html") 
@@ -226,4 +274,4 @@ def generate_node_header():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

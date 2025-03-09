@@ -23,12 +23,21 @@ What we added from last time:
 - right click on a node to redirect to the content
 
 What should we do to finish:
-- adjust the height according to the number of nodes.
-- add headings to a specific node and not just for the whole document.
-- solve the refresh problem.
-- redirecting to the same page and not creating a new one everytime.
-- save the progress (for example as a json file).
+V adjust the height according to the number of nodes.
+V add headings to a specific node and not just for the whole document.
+V upper letter titles means no title
+m solve the refresh problem.
+V redirecting to the same page and not creating a new one everytime.
+V save the progress - nodes open state.
+V separte files - add a css file.
+- save progress - by downloading the md file after generating titles, keep the color green for the made up ones.
+V make sure that the markdown file corresponds to the data file (and which part).
+- if markdown file deopped -> remove the drop md area. if data file dropped -> remove only data drop area. make a button for dropping another file.
+- add a counter when generating headings
+- update the nodes color
 - improve header generation.
+- remove temp files after we are done.
+* make the code and the links generic - don't use local directories.
 * containerize the web aplication so that it would work on different devices (for example by using docker)
 * finalize and optimize the code (remove redundancy and clean the code and test it)
 * add the code to the standart atlas as a separate directory in tools
@@ -43,3 +52,30 @@ what should we add to the presentation
 - the reesults of everything
 - show a live demo
 - add a user guide to how to use it
+
+
+##################################################################################################################
+
+Progress:
+
+4) things to consider:
+- if a file doesn't comply with the format it will cause an uncertain behaviour.
+- we tried to add alerts for edge cases, but not all are covered - so you should restart when shit happens.
+
+5) future plans and improvements:
+- cover more edge cases.
+- change the code according to the format.
+- adding an ability to compare 2 (or more files) symantically and visualize that using this tool.
+
+##################################################################################################################
+
+presentation:
+1) add a tree structure then zoom in on the nodes to show thier content.
+2)
+
+
+##################################################################################################################
+
+Things to add:
+
+- I actually didn't know javascript, we started by using a code for a simple tree and then expand on it.

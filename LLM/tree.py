@@ -13,12 +13,13 @@ class Node:
 class Tree:
     def __init__(self):
         self.root = Node(0) 
-        self.nodes_without_title = []  # To collect nodes with no title
+        self.nodes_without_title = [] 
 
 
     def add_child(self, section, title = "", content = "", classification = ""): 
         path = [x for x in section.split('.')]
-        new_node = Node(path[-1], section, title, content, "red" if title == "???" else "white", classification=classification)
+        color = "red" if (title == "???" or title.isupper()) else "white"
+        new_node = Node(path[-1], section, title, content, color, classification=classification)
         curr_node = self.root 
          
         while len(path) > 1: 
@@ -34,18 +35,19 @@ class Tree:
 
 
     def find_node(self, section): 
-        path = section.split('.')  # Keep as strings to match add_child()
+        path = section.split('.') 
         
         curr_node = self.root
         for part in path:
             found = False
             for child in curr_node.children:
-                if child.value == part:  # Match as string
+                if child.value == part: 
                     curr_node = child
                     found = True
                     break
             if not found:
-                return None  
+                return None 
+             
         return curr_node
 
 
@@ -57,39 +59,21 @@ class Tree:
         return self.find_node(section[:section.rfind('.')]) 
 
  
-    def add_title(self, section, title): 
-        path = [int(x) for x in section.split('.')]
-         
-        curr_node = self.root
-        for part in path:
-            found = False
-            for child in curr_node.children:
-                if child.value == part:
-                    curr_node = child
-                    found = True
-                    break
-            if not found:
-                return  
-         
-        curr_node.title = title
-        curr_node.color = "green"
+    def add_title(self, section, title):  
+        node = self.find_node(section)  
+        node.title = title
+        node.color = "green"
 
 
     def add_content(self, section, content):  
-        node = self.find_node(section)
+        node = self.find_node(section) 
         if node:
             node.content = content 
  
   
     def print_sections(self):
         def print_section_aux(node, prefix):
-            if node:
-                # string = prefix + str(node.section) 
-                # print(f"\033[1m{string}\033[0m", end = "") 
-                # string = " " + str(node.title)
-                # print(f"\033[32m{string}\033[0m", end = "") 
-                # string = " " + str(node.content)
-                # print(f"\033[36m{string}\033[0m")  
+            if node:  
                 print(prefix + str(node.section) + " " + " " + str(node.title) +  " " + str(node.content))
                 for child in node.children:
                     print_section_aux(child, prefix + "    ")
@@ -109,8 +93,7 @@ class Tree:
                     "title": node.title,
                     "content": node.content
                 }
-                self.nodes_without_title.append(node_data)
-                # print(node.section)
+                self.nodes_without_title.append(node_data) 
 
             for child in node.children:
                 tree_to_json_aux(child, empty_cond, leaf_cond)
@@ -129,8 +112,8 @@ class Tree:
             json_node = {
                 "name": node.section + " " + node.title,
                 "fill": self.get_node_fill_color(0 if node == self.root else node.section.count('.') + 1),
-                # "fill": node.color,
-                "color": node.color
+                "color": node.color,
+                "isOpen": True if not node.title else False
             }
             
             if node.children:
@@ -141,11 +124,9 @@ class Tree:
                 json_node["stroke-width"] = 2
                 
             return json_node
-        
-        # Start from the root node and build the JSON structure
+         
         root_json = create_json_node(self.root)
-        
-        # Output the final JSON to a file
+         
         with open("treeVisualization/treeData.json", "w") as f:
             json.dump(root_json, f, indent=2)
 
@@ -156,29 +137,12 @@ class Tree:
             2: "#32CD32",
             3: "red",
             4: "#FFD700",
-        }
-        # color_map = {}
+        } 
         return color_map.get(depth, "brown")
+    
 
 
-def read_json_file(file_path):
-    try:
-        # Open and load the JSON data from the file
-        with open(file_path, "r") as file:
-            data = json.load(file)
-
-        # Extract and print the content from the JSON data
-        for entry in data:
-            section = entry.get("section")
-            title = entry.get("title")
-            content = entry.get("content") 
-            # print(f"section: {section}, title: {title}, content: {content}")
-    except FileNotFoundError:
-        print(f"Error: The file {file_path} was not found.")
-    except json.JSONDecodeError:
-        print(f"Error: Failed to decode JSON from {file_path}.")
-
-
+ 
 # tree = Tree() 
 # tree.add_child("1", "t")
 # tree.add_child("2")
@@ -206,8 +170,6 @@ def read_json_file(file_path):
 # print(tree.parent(tree.find_node("1.2.2")).section)  
 # tree.tree_to_json() 
 
-
-# read_json_file("nodes_without_title.json") 
 
 
 # tree = Tree()
