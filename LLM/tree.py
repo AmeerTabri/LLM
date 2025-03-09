@@ -18,12 +18,12 @@ class Tree:
 
     def add_child(self, section, title = "", content = "", classification = ""): 
         path = [x for x in section.split('.')]
-        color = "red" if (title == "???" or title.isupper()) else "white"
+        color = "red" if (title == "???" or title.isupper()) else ("green" if title[0] == "@" else "white")
         new_node = Node(path[-1], section, title, content, color, classification=classification)
         curr_node = self.root 
          
         while len(path) > 1: 
-            for child in curr_node.children:
+            for child in curr_node.children: 
                 if child.value == path[0]:
                     curr_node = child
                     path.pop(0)
@@ -105,15 +105,15 @@ class Tree:
         # Write the list of nodes with no title to a JSON file
         with open("data_set.json", "w") as f:
             json.dump(self.nodes_without_title, f, indent=2)
-
-
+     
+      
     def tree_to_custom_json(self):
         def create_json_node(node):
             json_node = {
                 "name": node.section + " " + node.title,
                 "fill": self.get_node_fill_color(0 if node == self.root else node.section.count('.') + 1),
-                "color": node.color,
-                "isOpen": True if not node.title else False
+                "color": self.get_node_text_color(node.color),
+                "isOpen": True if not node.title else False # Initially only the root is open
             }
             
             if node.children:
@@ -129,7 +129,16 @@ class Tree:
          
         with open("treeVisualization/treeData.json", "w") as f:
             json.dump(root_json, f, indent=2)
+ 
+    
+    def get_node_text_color(self, color):
+        # making the colors slightly brighter for better visibility 
+        if color == 'red':
+            return '#FF6347'
+        elif color == 'green':
+            return '#90EE90'
 
+        return 'white'
 
     def get_node_fill_color(self, depth): 
         color_map = {

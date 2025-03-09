@@ -67,6 +67,15 @@ function handleMdDrop(event) {
         
             // Draw the tree with the analyzed JSON data
             drawTree(jsonData);
+
+            
+            // Hide the drop area after successful upload
+            const dropZone = document.getElementById('drop-zone-md');
+            dropZone.style.display = 'none';  
+            
+            // // Show the download button
+            // const download = document.getElementById('download-btn');
+            // download.style.display = 'flex'; 
         }) 
         .catch(error => {
             console.error('Error:', error);
@@ -140,6 +149,10 @@ function handleDataDrop(event) {
             }
             
             dropdown.addEventListener("change", handlePartSelection);
+ 
+            // Hide the drop area after successful upload
+            const dropZone = document.getElementById('drop-zone-data');
+            dropZone.style.display = 'none';   
         })
         .catch(error => {
             console.error('Error:', error);
@@ -149,7 +162,7 @@ function handleDataDrop(event) {
 
     reader.readAsText(file);  // Read the file as plain text (Markdown)
 }
- 
+
 // Function to handle part selection 
 function handlePartSelection(event) {
     const selectedPart = event.target.value;  // Get the selected part number
@@ -180,12 +193,25 @@ function handlePartSelection(event) {
 
         // Draw the tree with the analyzed JSON data
         drawTree(jsonData.data);  // Use the 'data' field to draw the tree
+
+        
+        // Hide the drop area after successful upload
+        if (isMarkDownDroped[currPart]) {
+            const dropZone = document.getElementById('drop-zone-md');
+            dropZone.style.display = 'none';  
+        }
+        else {
+            const dropZone = document.getElementById('drop-zone-md');
+            dropZone.style.display = 'flex';  
+            dropZone.style.justifyContent = 'center';  
+            dropZone.style.alignItems = 'center'; 
+        }
     })
     .catch(error => console.error('Error:', error));
 }
 
-// Function to handle generating headings for nodes 
-function generate_heading(name) { 
+// Function to handle generating heading for a node 
+function generate_heading(node_name) { 
     if (!isMarkDownDroped[currPart]) {
         alert("Unable to generate node heading. Content is missing.");
         return; 
@@ -196,16 +222,18 @@ function generate_heading(name) {
     loading.style.display = "flex";
 
     // Send a request to the backend
-    fetch('http://127.0.0.1:5000/node_heading', { // Update with your actual backend URL
+    fetch('http://127.0.0.1:5000/node_heading', { 
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json' // Sending JSON data
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name: name }) // Send the name in the request body
+        body: JSON.stringify({ 
+            node_name: node_name 
+        }) 
     }) 
-    .then(response => response.json()) // Parse the response as JSON
+    .then(response => response.json()) 
     .then(jsonData => {
-        console.log('Received JSON:', jsonData);  // Log the JSON data
+        console.log('Received JSON:', jsonData);
 
         // Ensure any existing tree is removed before drawing a new one
         d3.select("svg").remove();
@@ -217,10 +245,10 @@ function generate_heading(name) {
         console.error('Error:', error);
     }) 
     .finally(() => {
-        // Hide loading animation after request is complete
         loading.style.display = "none";
     });
 }
+
 
  
 // Attach the event listeners to the drop zones
@@ -320,7 +348,7 @@ document.getElementById("button").addEventListener("click", () => {
         });
 });
 
-
+  
 // Function to process the JSON data (example)
 function parseJsonData(jsonData) { 
     console.log('Parsing JSON data:', jsonData); 
@@ -408,10 +436,9 @@ function drawTree(treeData) {
         }
     }
     
-    
-
+     
     window.scrollTo({
-        top: (openedNodesCount*(node_height/2) - 150),  // Scroll to the tree
+        top: (openedNodesCount*(node_height/2) - 350),  // Scroll to the tree
         behavior: 'smooth' 
     });
 
@@ -498,10 +525,10 @@ function drawTree(treeData) {
                     .on("click", function() {
                         if (!openedWindow[currPart] || openedWindow[currPart].closed) {
                             // If the window isn't open or has been closed, open it
-                            openedWindow[currPart] = window.open(`C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`);
+                            openedWindow[currPart] = window.open(`LLM/z.html#${section}`);
                         } else {
                             // If the window is open, focus on it
-                            openedWindow[currPart].location.href = `C:/Users/Ameer Tabri/Desktop/LLM/z.html#${section}`;
+                            openedWindow[currPart].location.href = `LLM/z.html#${section}`;
                             openedWindow[currPart].focus();
                         }
                     });

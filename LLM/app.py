@@ -134,22 +134,16 @@ def analyze_markdown():
     try:
         markdown_data = request.data.decode('utf-8') 
 
-        tree = Tree()
-
-        print("k")
+        tree = Tree() 
 
         save_md_file(markdown_data)
-        process_file(file_path, tree) 
-
-        print("kk") 
+        process_file(file_path, tree)  
 
         # Check equivalence
         if not check_equivalence(tree, trees[curr_part]): 
             return jsonify({"incorrect": "Markdown file does not correspond with data file"}), 400
 
-        save_as_html(tree, "./z.html") 
-
-        print("kkk") 
+        save_as_html(tree, "./z.html")  
 
         trees[curr_part] = tree
 
@@ -202,7 +196,8 @@ def change_part():
  
         part_index = int(part_number.replace('part', ''))   
 
-        curr_part = part_index
+        global curr_part 
+        curr_part = part_index 
  
         selected_part = trees[part_index]  
         process_data_file(selected_part)
@@ -243,21 +238,25 @@ def generate_headers():
 
 
 # Generate heading for a single node
-@app.route('/node_heading', methods=['POST'])
+@app.route('/node_heading', methods=['POST']) 
 def generate_node_header():
     try: 
         data = request.get_json() 
-        name = data.get('name') 
-        elements = name.split(' ', 1)
+        node_section = data.get('node_name')   
+
+        elements = node_section.split(' ', 1)
+        if len(elements) < 2:
+            return jsonify({"error": "Invalid node"}), 400
+        
         section = elements[0]
-        title = elements[1]
+        title = elements[1] 
         
         print(section + ' ' + title)  
-
-        node = trees[curr_part].find_node(section)  
+ 
+        node = trees[curr_part].find_node(section)   
         content = node.content
-        generated_title = generate_title(content, context = "") 
-        trees[curr_part].add_title(section, generated_title) 
+        generated_title = generate_title(content, context="") 
+        trees[curr_part].add_title(section, generated_title)  
    
         trees[curr_part].tree_to_custom_json()
         save_as_html(trees[curr_part], "./z.html") 
@@ -266,12 +265,11 @@ def generate_node_header():
         with open(json_file_path, 'r', encoding="utf-8") as json_file:
             json_data = json.load(json_file)
 
-        # Return the JSON data as a response
         return jsonify(json_data), 200
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-
+ 
+ 
 if __name__ == "__main__":
     app.run(debug=True)
