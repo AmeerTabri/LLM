@@ -36,8 +36,9 @@ Before using the web application, you need to set up the Docker container.
 5. **Node Types**:
 
    - The nodes are color-coded:
-     - **White text**: Sections that already have titles.
-     - **Red text**: Sections that are missing titles.
+     - **White text**: These are Sections that already have headings.
+     - **Red text**: Sections that are missing headings.
+     - **green text**: Sections with generated headings.
 
 6. **Generate Missing Titles**:
 
