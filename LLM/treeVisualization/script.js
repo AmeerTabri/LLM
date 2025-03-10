@@ -71,9 +71,9 @@ function handleMdDrop(event) {
             const dropZone = document.getElementById('drop-zone-md');
             dropZone.style.display = 'none';  
             
-            // // Show the download button
-            // const download = document.getElementById('download-btn');
-            // download.style.display = 'flex'; 
+            // Show the download button
+            const download = document.getElementById('download-btn');
+            download.style.display = 'flex'; 
         }) 
         .catch(error => {
             console.error('Error:', error);
@@ -188,17 +188,19 @@ function handlePartSelection(event) {
         // Draw the tree with the analyzed JSON data
         drawTree(jsonData.data); 
 
-        
-        // Hide the drop area after successful upload
-        if (isMarkDownDroped[currPart]) {
-            const dropZone = document.getElementById('drop-zone-md');
+         
+        // Show the download button
+        const download = document.getElementById('download-btn');
+        const dropZone = document.getElementById('drop-zone-md');
+        if (isMarkDownDroped[currPart]) { 
             dropZone.style.display = 'none';  
+            download.style.display = 'flex';  
         }
-        else {
-            const dropZone = document.getElementById('drop-zone-md');
+        else {  
             dropZone.style.display = 'flex';  
             dropZone.style.justifyContent = 'center';  
             dropZone.style.alignItems = 'center'; 
+            download.style.display = 'none';  
         }
     })
     .catch(error => console.error('Error:', error));
@@ -339,7 +341,13 @@ document.getElementById("button").addEventListener("click", () => {
         });
 });
 
-  
+// downloading the md file
+document.getElementById("download-btn").addEventListener("click", function () {
+    let filePath = `../inputs/input${currPart}.md`; 
+    window.open(filePath, "_blank");
+});
+ 
+
 // Function to process the JSON data (example)
 function parseJsonData(jsonData) { 
     console.log('Parsing JSON data:', jsonData); 
@@ -514,10 +522,10 @@ function drawTree(treeData) {
                     .on("click", function() {
                         if (!openedWindow[currPart] || openedWindow[currPart].closed) {
                             // If the window isn't open or has been closed, open it
-                            openedWindow[currPart] = window.open(`../files-with-content/content.html#${section}`);
+                            openedWindow[currPart] = window.open(`../outputs/content.html#${section}`);
                         } else {
                             // If the window is open, focus on it
-                            openedWindow[currPart].location.href = `../files-with-content/content.html#${section}`;
+                            openedWindow[currPart].location.href = `../outputs/content.html#${section}`;
                             openedWindow[currPart].focus();
                         }
                     }); 

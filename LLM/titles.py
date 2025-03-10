@@ -42,7 +42,7 @@ def select_best_title(titles, content):
     return best_title[0]
 
 
-def generate_title(content, context = "", max_length=7, data_set = ""): 
+def generate_title(content, context = "", max_length=7, data_set = ""):  
     prompt = f"Generate a concise title for the following book description:\n\n{content}" 
     prompt = f"giving the context of the content: {context}, Generate a title for this paragraph: {content}"
  
@@ -51,9 +51,9 @@ def generate_title(content, context = "", max_length=7, data_set = ""):
 
     outputs = model.generate(
         inputs["input_ids"],
-        max_new_tokens=12,  # Limit to 3 new tokens
+        max_new_tokens=20,  
         num_beams=50,       # Reduce beam search for efficiency
-        temperature=0.9,   # Slightly increased for more variety
+        temperature=1.1,   # Slightly increased for more variety
         do_sample=True,
         early_stopping=False,
         no_repeat_ngram_size=2,  # Prevent repetition of 2-grams
@@ -180,58 +180,3 @@ def generate_best_title(content, max_length=7, data_set=""):
     print(f"Selected Title: {selected_title}")
     return selected_title
  
-
-# file_num = 1
-
-# file_path = f"inputs/input{file_num}.md"
-# output_file_path = f"outputs/output{file_num}.md"
-
-# tree = Tree()
-# parse_file(file_path, output_file_path, tree)
-# save_as_html(tree, f"outputs/output{file_num}.html")
-# # tree.print_sections()
-
-# tree.tree_to_json(empty_cond = False, leaf_cond = True)
-
-
-def process_json_file(file_path, limit=10): 
-    with open(file_path, 'r') as file:
-        data = json.load(file)
-
-    # Use a list of dictionaries to store extracted data dynamically
-    data_set = []
-    for i, item in enumerate(data):
-        if i == limit:  
-            break
-        
-        content = item.get("content", "").replace("\n", "").strip()
-        section = item.get("section", "")
-        title = item.get("title", "")
-        
-        # Print or log extracted data
-        print(f"Section: {section}")
-        print(f"Title: {title}")
-        print(f"Content: {content}\n")
-        
-        # Append to data_set
-        data_set.append({
-            "section": section,
-            "title": title,
-            "content": content
-        }) 
-
-    return data_set
-        
-# data = process_json_file("data_set.json", limit=3)   
-# print("data = ", data)
-
-# content = "This European Standard specifies the process and technical requirements for the development of software      \
-#     for programmable electronic systems for use in railway control and protection applications. It is aimed at use      \
-#     in any area where there are safety implications. These systems can be implemented using dedicated microprocessors,  \
-#     programmable logic controllers, multiprocessor distributed systems, larger scale central processor systems or other \
-#     architectures."
-# # title = generate_multiple_titles(content)
-# title = generate_title(content)
-
-# score = score_title(title[3], content)
-# print(f"Semantic similarity score: {score:.4f}")

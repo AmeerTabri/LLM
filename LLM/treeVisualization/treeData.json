@@ -59,9 +59,9 @@
           "stroke-width": 2
         },
         {
-          "name": "1.7 ???",
+          "name": "1.7 European Standard on Generic Software and Application Data and Algorithms",
           "fill": "none",
-          "color": "#FF6347",
+          "color": "#90EE90",
           "isOpen": false,
           "stroke": "#32CD32",
           "stroke-width": 2
@@ -509,7 +509,7 @@
       ]
     },
     {
-      "name": "4 Requirements for the safety of software in relation to the intended function",
+      "name": "4 Objectives, conformance and software safety integrity levels",
       "fill": "cyan",
       "color": "white",
       "isOpen": false,

@@ -12,7 +12,7 @@ def generate_all_subsections(section):
         section = section[:last_dot] + "." + str(int(section[last_dot+1:]) + 1)
         subsections.append(section) 
         section = section.rsplit('.', 1)[0]
-    for i in range(1,8):
+    for i in range(1,8): # allow jumps
         subsections.append(str(int(section) + i))
 
     return subsections 
