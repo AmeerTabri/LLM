@@ -56,3 +56,21 @@ Before using the web application, you need to set up the Docker container.
    ```bash
    docker-compose up
    ```
+2. Upload Files
+
+- Choose a data file from the `examples` directory and drag it into the **data file drop zone**.
+- First, drop the **document** file and then the corresponding **document for testing with a markdown file.md** file to enable the generation of headings.
+
+3. Save Progress
+
+- To save your progress, click the **Save File** button at the top right corner of the app.
+- A new tab will open, displaying the generated content.
+- Right-click on the tab and select **Save As** to save the file locally.
+- Make sure to save the file with the `.md` extension to preserve the markdown format.
+- You can use the downloaded **md** file for later use, and the generated headings will remain shown in **green**.
+
+4. Review and Reiterate
+
+- As you work through the document, you can repeat the process by uploading new data and markdown files.
+- The tree structure will reflect updates, and newly generated headings will be displayed in **green** to clearly differentiate them from the existing ones.
+
