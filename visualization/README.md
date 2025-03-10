@@ -59,19 +59,19 @@ Before using the web application, you need to set up the Docker container.
    ```
 2. Upload Files
    
-- Drag a data file from the `examples` directory into the **data file drop zone**.
-- Drop the **document** file first, then the corresponding **document.md** to generate headings.
-- Ensure both files are in the correct format to avoid undefined behavior.
+   - Drag a data file from the `examples` directory into the **data file drop zone**.
+   - Drop the **document** file first, then the corresponding **document.md** to generate headings.
+   - Ensure both files are in the correct format to avoid undefined behavior.
 
 3. Save Progress
    
-- Click **Save File** at the top right to save your progress.
-- A new tab will open with the content. Right-click and select **Save As** to save it locally.
-- Save the file with the `.md` extension to preserve the markdown format.
-- The downloaded **md** file can be used later, with generated headings shown in **green**.
+   - Click **Save File** at the top right to save your progress.
+   - A new tab will open with the content. Right-click and select **Save As** to save it locally.
+   - Save the file with the `.md` extension to preserve the markdown format.
+   - The downloaded **md** file can be used later, with generated headings shown in **green**.
 
 4. Review and Reiterate
 
-- As you work through the document, you can repeat the process by uploading new data and markdown files.
-- The tree structure will reflect updates, and newly generated headings will be displayed in **green** to clearly differentiate them from the existing ones.
+   - As you work through the document, you can repeat the process by uploading new data and markdown files.
+   - The tree structure will reflect updates, and newly generated headings will be displayed in **green** to clearly differentiate them from the existing ones.
 
