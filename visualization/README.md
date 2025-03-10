@@ -62,12 +62,11 @@ Before using the web application, you need to set up the Docker container.
 - First, drop the **document** file and then the corresponding **document for testing with a markdown file.md** file to enable the generation of headings.
 
 3. Save Progress
-
-- To save your progress, click the **Save File** button at the top right corner of the app.
-- A new tab will open, displaying the generated content.
-- Right-click on the tab and select **Save As** to save the file locally.
-- Make sure to save the file with the `.md` extension to preserve the markdown format.
-- You can use the downloaded **md** file for later use, and the generated headings will remain shown in **green**.
+   
+- Click **Save File** at the top right to save your progress.
+- A new tab will open with the content. Right-click and select **Save As** to save it locally.
+- Save the file with the `.md` extension to preserve the markdown format.
+- The downloaded **md** file can be used later, with generated headings shown in **green**.
 
 4. Review and Reiterate
 
