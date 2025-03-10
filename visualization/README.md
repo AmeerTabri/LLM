@@ -58,9 +58,10 @@ Before using the web application, you need to set up the Docker container.
    docker-compose up
    ```
 2. Upload Files
-
-- Choose a data file from the `examples` directory and drag it into the **data file drop zone**.
-- First, drop the **document** file and then the corresponding **document for testing with a markdown file.md** file to enable the generation of headings.
+   
+- Drag a data file from the `examples` directory into the **data file drop zone**.
+- Drop the **document** file first, then the corresponding **document.md** to generate headings.
+- Ensure both files are in the correct format to avoid undefined behavior.
 
 3. Save Progress
    
