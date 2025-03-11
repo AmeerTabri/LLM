@@ -15,7 +15,7 @@ Before using the web application, you need to set up the platform either on your
 
 ---
 
-## Instructions to Run the Platform on Your Laptop
+## Instructions to Run the Platform on your machine (Windows)
 
 ### Backend Setup
 
