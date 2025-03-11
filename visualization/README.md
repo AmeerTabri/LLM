@@ -1,4 +1,4 @@
-# Document Navigation & Heading Generation Platform
+# Standart Document Navigation & Heading Generation Web Application
 
 This web application helps navigate through large standard documents and generate missing headings. It is designed to simplify the process of working with extensive documents, particularly when sections are missing headings.
 
