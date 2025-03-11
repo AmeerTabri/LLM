@@ -1,9 +1,2 @@
 flask
 flask-cors
-transformers
-torch
-sentence-transformers
-scikit-learn
-markdown
-metrics
-pairwise

@@ -1,30 +1,21 @@
-# Use the official Nginx image as a parent image
-FROM nginx:alpine
+# Use an official Python base image
+FROM python:3.9
 
-# Copy the static files to the Nginx web root
-COPY . /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-
-# Use an official Python runtime as the base image
-FROM python:3.10-slim
-
-# Set working directory inside container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy project files into container
-COPY . /app
+# Copy the entire project to the container
+COPY . .
 
-# Install required Python packages with timeout
-RUN pip install --no-cache-dir  -r requirements.txt
+# Install backend dependencies from the root requirements.txt
+RUN pip install -r requirements.txt
 
-# Expose port 5000
-EXPOSE 5000
+# Expose ports for both backend (5000) and frontend (8000)
+EXPOSE 5000 8000
 
-# Set environment variable for Flask
-ENV FLASK_APP=app.py
+# Copy the entrypoint script and give it execution permissions
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-# Command to run Flask app on container start
-CMD ["python", "Backend/app.py"]
+# Start both the backend and frontend when the container runs
+CMD ["/entrypoint.sh"]
