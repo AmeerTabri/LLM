@@ -61,10 +61,10 @@ Before using the web application, you need to set up the platform either on your
    ```
    The backend will be running at **http://localhost:5000**.
 
-   ```
+   
    The frontend will be running at **http://localhost:8000**.
 
----
+
 
 ## Web Application Usage
 
