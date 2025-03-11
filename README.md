@@ -41,13 +41,13 @@ Before using the web application, you need to set up the platform either on your
    cd treeVisualization
    python -m http.server 8000
    ```
-   The frontend will be running at **http://localhost:8000/treeVisual.html**.
+   The frontend will be running at **http://localhost:8000**.
 
 ---
 
 ## Instructions to Run the Platform in Containers
 
-### Backend Setup
+### Backend + Frontend Setup
 
 1. **Clone the Repository**: Clone the repository to your local machine.
    ```bash
@@ -56,20 +56,13 @@ Before using the web application, you need to set up the platform either on your
    ```
 2. **Build and Run the Backend Container**:
    ```bash
-   docker build -t my_flask_app:latest .
-   docker run -p 5000:5000 my_flask_app:latest
+   docker build -t visualization-app .
+   docker run -p 5000:5000 -p 8000:8000 visualization-app
    ```
    The backend will be running at **http://localhost:5000**.
 
-### Frontend Setup
-
-1. **Build and Run the Frontend Container**:
-   ```bash
-   cd treeVisualization
-   docker build -t my_frontend:latest .
-   docker run -p 80:80 my_frontend:latest
    ```
-   The frontend will be running at **http://localhost**.
+   The frontend will be running at **http://localhost:8000**.
 
 ---
 
